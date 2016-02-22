@@ -175,9 +175,7 @@
     <Compile Include="Base\Model.cs" />
     <Compile Include="Base\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Actions\PopupMenu.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Actions\PopupMenu.cs" />
     <Compile Include="Views\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

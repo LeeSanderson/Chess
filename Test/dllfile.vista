@@ -1,0 +1,7 @@
+ConditionVariable : ConditionVariable.dll
+ConditionVariable2 : ConditionVariable2.dll
+ConditionVariable3 : ConditionVariable3.dll
+SRWLock : SRWLock.dll
+SRWLock2 : SRWLock2.dll
+SRWLock3 : SRWLock3.dll
+SRWLock4 : SRWLock4.dll

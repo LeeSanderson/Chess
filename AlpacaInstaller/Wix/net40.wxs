@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <Property Id="NETFRAMEWORK40" Secure="yes">
+      <RegistrySearch Id="NetFramework40" Root="HKLM" Key="Software\Microsoft\NET Framework Setup\NDP\v4.0.10904" Name="Install" Type="raw" />
+    </Property>
+  </Fragment>
+</Wix>
+

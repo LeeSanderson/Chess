@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <Feature
+      Id="AlpacaFeature"
+      Title="Tools"
+      Description="Alpaca Tools"
+      Level="1"
+      Display="collapse">
+      <!-- the ENGINE: required by everyone -->
+      <ComponentRef Id="ChessDllComponent"/>
+      <!-- extended reflection -->
+      <MergeRef Id="ExtendedReflectionModule"/>
+      <!-- mchess DLLs -->
+      <ComponentRef Id="MChessDllComponent"/>
+      <ComponentRef Id="MChessAPIDllComponent"/>
+      <ComponentRef Id="MChessEngineDllComponent"/>
+      <ComponentRef Id="MChessLauncherDllComponent"/>
+      <ComponentRef Id="Framework35WrappersDllComponent"/>
+      <ComponentRef Id="Framework4WrappersDllComponent"/>
+      <ComponentRef Id="ThreadingWrappersDllComponent"/>
+      <!-- mchess -->
+      <ComponentRef Id="ManagedChessBaseExeComponent"/>
+      <ComponentRef Id="ManagedChessExeComponent"/>
+      <!-- mcut (mchess runner) -->
+      <ComponentRef Id="ManagedCUTExeComponent"/>
+      <!-- concurrency explorer -->
+      <ComponentRef Id="ConcurrencyExplorerExeComponent"/>
+      <!-- alpaca -->
+      <ComponentRef Id="AlpacaExeComponent"/>
+      <ComponentRef Id="AlpacaTaskometerDllComponent"/>
+      <ComponentRef Id="AlpacaUnitTestingExecutionDllComponent"/>
+      <ComponentRef Id="AlpacaUnitTestingExtensionsDllComponent"/>
+      <ComponentRef Id="AlpacaUnitTestingFrameworkDllComponent"/>
+      <!-- gac -->
+      <ComponentRef Id="GacAlpacaUnitTestingExtensionsDllComponent"/>
+      <ComponentRef Id="GacAlpacaUnitTestingFrameworkDllComponent"/>
+    </Feature>
+    
+    <DirectoryRef Id="TARGETDIR">
+      <Merge Id="ExtendedReflectionModule" Language="0" SourceFile="..\MergeModules\extendedreflection_x86_ret.msm" DiskId="1" />
+    </DirectoryRef>
+    
+    <!-- EXECUTABLES -->
+
+    <DirectoryRef Id="INSTALLBINLOCATION">
+    <Component
+        Id="GacAlpacaUnitTestingExtensionsDllComponent"
+        Guid="{CFD39A42-9D78-4669-BB4E-BA3C9D729191}">
+      <File
+        Id="GacAlpacaUnitTestingExtensionsDll"
+        Source="$(var.BinDirectory)\Microsoft.Concurrency.UnitTesting.Extensions.dll"
+        Name="Microsoft.Concurrency.UnitTesting.Extensions.dll"
+        AssemblyManifest="GacAlpacaUnitTestingExtensionsDll"
+        Assembly=".net"
+        KeyPath="yes">
+      </File>
+    </Component>
+
+    <Component
+    Id="GacAlpacaUnitTestingFrameworkDllComponent"
+    Guid="{F8B84FB2-954E-4F91-B689-E82C781F7A06}">
+      <File
+        Id="GacAlpacaUnitTestingFrameworkDll"
+        Source="$(var.BinDirectory)\Microsoft.Concurrency.UnitTestingFramework.dll"
+        AssemblyManifest="GacAlpacaUnitTestingFrameworkDll"
+        Assembly=".net"
+        Name="Microsoft.Concurrency.UnitTestingFramework.dll"
+        KeyPath="yes">
+      </File>
+    </Component>
+    </DirectoryRef>
+    
+    <DirectoryRef Id="AlpacaReferenceAssemblies">
+      <Component
+        Id="AlpacaUnitTestingExtensionsDllComponent"
+        Guid="{355FA88B-80AB-4522-A056-5CD00811CF39}">
+        <File
+          Id="AlpacaUnitTestingExtensionsDll"
+          Source="$(var.BinDirectory)\Microsoft.Concurrency.UnitTesting.Extensions.dll"
+          Name="Microsoft.Concurrency.UnitTesting.Extensions.dll"
+          KeyPath="yes">
+        </File>
+        <File
+          Id="AlpacaUnitTestingExtensionsPdb"
+          Source="$(var.BinDirectory)\Microsoft.Concurrency.UnitTesting.Extensions.pdb"
+          Name="Microsoft.Concurrency.UnitTesting.Extensions.pdb">
+        </File>
+        <File
+          Id="AlpacaUnitTestingExtensionsXml"
+          Source="$(var.BinDirectory)\Microsoft.Concurrency.UnitTesting.Extensions.xml"
+          Name="Microsoft.Concurrency.UnitTesting.Extensions.xml">
+        </File>
+      </Component>
+      <Component
+          Id="AlpacaUnitTestingFrameworkDllComponent"
+          Guid="{9109FB48-4024-4660-B4A4-1382B2C59DB3}">
+        <File
+          Id="AlpacaUnitTestingFrameworkDll"
+          Source="$(var.BinDirectory)\Microsoft.Concurrency.UnitTestingFramework.dll"
+          Name="Microsoft.Concurrency.UnitTestingFramework.dll"
+          KeyPath="yes">
+        </File>
+        <File
+          Id="AlpacaUnitTestingFrameworkPdb"
+          Source="$(var.BinDirectory)\Microsoft.Concurrency.UnitTestingFramework.pdb"
+          Name="Microsoft.Concurrency.UnitTestingFramework.pdb">
+        </File>
+        <File
+          Id="AlpacaUnitTestingFrameworkXml"
+          Source="$(var.BinDirectory)\Microsoft.Concurrency.UnitTestingFramework.xml"
+          Name="Microsoft.Concurrency.UnitTestingFramework.xml">
+        </File>
+      </Component>
+    </DirectoryRef>
+    
+    <DirectoryRef Id="INSTALLBINLOCATION">  
+      <Component
+        Id="ManagedChessExeComponent"
+        Guid="{C521BE64-4C59-48B9-B856-8F2C871E5F39}">
+        <File
+          Id="ManagedChessExe"
+          Source="$(var.BinDirectory)\mchess.exe"
+          Name="mchess.exe"
+          KeyPath="yes"
+          />
+        <File
+          Id ="ManagedChessPdb"
+          Source="$(var.BinDirectory)\mchess.pdb"
+          Name="mchess.pdb"
+          />
+      </Component>
+
+      <Component
+        Id="ManagedCUTExeComponent"
+        Guid="{017C7B67-95B1-4E8E-AF0E-FC241EBFEE5C}">
+        <File
+          Id="ManagedCUTExe"
+          Source="$(var.BinDirectory)\mcut.exe"
+          Name="mcut.exe"
+          KeyPath="yes"
+          />
+        <File
+          Id="ManagedCUTPdb"
+          Source="$(var.BinDirectory)\mcut.pdb"
+          Name="mcut.pdb"
+          />
+      </Component>
+      
+      <Component
+        Id="AlpacaExeComponent"
+        Guid="{953A9262-96CF-442B-BBD8-92C3D54E342D}">
+        <File
+          Id="AlpacaExe"
+          Source="$(var.BinDirectory)\alpaca.exe"
+          Name="alpaca.exe"
+          KeyPath="yes"
+          />
+        <File
+          Id="AlpacaPdb"
+          Source="$(var.BinDirectory)\alpaca.pdb"
+          Name="alpaca.pdb"
+          />
+      </Component>
+
+      <Component
+        Id="ManagedChessBaseExeComponent"
+        Guid="{826B9CB2-8A59-4A4F-ACF5-86C91093725B}">
+        <File
+          Id="ManagedChessBaseExe"
+          Source="$(var.BinDirectory)\Microsoft.ManagedChess.Base.exe"
+          Name="Microsoft.ManagedChess.Base.exe"
+          KeyPath="yes"
+          />
+        <File
+          Id="ManagedChessBasePdb"
+          Source="$(var.BinDirectory)\Microsoft.ManagedChess.Base.pdb"
+          Name="Microsoft.ManagedChess.Base.pdb"
+          />
+      </Component>
+
+      <Component
+        Id="ConcurrencyExplorerExeComponent"
+        Guid="{B9C38907-E7EE-4FF1-872D-A03276839FF0}">
+        <File
+          Id="ConcurrencyExplorerExe"
+          Source="$(var.BinDirectory)\concurrencyexplorer.exe"
+          Name="concurrencyexplorer.exe"
+          KeyPath="yes"
+          />
+        <File
+          Id="ConcurrencyExplorerPdb"
+          Source="$(var.BinDirectory)\concurrencyexplorer.pdb"
+          Name="concurrencyexplorer.pdb"
+          />
+      </Component>
+
+      <Component
+          Id="AlpacaTaskometerDllComponent"
+          Guid="{F8672C58-1B3E-4CAB-A97B-1EE1F5A71F8E}">
+        <File
+          Id="ScenarioManagedDll"
+          Source="$(var.BinDirectory)\Scenario.Managed.dll"
+          Name="Scenario.Managed.dll">
+        </File>	
+        <File
+          Id="AlpacaTaskometerDll"
+          Source="$(var.BinDirectory)\Microsoft.Concurrency.Taskometer.dll"
+          Name="Microsoft.Concurrency.Taskometer.dll"
+          KeyPath="yes">
+          <CopyFile
+            Id="AlpacaTaskometerDll"
+            DestinationDirectory="AlpacaReferenceAssemblies"
+            />
+        </File>
+        <File
+          Id="AlpacaTaskometerPdb"
+          Source="$(var.BinDirectory)\Microsoft.Concurrency.Taskometer.pdb"
+          Name="Microsoft.Concurrency.Taskometer.pdb">
+          <CopyFile
+            Id="AlpacaTaskometerPdb"
+            DestinationDirectory="AlpacaReferenceAssemblies"
+            />
+        </File>
+        <File
+          Id="AlpacaTaskometerXml"
+          Source="$(var.BinDirectory)\Microsoft.Concurrency.Taskometer.xml"
+          Name="Microsoft.Concurrency.Taskometer.xml">
+          <CopyFile
+            Id="AlpacaTaskometerXml"
+            DestinationDirectory="AlpacaReferenceAssemblies"
+            />
+        </File>
+      </Component>
+
+      <Component
+          Id="AlpacaUnitTestingExecutionDllComponent"
+          Guid="{1EF3AC08-7F12-4977-956A-71D24BA8BAC1}">
+        <File
+          Id="AlpacaUnitTestingExecutionDll"
+          Source="$(var.BinDirectory)\Microsoft.Concurrency.UnitTesting.Execution.dll"
+          Name="Microsoft.Concurrency.UnitTesting.Execution.dll"
+          KeyPath="yes">
+        </File>
+      </Component>
+      
+              <Component
+                  Id="MChessEngineDllComponent"
+                  Guid="{9D92FF23-A403-476D-9D0E-69D397FB8675}">
+                <File
+                  Id="MChessEngineDll"
+                  Source="$(var.BinDirectory)\Microsoft.ManagedChess.Engine.dll"
+                  Name="Microsoft.ManagedChess.Engine.dll"
+                  KeyPath="yes">
+                </File>
+                <File
+                  Id="MChessEnginePdb"
+                  Source="$(var.BinDirectory)\Microsoft.ManagedChess.Engine.pdb"
+                  Name="Microsoft.ManagedChess.Engine.pdb"
+                />
+                </Component>
+
+              <Component
+                Id="MChessAPIDllComponent"
+                Guid="{1A7039CF-C37F-4487-B2AA-91059A433606}">
+                <File
+                  Id="MChessAPIDll"
+                  Source="$(var.BinDirectory)\Microsoft.ManagedChessAPI.dll"
+                  Name="Microsoft.ManagedChessAPI.dll"
+                  KeyPath="yes">
+                </File>
+                <File
+                  Id="MChessAPIPdb"
+                  Source="$(var.BinDirectory)\Microsoft.ManagedChessAPI.pdb"
+                  Name="Microsoft.ManagedChessAPI.pdb"
+                />
+              </Component>
+              
+                <Component
+                  Id="MChessLauncherDllComponent"
+                  Guid="{3C1D3ACC-A1F5-4884-81C9-452964A0D503}">
+                  <File
+                    Id="MChessLauncherDll"
+                    Source="$(var.BinDirectory)\Microsoft.ManagedChess.Launcher.dll"
+                    Name="Microsoft.ManagedChess.Launcher.dll"
+                    KeyPath="yes">
+                  </File>
+                  <File
+                    Id="MChessLauncherPdb"
+                    Source="$(var.BinDirectory)\Microsoft.ManagedChess.Launcher.pdb"
+                    Name="Microsoft.ManagedChess.Launcher.pdb"
+                  />
+                </Component>
+
+                <Component
+                    Id="Framework4WrappersDllComponent"
+                    Guid="{F2D9CC76-9F7C-46A6-AB79-BB48BC9A0328}">
+                  <File
+                    Id="Framework4WrappersDll"
+                    Source="$(var.BinDirectory)\Microsoft.ManagedChess.Framework4Wrappers.dll"
+                    Name="Microsoft.ManagedChess.Framework4Wrappers.dll"
+                    KeyPath="yes">
+                  </File>
+                  <File
+                    Id="Framework4WrappersPdb"
+                    Source="$(var.BinDirectory)\Microsoft.ManagedChess.Framework4Wrappers.pdb"
+                    Name="Microsoft.ManagedChess.Framework4Wrappers.pdb"
+                  />
+                </Component>
+      
+               <Component
+                  Id="Framework35WrappersDllComponent"
+                  Guid="{BB822A50-5487-4D8A-9890-E09571867365}">
+                  <File
+                    Id="Framework35WrappersDll"
+                    Source="$(var.BinDirectory)\Microsoft.ManagedChess.Framework35Wrappers.dll"
+                    Name="Microsoft.ManagedChess.Framework35Wrappers.dll"
+                    KeyPath="yes">
+                  </File>
+                 <File
+                   Id="Framework35WrappersPdb"
+                   Source="$(var.BinDirectory)\Microsoft.ManagedChess.Framework35Wrappers.pdb"
+                   Name="Microsoft.ManagedChess.Framework35Wrappers.pdb"
+                  />
+                </Component>
+
+              <Component
+                Id="ThreadingWrappersDllComponent"
+                Guid="">
+                <File
+                  Id="ThreadingWrappersDll"
+                  Source="$(var.BinDirectory)\Microsoft.ManagedChess.ThreadingWrappers.dll"
+                  Name="Microsoft.ManagedChess.ThreadingWrappers.dll"
+                  KeyPath="yes">
+                </File>
+                <File
+                  Id="ThreadingWrappersPdb"
+                  Source="$(var.BinDirectory)\Microsoft.ManagedChess.ThreadingWrappers.pdb"
+                  Name="Microsoft.ManagedChess.ThreadingWrappers.pdb"
+                />
+              </Component>
+              
+                <Component
+                  Id="MChessDllComponent"
+                  Guid="{5FF2C1D4-CDE8-4C43-8C03-825A6F0F9BFF}">
+                  <File
+                    Id="MChessDll"
+                    Source="$(var.BinDirectory)\Microsoft.ManagedChess.MChess.dll"
+                    Name="Microsoft.ManagedChess.MChess.dll"
+                    KeyPath="yes">
+                  </File>
+                  <File
+                    Id="MChessPdb"
+                    Source="$(var.BinDirectory)\Microsoft.ManagedChess.MChess.pdb"
+                    Name="Microsoft.ManagedChess.MChess.pdb"
+                  />
+                </Component>
+              
+                <Component
+                  Id="ChessDllComponent"
+                  Guid="{C5B843D3-DA57-499D-9791-D20D625B5C5D}">
+                  <File
+                    Id="ChessDll"
+                    Source="$(var.BinDirectory)\Chess.dll"
+                    Name="Chess.dll">
+                  </File>
+                  <File
+                    Id="ChessPdb"
+                    Source="$(var.BinDirectory)\Chess.pdb"
+                    Name="Chess.pdb">
+                  </File>
+                </Component>
+    </DirectoryRef>
+  </Fragment>
+</Wix>

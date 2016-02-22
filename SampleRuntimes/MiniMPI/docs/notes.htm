@@ -1,0 +1,478 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+
+<title>MiniMPI Notes</title>
+
+<style type="text/css">
+<!--
+
+* 
+{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: Georgia
+}
+
+/* divs */
+div#main-wrapper 
+{
+	width: 600px;
+	padding: 10px 50px;
+	margin: 0 auto;
+	background-color: #afa;
+}
+
+div.section
+{
+	margin-top: 10px;
+	padding-top: 20px; 
+	padding-bottom: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+	width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid black;
+	background-color: #9f9;
+}
+
+div.section:hover 
+{
+	background-color: #8f8;	
+}
+
+div.section h2
+{
+	text-align: center;
+	padding-bottom: 10px;
+	border-bottom: 1px solid black;
+}
+
+div.section div
+{
+	margin-top: 10px;
+}
+
+div.section div h3 
+{
+	text-align: center;
+}
+
+div.section p 
+{
+	text-indent: 2em;
+}
+
+div.section h4
+{
+	padding-top: 8px;
+}
+
+-->
+</style>
+
+</head>
+<body>
+
+<div id="main-wrapper">
+
+<h1>MiniMPI Notes</h1>
+
+<div id="classes">
+<h2>List of Classes</h2>
+<ul>
+	<li>AsyncReceiveInstruction</li>
+	<li>AsyncSendInstruction</li>
+	<li>BarrierInstruction</li>
+	<li>Handle</li>
+	<li>Instruction</li>
+	<li>InvalidMiniMPIOperationException</li>
+	<li>InvalidMiniMPIProgramException</li>
+	<li>MiniMPICollectiveAbortException</li>
+	<li>MiniMPIException</li>
+	<li>MiniMPIExecutionException</li>
+	<li>MiniMPIRuntime</li>
+	<li>MiniMPIStringRuntime</li>
+	<li>MpiProcess</li>
+	<li>ReceiveHandle</li>
+	<li>SendHandle</li>
+	<li>WaitInstruction</li>
+</ul>
+</div><!-- End of div#classes -->
+
+<div id="exceptions" class="section">
+<h2 class="exception">Exceptions</h2>
+<div class="exception" id="invalidminimpioperationexception">
+	<h3>InvalidMiniMPIOperationException</h3>
+		<p>
+			This is the exception thrown when a MiniMPI call is invalid for the 
+			runtime or calling the process' current state.
+		</p>
+		<p>
+		  This exception extends the <code>MiniMPIExeption</code> class
+		</p>
+</div><!-- End of div#invalidminimpioperationexception -->
+<div class="exception" id="invalidminimpiprogramexception">
+	<h3>InvalidMiniMPIProgramException</h3>
+		<p>
+			The exception thrown when a MiniMPI program or process is incorrect, as
+			opposed to just making an invalid MPI operation. (e.g. Forgetting to call
+			<code>MpiFinalize</code> after calling <code>MpiInit</code>.)
+		</p>
+		<p>
+		  This exception extends the <code>MiniMPIExeption</code> class
+		</p>
+</div><!-- End of div#invalidminimpiprogramexception -->
+<div class="exception" id="minimpicollectiveabortexception">
+	<h3>MiniMPICollectiveAbortException</h3>
+		<p>
+			The exception thrown when a MiniMPI process is collectively aborted.
+		</p>
+		<p>
+		  This exception extends the <code>MiniMPIExeption</code> class
+		</p>
+</div><!-- End of div#minimpicollectiveabortexception -->
+<div class="exception" id="minimpiexception">
+	<h3>MiniMPIException:</h3>
+		<p>
+			The base exception for all exceptions in the MiniMPI namespace.
+		</p>
+		<p>
+			This exception extends the <code>Exception</code> class that is part of the
+			.NET Framework.
+		</p>
+</div><!-- End of div#minimpiexception -->
+<div class="exception" id="minimpiexecutionexception">
+	<h3>MiniMPIExecutionException:</h3>
+		<p>
+			The base exception for all exceptions in the MiniMPI namespace.  
+		</p>
+		<p>
+			At least that is what was said in the description, however the other
+			exceptions do not derive from this one.  I did a search and found that it
+			is used once in <code>MiniMPIRuntime.cs</code> and a few times in the 
+			testing package.
+		</p>
+		<p>
+			This exception extends the <code>MiniMPIException<code> class.
+		</p>
+</div><!-- End of div#minimpiexecutionexception -->
+</div><!-- End of div#exceptions -->
+
+<div id="enums" class="section">
+	<h2>Global Enums</h2>
+	<div id="instructiontype" class="enum">
+		<h3>InstructionType</h3>
+			<p>
+				All MPI calls can be broken down and describes as being comprised
+				of a combination of four different MPI calls: ISend, IRecv, Wait,
+				and Barrier.  MiniMPI implements MPI using only these four main
+				ideas.
+			</p>
+			<h4>AsyncSend</h4>
+				<p>
+					Analogous to ISend in MPI.  This starts the sending of the 
+					message to a local buffer (in another process to leave the
+					current MpiProcess free to do more work) to later be received 
+					by another MpiProcess.
+				</p>
+				<p>
+					value = 0
+				</p>
+			<h4>AsyncReceive</h4>
+				<p>
+					Analogous to IRecv in MPI.  This starts the receiving of a
+					message (in another process to leave the current MpiProcess
+					free to do more work).
+				</p>
+				<p>
+					value = 1
+				</p>
+			<h4>Wait</h4>
+				<p>
+					Analogous to Wait in MPI.  This makes the MpiProcess wait for
+					one of its AsyncSends or one of its AsyncReceives to finish 
+					before it is realeased to perform more work.
+				</p>
+				<p>
+					value = 2
+				</p>
+			<h4>Barrier</h4>
+				<p>
+					Analogous to Barrier in MPI.  Every MpiProcess that gets to a
+					Barrier must wait for all of the other MpiProcesses to get
+					to the Barrier before any of the MpiProcesses are free to
+					continue.
+				</p>
+				<p>
+					value = 3
+				</p>
+	</div><!-- End of div#instructiontype -->
+	<div id="minimpiruntimestate" class="enum">
+		<h3>MiniMPIRuntimeState</h3>
+			<h4>Initialized</h4>
+				<p>
+					This means that the runtime has been constructed but has not been executed yet.
+				</p>
+				<p>
+					value = 0
+				</p>
+			<h4>Executing</h4>
+				<p>
+					This means that the runtime is executing the assigned processes.
+				</p>
+				<p>
+					value = 1
+				</p>
+			<h4>Aborting</h4>
+				<p>
+					This indicates that the runtime is in the prociess of aborting all worker processes.
+					This is usually due to a process throwing an unhandled exception.  When in this 
+					state, the runtime will cause each process to abort the next time it calls into the
+					runtime.
+				</p>
+				<p>
+					value = 2
+				</p>
+			<h4>Terminating</h4>
+				<p>
+					This indicates that the runtime is terminating.  This is usually because a call to
+					the Dispose method while the runtime is running.
+				</p>
+				<p>
+					value = 3
+				</p>
+			<h4>Finished</h4>
+				<p>
+					This means that the runtime has finished executing the assigned processes and cannot
+					be restarted.
+				</p>
+				<p>
+					value = 4
+				</p>
+	</div><!-- End of div#minimpiruntimestate -->
+	<div id="mpiprocessstate" class="enum">
+		<h3>MpiProcessState</h3>
+			<h4>NotStarted</h4>
+				<p>
+					The process has been created, but not started yet.
+				</p>
+				<p>
+					value = 0
+				</p>
+			<h4>Started</h4>
+				<p>
+					The process has started running but the Mpi Initialize method has not been called
+					yet.
+				</p>
+				<p>
+					value = 1
+				</p>
+			<h4>MpiInitialized</h4>
+				<p>
+					Indicates the process has called the MiniMPI Initialize method but has not been
+					Finalized.  MPI API calls are valid only in this state.
+				</p>
+				<p>
+					value = 2
+				</p>
+			<h4>MpiFinalized</h4>
+				<p>
+					Indicates the process has called the MiniMPI Finalize method.  No more MPI API
+					calls are valid in this state.
+				</p>
+				<p>
+					value = 3
+				</p>
+			<h4>Finished</h4>
+				<p>
+					The process has finished executing.
+				</p>
+				<p>
+					value = 4
+				</p>
+	</div><!-- End of div#instructiontype -->
+</div><!-- End of div#enums -->
+
+<div id="mpiprocess" class="section">
+	<h2>The MpiProcess Class</h2>
+	<div id="mpiprocess_main" class="main">
+		<h3>The Main Idea</h3>
+			<p>
+				MpiProcess is implemented with a thread.  It has a list of
+				Instructions, a list of send instructions and receive instructions.
+				There are a few values that can be set within the assembly (i.e.
+				within the same project).  
+			</p>
+			<p>
+				Most of the fields are set externally.
+				The lists that I mentioned above can be added to by using the 
+				method RegisterInstruction().  For sinchronization issues, to use
+				the RegisterInstruction method, the programmer should lock the 
+				SyncRoot variable in the MpiProcess.
+			</p>
+	</div><!-- End of div#mpiprocess_main -->		
+</div><!-- End of div#mpiprocess -->
+
+<div id="instruction" class="section">
+	<h2>The Instruction Class</h2>
+	<div id="instruction_main" class="main">
+		<h3>The Main Idea</h3>
+			<p>
+				First of all, the Instruction class is an internal abstract class.
+				That means that only the classes inside of the MiniMPI project can
+				create references to Instruction objects.  Since it is an abstract
+				class, only instances of child classes may be created.
+			</p>
+			<p>
+				Each Instruction has a Type described by the enum InstructionType.
+				Each Instruction also has a boolean value called IsCompleted that
+				specifies when the Instruction has been executed.  Each Instruction
+				belongs to an MpiProcess and has a unique ID.  This abstract class
+				can be summarized by those fields.
+			</p>
+	</div><!-- End of div#instruction_main -->
+</div><!-- End of div#instruction -->
+
+<div id="asyncsendinstruction" class="section">
+	<h2>The AsyncSendInstruction Class</h2>
+	<div id="asyncsendinstruction_main" class="main">
+		<h3>The Main Idea</h3>
+			<p>
+				This class represents an asynchronous send from this MpiProcess to
+				another.
+			</p>
+	</div><!-- End of div#asyncsendinstruction_main -->
+	<div id="asyncsendinstruction_questions" class="questions">
+		<h3>Questions</h3>
+			<ol>
+				<li>What does the IsEager boolean value represent?</li>
+				<li>Does the Payload variable contain the message to be sent?</li>
+				<li>
+					If the Payload variable is the message, why is it only a
+					string?  Is that the only type of message that you are
+					allowing?
+				</li>
+				<li>
+					Are you allowing for wildcard sends?  I see that you account for
+					wildcard receives with a null pointer.  Will a wildcard send
+					occur if I use a null pointer for the DestProcess variable?
+				</li>
+			</ol>
+	</div><!-- End of div#asyncsendinstruction_questions -->
+</div><!-- End of div#asyncsendinstruction -->
+
+<div id="asyncreceiveinstruction" class="section">
+	<h2>The AsyncReceiveInstruction Class</h2>
+	<div id="asyncreceiveinstruction_main" class="main">
+		<h3>The Main Idea</h3>
+			<p>
+				This class represents an asynchronous receive from one MpiProcess to
+				this MpiProcess.  The receive instruction only needs to know the
+				MpiProcess that will be sending the message.  If you want to be able
+				to receive any eligable message, use a null value for the sending
+				MpiProcess.  This is called a "wildcard receive".
+			</p>
+	</div><!-- End of div#asyncreceiveinstruction_main -->
+	<div id="asyncreceiveinstruction_questions" class="questions">
+		<h3>Questions</h3>
+			<ol>
+				<li>
+					What does the "<code>int?</code>" mean?   I don't understand it 
+					and I didn't know that it could be used.  Does it mean that it  
+					may be an integer that is returned but sometimes it may return
+					something else?  Does it mean that it may be an int or null only?
+				</li>
+			</ol>
+	</div><!-- Emd pf div#asyncreceiveinstruction_questions -->
+</div><!-- End of div#asyncreceiveinstruction -->
+
+<div id="waitinstruction" class="section">
+	<h2>The WaitInstruction Class</h2>
+	<div id="waitinstruction_main" class="main">
+		<h3>The Main Idea</h3>
+			<p>
+				This class represents a call to Wait where an MpiProcess would be
+				required to wait until either one of its Send or one of its Receives
+				have finished.  You must pass in the handle of the type of 
+				instruction that you are waiting for to finish.
+			</p>
+	</div><!-- End of div#waitinstruction_main -->
+</div><!-- End of div#waitinstruction -->
+
+<div id="minimpiruntime" class="section">
+	<h2>The MiniMPIRuntime Abstract Class</h2>
+	<div id="minimpiruntime_main" class="main">
+		<h3>The Main Idea</h3>
+			<p>
+				This abstract class defines the main functionality of creating
+				the MpiProcesses and making sure that only the thread that 
+				created the object can call the Execute method.  Each 
+				MiniMPIRuntime has a unique ID given to it.
+			</p>
+	</div><!-- End of div#minimpiruntime_main -->
+	<div id="minimpiruntime_list" class="list">
+		<h3>List of Public Members</h3>
+			<p>
+				These are the members that can be called from outside of this
+				project.  These are the members that will be seen from projects
+				using MiniMPI.
+			</p>
+			<ul>
+				<li>MiniMPIRuntime(int) - Constructor</li>
+				<li>Execute(Action&lt;? extends MiniMPIRuntime&gt;) - Method</li>
+				<li>GetRank() - Method</li>
+				<li>MpiFinalize() - Method</li>
+				<li>MpiInit() - Method</li>
+				<li>ID - Property</li>
+				<li>ProcessCount - Variable</li>
+			</ul>
+	</div><!-- End of div#minimpiruntime_list -->
+	<div id="minimpiruntime_questions" class="questions">
+		<h3>Questions</h3>
+		<ol>
+			<li>
+				In the CreateProcesses method, why is the parameter not used at all,
+				or is it?  I can't see where you use the parameter "processWork".
+				Actually, I think I figured it out.  You have the parameter of 
+				processWork sent only to get the type of the parameter that is used
+				so that you can pass the deligate for ProcessWorker&lt;TRuntime&gt;
+				to the parametrized thread start.  Is that correct?
+			</li>
+			<li>
+			</li>
+		</ol>
+	</div><!-- End of div#minimpiruntime_questions -->
+</div><!-- End of div#minimpiruntime -->
+
+<div id="" class="section">
+	<h2></h2>
+	<div id="_main" class="main">
+		<h3>The Main Idea</h3>
+			<p>
+				
+			</p>
+	</div><!-- End of div#_main -->
+</div><!-- End of div# -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!-- End of div#main-wrapper -->
+
+</body>
+</html>

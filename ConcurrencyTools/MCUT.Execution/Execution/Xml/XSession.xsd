@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SessionSchema"
+    attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    targetNamespace="http://research.microsoft.com/concurrency/unittesting/session"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:s="http://research.microsoft.com/concurrency/unittesting/session"
+    xmlns:mc="http://research.microsoft.com/concurrency"
+    xmlns:mcut="http://research.microsoft.com/concurrency/unittesting"
+    xmlns:chess="http://research.microsoft.com/chess"
+>
+  <xs:import namespace="http://research.microsoft.com/concurrency"/>
+  <xs:import namespace="http://research.microsoft.com/concurrency/unittesting"/>
+  <xs:import namespace="http://research.microsoft.com/chess"/>
+
+  <xs:element name="session">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="state" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:anyAttribute namespace="##any" processContents="skip"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="mcut:testlist" />
+          <xs:element ref="mcut:testProject" />
+          <xs:element ref="mcut:testAssembly" />
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="msbuildProjectOutputType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Library"/>
+      <xs:enumeration value="Exe"/>
+      <xs:enumeration value="Module"/>
+      <xs:enumeration value="Winexe"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="msbuildProject">
+    <xs:annotation>
+      <xs:documentation>The relavent information needed by an MCUT session to handle a msbuild project.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="projectConfiguration" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="configuration" type="mcut:msbuild_configuration" use="required" />
+            <xs:attribute name="platform" type="mcut:msbuild_platform" use="required" />
+            <xs:attribute name="outputFolderPath" type="mc:nonEmptyString" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="s:buildRun" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="location" type="mc:nonEmptyString" use="required" />
+      <xs:attribute name="defaultConfiguration" type="mcut:msbuild_configuration" use="required" />
+      <xs:attribute name="defaultPlatform" type="mcut:msbuild_platform" use="required" />
+      <xs:attribute name="outputType" type="s:msbuildProjectOutputType" use="required" />
+      <xs:attribute name="assemblyName" type="mc:nonEmptyString" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="appTaskStatusType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Preparing"/>
+      <xs:enumeration value="Setup"/>
+      <xs:enumeration value="Waiting"/>
+      <xs:enumeration value="Running"/>
+      <xs:enumeration value="Complete"/>
+      <xs:enumeration value="Error"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="appTaskStateXType">
+    <xs:sequence>
+      <xs:element ref="mc:error" minOccurs="0" />
+      <xs:element name="taskFolderPath" minOccurs="0" />
+      <xs:element name="processState" type="s:processStateXType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="taskID" type="xs:positiveInteger" use="required" />
+    <xs:attribute name="type" type="mc:nonEmptyString" use="required" />
+    <xs:attribute name="status" type="s:appTaskStatusType" use="required" />
+    <xs:attribute name="isSetup" type="xs:boolean" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="processStateXType">
+    <xs:attribute name="pid" type="xs:integer" use="required" />
+    <xs:attribute name="startTime" type="xs:dateTime" use="required" />
+    <xs:attribute name="exitCode" type="xs:int" use="optional" />
+  </xs:complexType>
+
+  <xs:simpleType name="mcutTestRunType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RunTest"/>
+      <xs:enumeration value="ReRunTest"/>
+      <xs:enumeration value="Repro"/>
+      <xs:enumeration value="Continue"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="mcutTestRun">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="taskState" type="s:appTaskStateXType"/>
+        <xs:element ref="mcut:testCase" />
+        <xs:element ref="mcut:testResult" minOccurs="0" maxOccurs="1" />
+      </xs:sequence>
+      <xs:attribute name="testRunType" type="s:mcutTestRunType" use="required" />
+      <xs:attribute name="hasTestSourceChanged" type="xs:boolean" use="optional" />
+      <xs:attribute name="enableRegressionTestAsserts" type="xs:boolean" use="optional" />
+      <xs:attribute name="runInteractively" type="xs:boolean" use="optional" />
+      <xs:attribute name="useGoldenObservationFile" type="xs:boolean" use="optional" />
+      <!--<xs:anyAttribute namespace="##targetNamespace" processContents="lax" />-->
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="buildRun">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="taskState" type="s:appTaskStateXType"/>
+      </xs:sequence>
+      <xs:attribute name="isRebuild" type="xs:boolean" use="optional" />
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

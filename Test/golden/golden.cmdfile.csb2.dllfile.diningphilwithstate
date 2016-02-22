@@ -1,0 +1,21 @@
+Dining Phils with 2 phils
+Tests: 1 Threads: 3 ExecSteps: 19 HBExecs: 1 
+Tests: 2 Threads: 3 ExecSteps: 19 HBExecs: 1 
+Tests: 3 Threads: 3 ExecSteps: 19 HBExecs: 1 
+Tests: 4 Threads: 3 ExecSteps: 19 HBExecs: 1 
+Tests: 5 Threads: 3 ExecSteps: 19 HBExecs: 1 
+Tests: 6 Threads: 3 ExecSteps: 19 HBExecs: 1 
+Tests: 7 Threads: 3 ExecSteps: 23 HBExecs: 2 
+Tests: 8 Threads: 3 ExecSteps: 23 HBExecs: 2 
+Tests: 9 Threads: 3 ExecSteps: 23 HBExecs: 2 
+Tests: 10 Threads: 3 ExecSteps: 23 HBExecs: 2 
+Tests: 20 Threads: 3 ExecSteps: 23 HBExecs: 3 
+Tests: 30 Threads: 3 ExecSteps: 27 HBExecs: 5 
+Tests: 40 Threads: 3 ExecSteps: 35 HBExecs: 8 
+Tests: 50 Threads: 3 ExecSteps: 35 HBExecs: 13 
+Tests: 60 Threads: 3 ExecSteps: 35 HBExecs: 15 
+Tests: 70 Threads: 3 ExecSteps: 35 HBExecs: 17 
+Tests: 80 Threads: 3 ExecSteps: 35 HBExecs: 20 
+Tests: 83 Threads: 3 ExecSteps: 35 HBExecs: 20 
+Search Completed (0 Warnings).
+Exit code = 0 

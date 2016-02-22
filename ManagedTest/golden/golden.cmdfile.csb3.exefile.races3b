@@ -1,0 +1,6 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing races.exe RaceTest3b  ...
+Tests: 1 Threads: 2 ExecSteps: 11 HBExecs: 1 
+Tests: 2 Threads: 2 ExecSteps: 11 HBExecs: 1 
+Search Completed (1 Warning, 2 Races).
+Exit code = 0 

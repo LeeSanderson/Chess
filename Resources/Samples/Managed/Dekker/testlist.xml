@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testlist name="Dekker" xmlns="http://research.microsoft.com/chess">
+    
+  <!-- This element describes how to build the SimpleBank example -->
+  <build>
+    <startdir>@</startdir>
+    <executable>msbuild</executable>
+    <arg>Dekker.sln</arg>
+    <arg>/p:Configuration=Debug</arg>
+  </build>
+
+  <!-- Define the test -->
+  <test name="Test">
+    <startdir>@\bin\Debug</startdir>
+    <executable>mchess</executable>
+    <carg>Dekker.dll</carg>
+    <carg>/testclass:Dekker.Test</carg>
+  </test>
+
+</testlist>

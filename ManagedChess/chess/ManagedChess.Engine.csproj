@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9B667A03-026E-46B6-B5F1-C12FE0CD64E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.ManagedChess.EREngine</RootNamespace>
+    <AssemblyName>Microsoft.ManagedChess.Engine</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\keys\internalkey.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>%24/ChessTesting/ManagedChess/chess</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://tfs.codeplex.com/tfs/tfs06</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ExtendedReflection, Version=1.2.30104.1, Culture=neutral, PublicKeyToken=76a274db078248c8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\external\Microsoft.ExtendedReflection.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\version.cs">
+      <Link>Properties\version.cs</Link>
+    </Compile>
+    <Compile Include="ChessMain.cs" />
+    <Compile Include="ChessResult.cs" />
+    <Compile Include="Conversions.cs" />
+    <Compile Include="helpers.cs" />
+    <Compile Include="MonitorHelper.cs" />
+    <Compile Include="Monitor\AllCallbacks\ThreadExecutionMonitorCollection.cs" />
+    <Compile Include="Monitor\AllCallbacks\ThreadExecutionMonitorDispatcher.cs" />
+    <Compile Include="Monitor\AllCallbacks\ThreadExecutionMonitorManager.cs" />
+    <Compile Include="Monitor\CallsOnly\CallFrame.cs" />
+    <Compile Include="Monitor\CallsOnly\ICallFrame.cs" />
+    <Compile Include="Monitor\CallsOnly\IThreadMonitor.cs" />
+    <Compile Include="Monitor\CallsOnly\ObjectAccessHandler.cs" />
+    <Compile Include="Monitor\CallsOnly\ObjectAccessThreadMonitor.cs" />
+    <Compile Include="Monitor\CallsOnly\ThreadMonitorBase.cs" />
+    <Compile Include="Monitor\CallsOnly\ThreadMonitorCollection.cs" />
+    <Compile Include="Monitor\CallsOnly\ThreadMonitorFactory.cs" />
+    <Compile Include="Monitor\ComponentModel\ComponentBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitor\ComponentModel\ComponentElementBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitor\ComponentModel\ComponentServices.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitor\ComponentModel\IComponent.cs" />
+    <Compile Include="Monitor\ComponentModel\IComponentElement.cs" />
+    <Compile Include="Monitor\ComponentModel\IComponentServices.cs" />
+    <Compile Include="Monitor\ComponentModel\IInternalService.cs" />
+    <Compile Include="Monitor\Engine.cs" />
+    <Compile Include="Monitor\Environment.cs" />
+    <Compile Include="Monitor\IMonitorManager.cs" />
+    <Compile Include="Monitor\MonitorManager.cs" />
+    <Compile Include="Monitor\ThreadMonitorManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ClrManagedSyncManager.cs" />
+    <Compile Include="SyncVarManager.cs" />
+    <Compile Include="WrapperSentry.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\keys\internalkey.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ConcurrencyTools\MCUT.Execution\MCUT.Execution.csproj">
+      <Project>{81771FD7-1DB0-4E13-BC88-6B1C8AE8AB97}</Project>
+      <Name>MCUT.Execution</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ConcurrencyTools\MCUT.Framework\MCUT.Framework.csproj">
+      <Project>{E7F4455E-DBF6-4D36-8ACB-DA2106C5FCC3}</Project>
+      <Name>MCUT.Framework</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\MChess\MChess.vcxproj">
+      <Project>{A413A419-C3FD-47FA-9DC8-1EF2FAC81028}</Project>
+      <Name>MChess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

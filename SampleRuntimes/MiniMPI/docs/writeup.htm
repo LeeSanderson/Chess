@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Writeup for MiniMPI</title>
+</head>
+<body>
+
+    <h2>Notes:</h2>
+    <ul>
+        <li></li>
+    </ul>
+    <h3>MpiProcess</h3>
+    <p>SyncRoot - This object is used in lock statements for whenever the fields of the 
+        process instance is being changed. Each process may only be modified by two 
+        threads; namely, (1) The process thread itself and (2) the runtime thread. Due 
+        to this, it&#39;s safe to expect that we can exit the lock w/o worrying about the 
+        process from executing another Mpi API call. e.g. when in the MpiWait or 
+        MpiBarrier calls.</p>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing proccount.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+Environment.ProcessorCount = 16
+Tests: 1 Threads: 1 ExecSteps: 2 HBExecs: 1 
+Search Completed (1 Warning).
+Exit code = 0 

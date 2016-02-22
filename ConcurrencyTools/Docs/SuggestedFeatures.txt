@@ -1,0 +1,144 @@
+TODO: Move all these tasks to the codeplex project and delete them as they are moved.
+
+Alpaca:
+-------------
+- In the output, it might be helpful to indicate the type of test being run (i.e. ScheduleTest, DataRaceTest, etc.)
+	- Make sure the testcase uses the orig test case type. e.g. a DataRaceTest doesn't say it's a ChessTest.
+- BUG: When deleting a task, use the path from the run's xml element rather than the Task's folder so the folders get deleted properly.
+- Add an mcut /nologo flag
+- Add cmd line flags to disable the mcut runTestCase summary output.
+- Redo the messages for Assertions to be simpler (no PASS/FAIL, since that's implicit in the exception) and to match the format of VS testing messages.
+- When deleting a task (while focus is in the task list) auto-select the next row down.
+- MCUT: Add a switch to runTestCase to allow it to explicitly run as a x86|x64 app.
+	See: http://stackoverflow.com/questions/437271/running-c-app-32-bit-on-64-bit-machine
+- Add as a cmd line option to "mcut runAllTests" disable regression test result assertions
+	Currently, regression tests are enabled when running this command.
+- Only some of the test runs need to be deactivated.
+	i.e. Unit Test runs don't rely on scheduling of the bin, so re-running them should be fine, just nothing relating to trying to get a schedule out of it.
+	- Need to be able to indicate whether a test-run can be re-ran: e.g. based on whether a schedule was specified.
+- Need to display context names in UI
+- Add UI support for repro to do automatic exclusion of chess:result/preemptionmethod instances in results
+- Need to be more robust when loading session xml so that an error dialog can notify the user plus allow a new session xml file to be created.
+- Open Concurrency Explorer in a new process so Alpaca doesn't lock the assembly from being rebuilt.
+	- Need to verify this is an issue first. It's happened sometimes, but may not actually be the problem of CE.
+- Ideas to use TPL in the UI
+	- Performing a refresh. Computing the 'lookup' functions for prev runs could be done at the same
+	  time as loading the new source xml.
+- Usability BUG: Users right-click a failed test (w/say deadlock) (but not the Deadlock result entity)
+  and repeat test w/tracing. The user expects to be able to open Concurrency Explorer to see the deadlock
+  but it doesn't have the info.
+  - Should something more smart be done?
+  - or should we remove those tracing-like options when the trace data isn't useful.
+- Add the pause/restart chess test feature
+- !!! When doing a repro, don't do the Expected Result assertions.
+	Might want to add a property to the <run> element to indicate the run is a repro.
+		Yes, how about an attribute like: enum TestActionType { Run, Repro }
+		A repeat of a test would just keep the same value.
+- Ability to use a VS .csproj file as a test container.
+- Display aggregate test result in bottom tabs area so it's easier to see.
+- When a process exits, save the exit code into the task xml and then remove the pid from the
+  xml so it doesn't try to load the process on the next load of the app.
+  This will remove the (caught) exceptions when trying to grab the process
+- Allow saving of a testlist or test assembly to a separate file.
+- Add the ability to export session info for re-running of bad tests.
+- Add ability to break at the error, exception or assertion.
+- Add counts onto results tree root nodes. i.e. "Passed (55)"
+- Ability to create a testlist, set build projects, etc.
+x!!!BUG: When doing my demos, the selected entity isn't surviving the assembly refresh. :-(
+x- Remove the mcut "Finished." output. Replace with the summary of the test result.
+x- Add ability to "repeat" any test type, not just chess tests. - Benifit of Action refactoring and TestTypeContollers
+x- BUG: - Fixed, but this just exposed another bug documented to be fixed later
+	1. Run Chess Test w/Race Detection and bound #execs so it doesn't explore all possible schedules.
+	2. Right-click run and click "Continue Test"
+	result: Error: /repro, /continue, or /trace specified, but file 'sched' is not present
+x- Implement a builder pattern for test types: - Implemented for Actions so far.
+	x- So a new test type may be declared and in one spot all required implementation details can be specified.
+x- When deleting a test run: If in the explorer tree, select the parent node
+x- When refreshing a file, make sure the prev selection can stay selected if it's kept. Otherwise, select it's closest existing ancestor entity
+x- If an assembly file couldn't be loaded, add an attribute to indicate such so the UI may present that warning in the tree.
+	Fix: The UI is now more robust to detect failed recursive loads and keeps the node for the assembly/testlist so it can
+	be right-click refreshed.
+x- When creating a testCase for a managed test method with args
+	x- add the arg values into the testcase name
+	x- use the testCase\@name in the ui (e.g. in bucket list, task list)
+x- Rename to Alpaca (with a new logo)
+x- Make the RegressionTestExpectedResult take an array of acceptable TestResultTypes
+x- When deleting session, also delete all the folders that exist in the session folder.
+x- Need to be more forgiving with deleting tasks that haven't been completed. - Addressed by the following two tasks
+x- Tasks that error out during the submit phase should be changed to an Error state, not kepts in a Pending state.
+x- When reloading a session a startup, need to auto-submit tasks stuck in the Pending state.
+x- Add another level to tree where each test type gets a node.
+x- !!! Auto-load assemblies and test lists by monitoring the source file.
+x- Allow specifying Environment Vars for mchess in the ChessContext. Create unit test for this. - Done using the PreRunScript property of the ChessContext attribute
+x- !!! Stop annoying change of selection whenever a task finishes or is created (when in a batch create)
+x- Allow specifying cmd line args for mchess in the ChessContext. Create unit test for this.
+
+Builds:
+-------------
+- MSBuild support
+	- Support specifying a target in the testlist xml
+- Build - Allow auto-refresh commands to happen before queuing up the test runs.
+- Add ability to do a 'rebuild' of an MSBuild project
+- Allow specifying which version of VS cmd line tools to use (for new or older projects)
+- Allow multiple build elements, e.g. when a testlist had multiple projects for all the imported test assemblies
+x- Support the UI to rebuild MSBuild build entities
+
+Unit Testing:
+-------------
+- Add ability for a class type to support type parameters (similar to TestArgs)
+	When serializing to xml, generate one class per type combination.
+	This would really help for writing a test against an interface, but allowing to swap out
+	different implementations.
+- Add ability to group tests/classes by custom categories. e.g. "Unit 2b Slide Examples"
+- Create regression tests for FauxParallel. - This class is No longer needed: Remove it and check the PPCP samples to make sure they don't use it anymore.
+- Create unit tests for the options available on the ScheduleTestMethod
+- Add the TestContext property availability so the following properties can be available during testing:
+	- TestMethodName
+	- ContextName
+	- TestType
+	- IsRegressionTest, etc
+- When reading a test assembly, sort testArgs by the actual strong-typed value. This will help runs to run the args in a meaningful order.
+- Reset the CUT.Framework project to use Warning level of 4 (I lowered it to 3 to ignore the comment warnings)
+- [assembly:TestAssemblyNameAttribute] - for controlling the name used in the auto-generated testlists.
+x- Validate there are no duplicate context names at each declaration level (i.e. at method and class level)
+x- Move FauxParallel into an external dll, outside of MCUT.Framework so that it may be referenced and instrumented seperately.
+x- Auto instrument referenced assemblies.
+	x- Add this to the testAssemblyReader. Re-add the assembly-level attribute ability
+	x- Don't include the MCUT.Framework dll
+x- When running a task, redirect the output from the whole script rather than just the test command (i.e. mchess).
+  This will also allow for more robust tests/tasks that may have more than one command.
+x- !!! Remove the need for the TestClass marker attribute. - Peli
+x- !!! Add exception info the <result> element. i.e. stackTrace. This will help to allow the developer to see it.
+x- Add the CUT Framework dll to the GAC so it's not copied by default into the test project's output folder and it can be referenced w/o manually knowing the location of the chess install folder.
+
+Regression Tests:
+- ChessMethodTests.cs - Add remaining tests for ChessExitCode. Need simple examples that expose each of the possible exit codes.
+
+
+
+Bug Scenario
+1. Build & Run "Debug" assembly tests
+2. While the previous build is going: Build & Run "Release" assembly tests
+Result: seems like the "Release" build didn't spawn its tests
+
+Bug Scenario - *FIXED*
+When starting ChessBoard where there's a file in the session for which the folder doesn't exist anymore
+the following exception occurs:
+	Unhandled Exception: System.ArgumentException: The directory name C:\srr\projects\PPCP\units\unit2\src\Testing\bin\Debug is invalid.
+	   at System.IO.FileSystemWatcher.set_Path(String value)
+	   at ChessBoard.Model.WatchedEntity..ctor(IHasSourceFile entity) in C:\Chess\dev\main\ChessBoard\Base\Model.cs:line 33
+	   at ChessBoard.Model.RegisterEntitiesWithSourceFiles(EntityBase source) in C:\Chess\dev\main\ChessBoard\Base\Model.cs:line 354
+	   at ChessBoard.Model.StartSession(FileInfo sessionfile, FileInfo sessionbackupfile, IEnumerable`1 batchcommands) in C:\Chess\dev\main\ChessBoard\Base\Model.cs:line 129
+	   at ChessBoard.Program.Main(String[] args) in C:\Chess\dev\main\ChessBoard\Base\Program.cs:line 47
+	To Fix: Create a FileSystemWatcher on the closest ancestor directory and detect when the folder had been created.
+
+
+TODO:
+UnitTestRunner
+x- Implement expected result functionality
+x- Implement preRunScript capability
+
+UI Wiz people
+- Andrew Begel
+
+Test Framework Researcher: Peli

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+    targetNamespace="http://research.microsoft.com/concurrency"
+    attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:mc="http://research.microsoft.com/concurrency"
+>
+
+  <xs:element name="error">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="message" type="xs:string"/>
+        <xs:element name="stackTrace" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="error" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="exceptionType" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="nonEmptyString">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

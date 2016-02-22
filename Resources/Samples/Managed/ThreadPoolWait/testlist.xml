@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testlist name="ThreadPoolWait Tests" xmlns="http://research.microsoft.com/chess">
+
+  <!--This element describes how to build solution -->
+
+  <build>
+    <startdir>@</startdir>
+    <executable>msbuild</executable>
+    <arg>ThreadPoolWait.sln</arg>
+  </build>
+
+  <!--The following settings apply to all of the tests-->
+
+  <startdir>@\TestProject1\bin\Debug</startdir>
+  <executable>mchess.exe</executable>
+  <carg>TestProject1.dll</carg>
+  <carg>/ia:ThreadPoolWait</carg>
+  <carg>/detectraces</carg>
+
+  <!--These are the tests-->
+
+  <test name="MainTest">
+    <carg>/arg:Main</carg>
+  </test>
+
+  <test name="MainTestFixed">
+    <carg>/arg:MainFixed</carg>
+  </test>
+
+</testlist>

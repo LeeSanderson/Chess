@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ChessSchema"
+    attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    targetNamespace="http://research.microsoft.com/chess"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:mc="http://research.microsoft.com/concurrency"
+    xmlns:chess="http://research.microsoft.com/chess"
+>
+  <xs:import namespace="http://research.microsoft.com/concurrency"/>
+
+  <xs:simpleType name="nonEmptyString">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="cmdLineArg" type="xs:string"/>
+
+  <xs:simpleType name="breakType">
+    <xs:union memberTypes="xs:string">
+      <xs:simpleType>
+        <xs:list>
+          <xs:annotation>
+            <xs:documentation>
+              .net serializes a Flags enum as a comma-delimited list but we can't strongly represent this in xml schema.
+              So we just make it flexible here.
+            </xs:documentation>
+          </xs:annotation>
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="NoBreak"/>
+              <xs:enumeration value="Start"/>
+              <xs:enumeration value="ContextSwitch"/>
+              <xs:enumeration value="Preemption"/>
+              <xs:enumeration value="AfterPreemption"/>
+              <xs:enumeration value="Deadlock"/>
+              <xs:enumeration value="Timeout"/>
+              <xs:enumeration value="Assertion"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:list>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+
+  <xs:simpleType name="exitCodeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success"/>
+      <xs:enumeration value="CHESS_START"/>
+      <xs:enumeration value="TestFailure"/>
+      <xs:enumeration value="ChessDeadlock"/>
+      <xs:enumeration value="ChessLivelock"/>
+      <xs:enumeration value="ChessTimeout"/>
+      <xs:enumeration value="ChessNonDet"/>
+      <xs:enumeration value="ChessInvalidTest"/>
+      <xs:enumeration value="ChessRace"/>
+      <xs:enumeration value="ChessIncompleteInterleavingCoverage"/>
+      <xs:enumeration value="ChessInvalidObservation"/>
+      <xs:enumeration value="ChessFailure"/>
+      <xs:enumeration value="ChessAtomicityViolation"/>
+      <xs:enumeration value="UnitTestAssertFailure"/>
+      <xs:enumeration value="UnitTestAssertInconclusive"/>
+      <xs:enumeration value="UnitTestException"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="instrumentAssembly">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:documentation>
+          Includes an assembly to instrument via chess.
+          This is equivalent to the ChessInstrumentAssemblyAttribute attribute.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:simpleContent>
+        <xs:extension base="chess:nonEmptyString">
+          <xs:attribute name="exclude" type="xs:boolean" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="defaultPreemptability" type="xs:boolean" />
+
+  <xs:simpleType name="preemptabilityTargetKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Assembly"/>
+      <xs:enumeration value="Namespace"/>
+      <xs:enumeration value="Type"/>
+      <xs:enumeration value="Method"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="togglePreemptability">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:documentation>
+          Includes an assembly to instrument via chess.
+          This is equivalent to the ChessInstrumentAssemblyAttribute attribute.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:simpleContent>
+        <xs:extension base="chess:nonEmptyString">
+          <xs:attribute name="targetKind" type="chess:preemptabilityTargetKind" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <!--Note: The MChess Options attributes are purposely upper case. They match the copy-paste casing of the MChessOptions structure's properties.-->
+  <xs:attributeGroup name="unitTestContextableAttributes">
+    <xs:attribute name="MaxChessTime" type="xs:int" use="optional"/>
+    <xs:attribute name="MaxPreemptions" type="xs:int" use="optional"/>
+    <xs:attribute name="MaxExecs" type="xs:int" use="optional"/>
+    <xs:attribute name="MaxExecSteps" type="xs:int" use="optional"/>
+    <xs:attribute name="MaxExecTime" type="xs:int" use="optional"/>
+    <xs:attribute name="ProcessorCount" type="xs:nonNegativeInteger" use="optional"/>
+
+    <xs:attribute name="EnableRaceDetection" type="xs:boolean" use="optional"/>
+    <xs:attribute name="EnableAtomicityChecking" type="xs:boolean" use="optional"/>
+    <xs:attribute name="PreemptVolatiles" type="xs:boolean" use="optional"/>
+    <xs:attribute name="PreemptAllAccesses" type="xs:boolean" use="optional"/>
+    <xs:attribute name="FlipPreemptionSense" type="xs:boolean" use="optional"/>
+
+    <xs:attribute name="ShowHBExecs" type="xs:boolean" use="optional"/>
+    <xs:attribute name="NoPopups" type="xs:boolean" use="optional"/>
+    <xs:attribute name="NoTime" type="xs:boolean" use="optional"/>
+  </xs:attributeGroup>
+
+  <xs:element name="mchessOptions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="chess:schedule" minOccurs="0" />
+        <xs:element ref="chess:instrumentAssembly" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="chess:togglePreemptability" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="chess:cmdLineArg" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attributeGroup ref="chess:unitTestContextableAttributes"/>
+      <xs:attribute name="Break" type="chess:breakType" use="optional"/>
+      <xs:attribute name="ScheduleFilePath" type="xs:string" use="optional"/>
+      <!-- Misc attributes:
+      EnableRepro
+      EnableTracing
+      TraceAllSchedules
+      TargetRace
+      EnumerateObservations
+      CheckObservations
+      ObservationFile
+      ObservationMode
+      ContinueFromLastSchedule
+      EnableLogging
+      PrintDiagnosticInformation
+      -->
+      <xs:anyAttribute namespace="##any" processContents="skip"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="resultType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Notification"/>
+      <xs:enumeration value="Warning"/>
+      <xs:enumeration value="Error"/>
+      <xs:enumeration value="Race"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="actionNameType">
+    <xs:annotation>
+      <xs:documentation>This should match the XChessNames.Actions lists.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="View"/>
+      <xs:enumeration value="Repeat"/>
+      <xs:enumeration value="Continue"/>
+      <xs:enumeration value="Repro"/>
+      <xs:enumeration value="Repro Last Schedule"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="scheduleFormat">
+    <xs:annotation>
+      <xs:documentation>Only 'hex' is supported.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="hex"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="schedule">
+    <xs:annotation>
+      <xs:documentation>A Chess schedule in Hex format.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:attribute name="format" type="chess:scheduleFormat" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="actionRaceType">
+    <xs:union memberTypes="xs:int xs:boolean"/>
+  </xs:simpleType>
+
+  <xs:element name="action">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="carg" type="xs:string" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              Usage: This is set by the NondeterminismHandler.cpp (RecoverNondeterminismOnBacktrack method).
+              Currently, we don't have a test for this or using the argument.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="name" type="chess:actionNameType" use="required"/>
+      <xs:attribute name="race" type="chess:actionRaceType" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="preemptionvars" type="xs:string"/>
+  <xs:element name="preemptionmethod" type="xs:string"/>
+
+  <xs:complexType name="resultsXType">
+    <xs:annotation>
+      <xs:documentation>The root node of a results.xml file.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="starttime" type="xs:string" minOccurs="0"/>
+      <xs:element name="commandline" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="executable" type="xs:string" minOccurs="0"/>
+            <xs:element name="startdir" type="xs:string" minOccurs="0"/>
+            <xs:element name="carg" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="chess:schedule" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="result" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="label" type="xs:string"/>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element ref="mc:error" minOccurs="0"/>
+            <xs:element ref="chess:preemptionvars" minOccurs="0"/>
+            <xs:element ref="chess:action" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="chess:schedule" minOccurs="0"/>
+            <xs:element ref="chess:preemptionmethod" minOccurs="0" maxOccurs="unbounded">
+              <xs:annotation>
+                <xs:documentation>
+                  Identifies the methods that the chess schedule performed a preemptions on
+                  for the schedule that caused this result.
+                  NOTE: This will occur only when doing a repro of a schedule and it's not
+                  a continuation of a previous run.
+                </xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+      <!--
+      Allow the specification of extra actions and the 'last schedule'.
+      These may be added to the results xml after chess has finished.
+      -->
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="chess:action"/>
+        <xs:element ref="chess:schedule"/>
+      </xs:choice>
+
+      <xs:element name="finalStats" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="exitCode" type="xs:int" use="optional"/>
+          <xs:attribute name="raceCount" type="xs:int" use="optional"/>
+          <xs:attribute name="warningCount" type="xs:int" use="optional"/>
+          <xs:attribute name="schedulesRan" type="xs:int" use="optional"/>
+          <xs:attribute name="lastThreadCount" type="xs:int" use="optional"/>
+          <xs:attribute name="lastExecSteps" type="xs:int" use="optional"/>
+          <xs:attribute name="lastHBExecSteps" type="xs:int" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="endtime" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="results" type="chess:resultsXType"/>
+  <xs:element name="chessResults" type="chess:resultsXType"/>
+</xs:schema>

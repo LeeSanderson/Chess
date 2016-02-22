@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testlist name="All Chess/MCUT Tests" xmlns="http://research.microsoft.com/concurrency/unittesting">
+  <!--Loads up all the tests for regressions and samples.-->
+  <!--This is now invalid xml: <include>@\..\ManagedTest\testlist.xml</include>-->
+  <include location="@\..\ConcurrencyTools\RegressionTesting\RegressionTesting.TestList.xml"/>
+  <include location="@\..\SampleRuntimes\MiniMPI\AlpacaTestProject\AlpacaTestProject.csproj"/>
+</testlist>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testlist name="Regression Tests" xmlns="http://research.microsoft.com/concurrency/unittesting">
+  <msbuild project="@\RegressionTesting.sln" configuration="Debug" />
+
+  <testProject location="@\MCUT.Framework\MCUT.Framework.RegressionTests.csproj" configuration="Debug">
+    <goldenObservationFilesFolderPath>.\obs.golden</goldenObservationFilesFolderPath>
+  </testProject>
+  <testProject location="@\MChess\MChess.RegressionTests.csproj" configuration="Debug" />
+  <include location="@\RecursiveBuildTests.TestList.xml"/>
+</testlist>

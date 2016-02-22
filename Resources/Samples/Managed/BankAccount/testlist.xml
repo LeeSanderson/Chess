@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testlist name="BankAccount" xmlns="http://research.microsoft.com/chess">
+
+  <!-- This element describes how to build the Bank example -->
+  <build>
+    <startdir>@</startdir>
+    <executable>msbuild</executable>
+    <arg>Bank.sln</arg>
+    <arg>/p:Configuration=Debug</arg>
+  </build>
+
+  <!-- We use just a single test in this example -->
+  <test name="Test">
+    <startdir>@\TestBank\bin\Debug</startdir>
+    <executable>mchess</executable>
+    <carg>TestBank.dll</carg>
+    <carg>/ia:Bank</carg>
+  </test>
+
+</testlist>

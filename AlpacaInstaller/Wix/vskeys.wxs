@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Include xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <RegistryKey Key="EnterpriseTools\QualityTools" Action="none">
+    <RegistryKey Key="TestTypes\{13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b}\SupportedHostAdapters" Action="none">
+      <RegistryValue Name="Chess" Value="" Type="string" />
+    </RegistryKey>
+    <RegistryKey Key="HostAdapters" Action="none">
+      <RegistryKey Key="Chess" Action="createAndRemoveOnUninstall">
+        <RegistryValue 
+          Name="Type" 
+          Value="Microsoft.ManagedChess.TeamTestHost.MasterHostAdapter, Microsoft.ManagedChess.TeamTestHost, Version=$(var.VersionNumber), Culture=neutral, PublicKeyToken=72df61d2ac4e49c5"
+          Type="string"/>
+        <RegistryValue 
+          Name="EditorType" 
+          Value="Microsoft.ManagedChess.TeamTestHost.RunConfigurationCustomHostEditor, Microsoft.ManagedChess.TeamTestHost, Version=$(var.VersionNumber), Culture=neutral, PublicKeyToken=72df61d2ac4e49c5"
+          Type="string"/>
+        <RegistryKey Key="SupportedTestTypes">
+          <RegistryValue Name="{13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b}" Value="" Type="string" />
+        </RegistryKey>
+      </RegistryKey>
+    </RegistryKey>
+  </RegistryKey>
+</Include>

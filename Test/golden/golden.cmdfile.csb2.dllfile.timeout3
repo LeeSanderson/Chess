@@ -1,0 +1,25 @@
+Tests: 1 Threads: 3 ExecSteps: 26 HBExecs: 1 
+Tests: 2 Threads: 3 ExecSteps: 29 HBExecs: 2 
+Tests: 3 Threads: 3 ExecSteps: 29 HBExecs: 2 
+Tests: 4 Threads: 3 ExecSteps: 32 HBExecs: 3 
+Tests: 5 Threads: 3 ExecSteps: 35 HBExecs: 4 
+Tests: 6 Threads: 3 ExecSteps: 35 HBExecs: 4 
+Tests: 7 Threads: 3 ExecSteps: 35 HBExecs: 4 
+Tests: 8 Threads: 3 ExecSteps: 35 HBExecs: 4 
+Tests: 9 Threads: 3 ExecSteps: 35 HBExecs: 4 
+Tests: 10 Threads: 3 ExecSteps: 35 HBExecs: 4 
+Tests: 20 Threads: 3 ExecSteps: 38 HBExecs: 5 
+Tests: 30 Threads: 3 ExecSteps: 44 HBExecs: 7 
+Tests: 40 Threads: 3 ExecSteps: 50 HBExecs: 10 
+Tests: 50 Threads: 3 ExecSteps: 50 HBExecs: 12 
+Tests: 60 Threads: 3 ExecSteps: 50 HBExecs: 12 
+Tests: 70 Threads: 3 ExecSteps: 50 HBExecs: 13 
+Tests: 80 Threads: 3 ExecSteps: 50 HBExecs: 15 
+Tests: 90 Threads: 3 ExecSteps: 56 HBExecs: 19 
+Tests: 100 Threads: 3 ExecSteps: 59 HBExecs: 20 
+Tests: 200 Threads: 3 ExecSteps: 59 HBExecs: 22 
+Tests: 300 Threads: 3 ExecSteps: 59 HBExecs: 26 
+Tests: 400 Threads: 3 ExecSteps: 59 HBExecs: 29 
+Tests: 493 Threads: 3 ExecSteps: 59 HBExecs: 32 
+Search Completed (0 Warnings).
+Exit code = 0 

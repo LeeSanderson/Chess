@@ -1,0 +1,24 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing semaphore.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+Tests: 1 Threads: 3 ExecSteps: 18 HBExecs: 1 
+Tests: 2 Threads: 3 ExecSteps: 18 HBExecs: 2 
+Tests: 3 Threads: 3 ExecSteps: 18 HBExecs: 3 
+Tests: 4 Threads: 3 ExecSteps: 18 HBExecs: 3 
+Tests: 5 Threads: 3 ExecSteps: 18 HBExecs: 3 
+Tests: 6 Threads: 3 ExecSteps: 18 HBExecs: 3 
+Tests: 7 Threads: 3 ExecSteps: 18 HBExecs: 3 
+Tests: 8 Threads: 3 ExecSteps: 18 HBExecs: 3 
+Tests: 9 Threads: 3 ExecSteps: 18 HBExecs: 3 
+Tests: 10 Threads: 3 ExecSteps: 18 HBExecs: 4 
+Tests: 20 Threads: 3 ExecSteps: 18 HBExecs: 4 
+Tests: 30 Threads: 3 ExecSteps: 18 HBExecs: 4 
+Tests: 40 Threads: 3 ExecSteps: 18 HBExecs: 4 
+Tests: 50 Threads: 3 ExecSteps: 18 HBExecs: 4 
+Tests: 60 Threads: 3 ExecSteps: 18 HBExecs: 4 
+Tests: 70 Threads: 3 ExecSteps: 18 HBExecs: 4 
+Tests: 80 Threads: 3 ExecSteps: 18 HBExecs: 4 
+Tests: 90 Threads: 3 ExecSteps: 18 HBExecs: 4 
+Tests: 99 Threads: 3 ExecSteps: 18 HBExecs: 4 
+Search Completed (1 Warning).
+Exit code = 0 

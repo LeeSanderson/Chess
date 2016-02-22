@@ -1,0 +1,746 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session xmlns="http://research.microsoft.com/chess">
+  <testlist name="Samples" xmlns="http://research.microsoft.com/chess">
+    <!-- This testlist includes all testlists for managed samples -->
+    <testlist name="SimpleBank" xmlns="http://research.microsoft.com/chess">
+      <!-- This element describes how to build the SimpleBank example -->
+      <build>
+        <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\SimpleBank</startdir>
+        <executable>msbuild</executable>
+        <arg>SimpleBank.sln</arg>
+        <arg>/p:Configuration=Debug</arg>
+        <run>
+          <backend>Local (4)</backend>
+          <taskindex>1</taskindex>
+          <taskid>0000001</taskid>
+          <testdir>c:\Users\tball\chess\dev\main\Installer\taskdir.0000001</testdir>
+          <startscript>c:\Users\tball\chess\dev\main\Installer\taskdir.0000001\start.cmd</startscript>
+          <pid>38432</pid>
+          <starttime>3/9/2010 3:35:34 PM</starttime>
+        </run>
+      </build>
+      <!-- The following parameters apply to all tests -->
+      <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\SimpleBank\bin\Debug</startdir>
+      <executable>mchess</executable>
+      <carg>SimpleBank.dll</carg>
+      <!-- Define the 2 tests with their respective parameters -->
+      <test name="Test1">
+        <carg>/testclass:SimpleBank.Test1</carg>
+        <run>
+          <name>Run</name>
+          <backend>Local (4)</backend>
+          <taskindex>9</taskindex>
+          <taskid>0000009</taskid>
+          <testdir>c:\Users\tball\chess\dev\main\Installer\taskdir.0000009</testdir>
+          <startscript>c:\Users\tball\chess\dev\main\Installer\taskdir.0000009\start.cmd</startscript>
+          <pid>21980</pid>
+          <starttime>3/9/2010 3:36:18 PM</starttime>
+          <results xmlns="http://research.microsoft.com/chess">
+            <starttime>Tue Mar 09 03:36:21 2010 PM</starttime>
+            <commandline>
+              <executable>c:\Users\tball\chess\dev\main\scripts\..\bin\mchess.exe</executable>
+              <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\SimpleBank\bin\Debug</startdir>
+              <carg>SimpleBank.dll</carg>
+              <carg>/testclass:SimpleBank.Test1</carg>
+              <carg>/schedulefile:c:\Users\tball\chess\dev\main\Installer\taskdir.0000009\inputschedule</carg>
+              <carg>/outputprefix:c:\Users\tball\chess\dev\main\Installer\taskdir.0000009\</carg>
+            </commandline>
+            <result>
+              <label>W1</label>
+              <description>Race Detection Disabled. Races May Hide Bugs.</description>
+            </result>
+            <result>
+              <label>N</label>
+              <description>Search Completed</description>
+            </result>
+            <endtime>Tue Mar 09 03:36:22 2010 PM</endtime>
+            <action name="Repro Last Schedule" />
+            <schedule format="hex">
+   01000000 01000000 07000000 01000000 FF010000 01000000 01000000 FF010000 12000000 01000000 02000000 05000000 01000000 02000000 09000000 01000000
+   03000000 05000000 01000000 03000000 09000000 03000000 03000000 06000000 03000000 01000000 00000000 01000000 FF010000 12000000 01000000 01000000
+   01000000 00000000 00000000 01000000 00000000 06000000 02000000 08000000</schedule>
+            <action name="Repeat" />
+          </results>
+        </run>
+      </test>
+      <test name="Test2">
+        <carg>/testclass:SimpleBank.Test2</carg>
+        <run>
+          <name>Run</name>
+          <backend>Local (4)</backend>
+          <taskindex>10</taskindex>
+          <taskid>0000010</taskid>
+          <testdir>c:\Users\tball\chess\dev\main\Installer\taskdir.0000010</testdir>
+          <startscript>c:\Users\tball\chess\dev\main\Installer\taskdir.0000010\start.cmd</startscript>
+          <pid>21968</pid>
+          <starttime>3/9/2010 3:36:18 PM</starttime>
+          <results xmlns="http://research.microsoft.com/chess">
+            <starttime>Tue Mar 09 03:36:22 2010 PM</starttime>
+            <commandline>
+              <executable>c:\Users\tball\chess\dev\main\scripts\..\bin\mchess.exe</executable>
+              <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\SimpleBank\bin\Debug</startdir>
+              <carg>SimpleBank.dll</carg>
+              <carg>/testclass:SimpleBank.Test2</carg>
+              <carg>/schedulefile:c:\Users\tball\chess\dev\main\Installer\taskdir.0000010\inputschedule</carg>
+              <carg>/outputprefix:c:\Users\tball\chess\dev\main\Installer\taskdir.0000010\</carg>
+            </commandline>
+            <result>
+              <label>W1</label>
+              <description>Race Detection Disabled. Races May Hide Bugs.</description>
+            </result>
+            <result>
+              <label>N</label>
+              <description>Search Completed</description>
+            </result>
+            <endtime>Tue Mar 09 03:36:22 2010 PM</endtime>
+            <action name="Repro Last Schedule" />
+            <schedule format="hex">
+   01000000 01000000 0B000000 01000000 FF010000 01000000 01000000 FF010000 12000000 01000000 02000000 05000000 01000000 02000000 09000000 01000000
+   03000000 05000000 01000000 03000000 09000000 01000000 04000000 05000000 01000000 04000000 09000000 04000000 04000000 06000000 04000000 04000000
+   07000000 03000000 03000000 06000000 03000000 01000000 00000000 01000000 FF010000 12000000 01000000 01000000 01000000 00000000 00000000 01000000
+   00000000 08000000 02000000 08000000</schedule>
+            <action name="Repeat" />
+          </results>
+        </run>
+      </test>
+    </testlist>
+    <testlist name="BankAccount" xmlns="http://research.microsoft.com/chess">
+      <!-- This element describes how to build the Bank example -->
+      <build>
+        <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\BankAccount</startdir>
+        <executable>msbuild</executable>
+        <arg>Bank.sln</arg>
+        <arg>/p:Configuration=Debug</arg>
+        <run>
+          <backend>Local (4)</backend>
+          <taskindex>2</taskindex>
+          <taskid>0000002</taskid>
+          <testdir>c:\Users\tball\chess\dev\main\Installer\taskdir.0000002</testdir>
+          <startscript>c:\Users\tball\chess\dev\main\Installer\taskdir.0000002\start.cmd</startscript>
+          <pid>38508</pid>
+          <starttime>3/9/2010 3:35:34 PM</starttime>
+        </run>
+      </build>
+      <!-- We use just a single test in this example -->
+      <test name="Test">
+        <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\BankAccount\TestBank\bin\Debug</startdir>
+        <executable>mchess</executable>
+        <carg>TestBank.dll</carg>
+        <carg>/ia:Bank</carg>
+        <run>
+          <name>Run</name>
+          <backend>Local (4)</backend>
+          <taskindex>11</taskindex>
+          <taskid>0000011</taskid>
+          <testdir>c:\Users\tball\chess\dev\main\Installer\taskdir.0000011</testdir>
+          <startscript>c:\Users\tball\chess\dev\main\Installer\taskdir.0000011\start.cmd</startscript>
+          <pid>21832</pid>
+          <starttime>3/9/2010 3:36:18 PM</starttime>
+          <results xmlns="http://research.microsoft.com/chess">
+            <starttime>Tue Mar 09 03:36:22 2010 PM</starttime>
+            <commandline>
+              <executable>c:\Users\tball\chess\dev\main\scripts\..\bin\mchess.exe</executable>
+              <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\BankAccount\TestBank\bin\Debug</startdir>
+              <carg>TestBank.dll</carg>
+              <carg>/ia:Bank</carg>
+              <carg>/schedulefile:c:\Users\tball\chess\dev\main\Installer\taskdir.0000011\inputschedule</carg>
+              <carg>/outputprefix:c:\Users\tball\chess\dev\main\Installer\taskdir.0000011\</carg>
+            </commandline>
+            <result>
+              <label>W1</label>
+              <description>Race Detection Disabled. Races May Hide Bugs.</description>
+            </result>
+            <result>
+              <label>E</label>
+              <description>ChessTest.Run raised exception
+
+Assert.AreEqual failed. Expected:&lt;9&gt;. Actual:&lt;8&gt;. 
+
+Stack trace:
+
+   at Microsoft.VisualStudio.TestTools.UnitTesting.Assert.HandleFail(String assertionName, String message, Object[] parameters)
+
+   at Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual[T](T expected, T actual, String message, Object[] parameters)
+
+   at Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual[T](T expected, T actual)
+
+   at TestBank.TestBank.WithdrawAndDepositConcurrently() in c:\Users\tball\chess\dev\main\Installer\Samples\Managed\BankAccount\TestBank\TestBank.cs:line 28
+
+   at TestBank.ChessTest.Run() in c:\Users\tball\chess\dev\main\Installer\Samples\Managed\BankAccount\TestBank\ChessTest.cs:line 18
+
+</description>
+              <action name="Repro" />
+              <schedule format="hex">
+     01000000 01000000 0F000000 01000000 FF010000 01000000 01000000 FF010000 12000000 01000000 02000000 05000000 01000000 02000000 09000000 02000000
+     02000000 06000000 02000000 00020000 02000000 02000000 00020000 04000000 01000000 00020000 02000000 01000000 00020000 04000000 02000000 00020000
+     02000000 02000000 00020000 04000000 02000000 02000000 07000000 01000000 02000000 08000000 01000000 00020000 02000000 01000000 00020000 04000000
+     03000000 01000000 00000000 01000000 FF010000 12000000 01000000 01000000 01000000 00000000 00000000 01000000 00000000 09000000 02000000 08000000
+    </schedule>
+            </result>
+            <endtime>Tue Mar 09 03:36:22 2010 PM</endtime>
+            <action name="Repro Last Schedule" />
+            <schedule format="hex">
+   01000000 01000000 08000000 01000000 FF010000 01000000 01000000 FF010000 12000000 01000000 02000000 05000000 01000000 02000000 09000000 02000000
+   02000000 06000000 02000000 00020000 02000000 02000000 00020000 04000000 01000000 00020000 02000000 02000000 01000000 00000000 01000000 FF010000
+   12000000 01000000 01000000 01000000 00000000 00000000</schedule>
+            <action name="Repeat" />
+          </results>
+        </run>
+      </test>
+    </testlist>
+    <testlist name="Producer-Consumer Queue Tests" xmlns="http://research.microsoft.com/chess">
+      <!--This element describes how to build the queue and the queue tests -->
+      <build>
+        <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\ProducerConsumerQueue</startdir>
+        <executable>msbuild</executable>
+        <arg>ProducerConsumerQueue.sln</arg>
+        <run>
+          <backend>Local (4)</backend>
+          <taskindex>3</taskindex>
+          <taskid>0000003</taskid>
+          <testdir>c:\Users\tball\chess\dev\main\Installer\taskdir.0000003</testdir>
+          <startscript>c:\Users\tball\chess\dev\main\Installer\taskdir.0000003\start.cmd</startscript>
+          <pid>38640</pid>
+          <starttime>3/9/2010 3:35:34 PM</starttime>
+        </run>
+      </build>
+      <!--The following settings apply to all of the tests-->
+      <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\ProducerConsumerQueue/BoundedQueueTest/bin/Debug</startdir>
+      <executable>mchess.exe</executable>
+      <carg>BoundedQueueTest.dll</carg>
+      <carg>/ia:ProducerConsumerQueue</carg>
+      <!--These are the tests-->
+      <test name="NoConsumer">
+        <carg>/arg:NoConsumer</carg>
+        <run>
+          <name>Run</name>
+          <backend>Local (4)</backend>
+          <taskindex>12</taskindex>
+          <taskid>0000012</taskid>
+          <testdir>c:\Users\tball\chess\dev\main\Installer\taskdir.0000012</testdir>
+          <startscript>c:\Users\tball\chess\dev\main\Installer\taskdir.0000012\start.cmd</startscript>
+          <pid>13544</pid>
+          <starttime>3/9/2010 3:36:23 PM</starttime>
+          <results xmlns="http://research.microsoft.com/chess">
+            <starttime>Tue Mar 09 03:36:26 2010 PM</starttime>
+            <commandline>
+              <executable>c:\Users\tball\chess\dev\main\scripts\..\bin\mchess.exe</executable>
+              <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\ProducerConsumerQueue\BoundedQueueTest\bin\Debug</startdir>
+              <carg>BoundedQueueTest.dll</carg>
+              <carg>/ia:ProducerConsumerQueue</carg>
+              <carg>/arg:NoConsumer</carg>
+              <carg>/schedulefile:c:\Users\tball\chess\dev\main\Installer\taskdir.0000012\inputschedule</carg>
+              <carg>/outputprefix:c:\Users\tball\chess\dev\main\Installer\taskdir.0000012\</carg>
+            </commandline>
+            <result>
+              <label>W1</label>
+              <description>Race Detection Disabled. Races May Hide Bugs.</description>
+            </result>
+            <result>
+              <label>E</label>
+              <description>Deadlock</description>
+              <action name="Repro" />
+              <schedule format="hex">
+     01000000 01000000 1A000000 01000000 FF010000 01000000 01000000 FF010000 12000000 01000000 00020000 02000000 01000000 00020000 04000000 01000000
+     00020000 04000000 01000000 00020000 02000000 01000000 00020000 04000000 01000000 00020000 02000000 01000000 00020000 04000000 01000000 00020000
+     02000000 01000000 00020000 04000000 01000000 00020000 02000000 01000000 00020000 04000000 01000000 00020000 02000000 01000000 00020000 04000000
+     01000000 00020000 02000000 01000000 00020000 04000000 01000000 00020000 02000000 01000000 00020000 04000000 01000000 00020000 02000000 01000000
+     00020000 04000000 01000000 00020000 02000000 01000000 00020000 04000000 01000000 00020000 02000000 01000000 00020000 04000000 01000000 01000000
+     0B000000 03000000 01000000 00000000 01000000 FF010000 12000000 01000000 01000000 01000000 00000000 00000000 01000000 00000000 1A000000 00020000
+     02000000
+    </schedule>
+            </result>
+            <endtime>Tue Mar 09 03:36:27 2010 PM</endtime>
+            <action name="Repro Last Schedule" />
+            <schedule format="hex">
+   01000000 01000000 02000000 01000000 FF010000 01000000 01000000 FF010000 12000000 02000000 01000000 00000000 01000000 FF010000 12000000 01000000
+   01000000 01000000 00000000 00000000</schedule>
+            <action name="Repeat" />
+          </results>
+        </run>
+      </test>
+      <test name="NoProducer">
+        <carg>/arg:NoProducer</carg>
+        <run>
+          <name>Run</name>
+          <backend>Local (4)</backend>
+          <taskindex>13</taskindex>
+          <taskid>0000013</taskid>
+          <testdir>c:\Users\tball\chess\dev\main\Installer\taskdir.0000013</testdir>
+          <startscript>c:\Users\tball\chess\dev\main\Installer\taskdir.0000013\start.cmd</startscript>
+          <pid>12084</pid>
+          <starttime>3/9/2010 3:36:23 PM</starttime>
+          <results xmlns="http://research.microsoft.com/chess">
+            <starttime>Tue Mar 09 03:36:26 2010 PM</starttime>
+            <commandline>
+              <executable>c:\Users\tball\chess\dev\main\scripts\..\bin\mchess.exe</executable>
+              <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\ProducerConsumerQueue\BoundedQueueTest\bin\Debug</startdir>
+              <carg>BoundedQueueTest.dll</carg>
+              <carg>/ia:ProducerConsumerQueue</carg>
+              <carg>/arg:NoProducer</carg>
+              <carg>/schedulefile:c:\Users\tball\chess\dev\main\Installer\taskdir.0000013\inputschedule</carg>
+              <carg>/outputprefix:c:\Users\tball\chess\dev\main\Installer\taskdir.0000013\</carg>
+            </commandline>
+            <result>
+              <label>W1</label>
+              <description>Race Detection Disabled. Races May Hide Bugs.</description>
+            </result>
+            <result>
+              <label>E</label>
+              <description>Deadlock</description>
+              <action name="Repro" />
+              <schedule format="hex">
+     01000000 01000000 05000000 01000000 FF010000 01000000 01000000 FF010000 12000000 01000000 00020000 02000000 01000000 00020000 04000000 01000000
+     01000000 0B000000 03000000 01000000 00000000 01000000 FF010000 12000000 01000000 01000000 01000000 00000000 00000000 01000000 00000000 05000000
+     00020000 02000000
+    </schedule>
+            </result>
+            <endtime>Tue Mar 09 03:36:26 2010 PM</endtime>
+            <action name="Repro Last Schedule" />
+            <schedule format="hex">
+   01000000 01000000 02000000 01000000 FF010000 01000000 01000000 FF010000 12000000 02000000 01000000 00000000 01000000 FF010000 12000000 01000000
+   01000000 01000000 00000000 00000000</schedule>
+            <action name="Repeat" />
+          </results>
+        </run>
+      </test>
+      <test name="OneProdOneCons">
+        <carg>/arg:OneProdOneCons</carg>
+        <run>
+          <name>Run</name>
+          <backend>Local (4)</backend>
+          <taskindex>14</taskindex>
+          <taskid>0000014</taskid>
+          <testdir>c:\Users\tball\chess\dev\main\Installer\taskdir.0000014</testdir>
+          <startscript>c:\Users\tball\chess\dev\main\Installer\taskdir.0000014\start.cmd</startscript>
+          <pid>3456</pid>
+          <starttime>3/9/2010 3:36:23 PM</starttime>
+          <results xmlns="http://research.microsoft.com/chess">
+            <starttime>Tue Mar 09 03:36:26 2010 PM</starttime>
+            <commandline>
+              <executable>c:\Users\tball\chess\dev\main\scripts\..\bin\mchess.exe</executable>
+              <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\ProducerConsumerQueue\BoundedQueueTest\bin\Debug</startdir>
+              <carg>BoundedQueueTest.dll</carg>
+              <carg>/ia:ProducerConsumerQueue</carg>
+              <carg>/arg:OneProdOneCons</carg>
+              <carg>/schedulefile:c:\Users\tball\chess\dev\main\Installer\taskdir.0000014\inputschedule</carg>
+              <carg>/outputprefix:c:\Users\tball\chess\dev\main\Installer\taskdir.0000014\</carg>
+            </commandline>
+            <result>
+              <label>W1</label>
+              <description>Race Detection Disabled. Races May Hide Bugs.</description>
+            </result>
+            <result>
+              <label>N</label>
+              <description>Search Completed</description>
+            </result>
+            <endtime>Tue Mar 09 03:36:28 2010 PM</endtime>
+            <action name="Repro Last Schedule" />
+            <schedule format="hex">
+   01000000 01000000 09000000 01000000 FF010000 01000000 01000000 FF010000 12000000 01000000 02000000 05000000 01000000 02000000 09000000 01000000
+   03000000 05000000 01000000 03000000 09000000 03000000 03000000 06000000 02000000 02000000 06000000 03000000 00020000 02000000 03000000 01000000
+   00000000 01000000 FF010000 12000000 01000000 01000000 01000000 00000000 00000000 01000000 00000000 06000000 02000000 08000000</schedule>
+            <action name="Repeat" />
+          </results>
+        </run>
+      </test>
+      <test name="OneProdTwoCons">
+        <carg>/arg:OneProdTwoCons</carg>
+        <run>
+          <name>Run</name>
+          <backend>Local (4)</backend>
+          <taskindex>15</taskindex>
+          <taskid>0000015</taskid>
+          <testdir>c:\Users\tball\chess\dev\main\Installer\taskdir.0000015</testdir>
+          <startscript>c:\Users\tball\chess\dev\main\Installer\taskdir.0000015\start.cmd</startscript>
+          <pid>15672</pid>
+          <starttime>3/9/2010 3:36:28 PM</starttime>
+          <results xmlns="http://research.microsoft.com/chess">
+            <starttime>Tue Mar 09 03:36:32 2010 PM</starttime>
+            <commandline>
+              <executable>c:\Users\tball\chess\dev\main\scripts\..\bin\mchess.exe</executable>
+              <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\ProducerConsumerQueue\BoundedQueueTest\bin\Debug</startdir>
+              <carg>BoundedQueueTest.dll</carg>
+              <carg>/ia:ProducerConsumerQueue</carg>
+              <carg>/arg:OneProdTwoCons</carg>
+              <carg>/schedulefile:c:\Users\tball\chess\dev\main\Installer\taskdir.0000015\inputschedule</carg>
+              <carg>/outputprefix:c:\Users\tball\chess\dev\main\Installer\taskdir.0000015\</carg>
+            </commandline>
+            <result>
+              <label>W1</label>
+              <description>Race Detection Disabled. Races May Hide Bugs.</description>
+            </result>
+            <result>
+              <label>E</label>
+              <description>Deadlock</description>
+              <action name="Repro" />
+              <schedule format="hex">
+     01000000 01000000 32000000 01000000 FF010000 01000000 01000000 FF010000 12000000 01000000 02000000 05000000 01000000 02000000 09000000 01000000
+     03000000 05000000 01000000 03000000 09000000 01000000 04000000 05000000 01000000 04000000 09000000 02000000 02000000 06000000 02000000 00020000
+     02000000 02000000 00020000 04000000 02000000 00020000 04000000 02000000 00020000 02000000 02000000 00020000 04000000 02000000 00020000 02000000
+     02000000 00020000 04000000 02000000 02000000 0B000000 03000000 03000000 06000000 03000000 00020000 02000000 03000000 00020000 04000000 03000000
+     00020000 04000000 03000000 00020000 02000000 03000000 00020000 04000000 03000000 00020000 02000000 03000000 00020000 04000000 03000000 03000000
+     0B000000 04000000 04000000 06000000 04000000 00020000 02000000 04000000 00020000 04000000 04000000 04000000 0B000000 02000000 00020000 02000000
+     02000000 00020000 02000000 02000000 00020000 04000000 02000000 00020000 04000000 02000000 00020000 02000000 02000000 00020000 04000000 02000000
+     00020000 02000000 02000000 00020000 04000000 02000000 02000000 0B000000 03000000 00020000 02000000 03000000 00020000 02000000 03000000 00020000
+     04000000 03000000 00020000 04000000 03000000 03000000 07000000 04000000 00020000 02000000 04000000 00020000 02000000 04000000 00020000 04000000
+     04000000 00020000 02000000 04000000 00020000 04000000 04000000 04000000 0B000000 08000000 01000000 00000000 01000000 FF010000 12000000 01000000
+     01000000 01000000 00000000 00000000 01000000 00000000 08000000 02000000 08000000 02000000 00000000 11000000 00020000 02000000 03000000 00000000
+     1A000000 00020000 02000000 04000000 00000000 1E000000 00020000 02000000 02000000 00000000 32000000 00020000 02000000 04000000 00000000 32000000
+     00020000 02000000
+    </schedule>
+            </result>
+            <endtime>Tue Mar 09 03:36:32 2010 PM</endtime>
+            <action name="Repro Last Schedule" />
+            <schedule format="hex">
+   01000000 01000000 02000000 01000000 FF010000 01000000 01000000 FF010000 12000000 02000000 01000000 00000000 01000000 FF010000 12000000 01000000
+   01000000 01000000 00000000 00000000</schedule>
+            <action name="Repeat" />
+          </results>
+        </run>
+      </test>
+      <test name="TwoProdOneCons">
+        <carg>/arg:TwoProdOneCons</carg>
+        <run>
+          <name>Run</name>
+          <backend>Local (4)</backend>
+          <taskindex>16</taskindex>
+          <taskid>0000016</taskid>
+          <testdir>c:\Users\tball\chess\dev\main\Installer\taskdir.0000016</testdir>
+          <startscript>c:\Users\tball\chess\dev\main\Installer\taskdir.0000016\start.cmd</startscript>
+          <pid>15196</pid>
+          <starttime>3/9/2010 3:36:28 PM</starttime>
+          <results xmlns="http://research.microsoft.com/chess">
+            <starttime>Tue Mar 09 03:36:32 2010 PM</starttime>
+            <commandline>
+              <executable>c:\Users\tball\chess\dev\main\scripts\..\bin\mchess.exe</executable>
+              <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\ProducerConsumerQueue\BoundedQueueTest\bin\Debug</startdir>
+              <carg>BoundedQueueTest.dll</carg>
+              <carg>/ia:ProducerConsumerQueue</carg>
+              <carg>/arg:TwoProdOneCons</carg>
+              <carg>/schedulefile:c:\Users\tball\chess\dev\main\Installer\taskdir.0000016\inputschedule</carg>
+              <carg>/outputprefix:c:\Users\tball\chess\dev\main\Installer\taskdir.0000016\</carg>
+            </commandline>
+            <result>
+              <label>W1</label>
+              <description>Race Detection Disabled. Races May Hide Bugs.</description>
+            </result>
+            <result>
+              <label>E</label>
+              <description>Deadlock</description>
+              <action name="Repro" />
+              <schedule format="hex">
+     01000000 01000000 2A000000 01000000 FF010000 01000000 01000000 FF010000 12000000 01000000 02000000 05000000 01000000 02000000 09000000 01000000
+     03000000 05000000 01000000 03000000 09000000 01000000 04000000 05000000 01000000 04000000 09000000 02000000 02000000 06000000 02000000 00020000
+     02000000 02000000 00020000 04000000 02000000 00020000 04000000 02000000 00020000 02000000 02000000 00020000 04000000 02000000 00020000 02000000
+     02000000 00020000 04000000 02000000 02000000 0B000000 03000000 03000000 06000000 03000000 00020000 02000000 03000000 00020000 04000000 03000000
+     03000000 0B000000 04000000 04000000 06000000 04000000 00020000 02000000 04000000 00020000 04000000 04000000 00020000 04000000 04000000 00020000
+     02000000 04000000 00020000 04000000 04000000 00020000 02000000 04000000 00020000 04000000 04000000 04000000 0B000000 02000000 00020000 02000000
+     02000000 00020000 02000000 02000000 00020000 04000000 02000000 00020000 04000000 02000000 02000000 07000000 03000000 00020000 02000000 03000000
+     00020000 02000000 03000000 00020000 04000000 03000000 00020000 02000000 03000000 00020000 04000000 03000000 03000000 0B000000 01000000 02000000
+     08000000 09000000 01000000 00000000 01000000 FF010000 12000000 01000000 01000000 01000000 00000000 00000000 01000000 00000000 08000000 02000000
+     08000000 02000000 00000000 11000000 00020000 02000000 03000000 00000000 15000000 00020000 02000000 04000000 00000000 1E000000 00020000 02000000
+     04000000 00000000 29000000 00020000 02000000 03000000 00000000 29000000 00020000 02000000 01000000 00000000 2A000000 03000000 08000000
+    </schedule>
+            </result>
+            <endtime>Tue Mar 09 03:36:32 2010 PM</endtime>
+            <action name="Repro Last Schedule" />
+            <schedule format="hex">
+   01000000 01000000 02000000 01000000 FF010000 01000000 01000000 FF010000 12000000 02000000 01000000 00000000 01000000 FF010000 12000000 01000000
+   01000000 01000000 00000000 00000000</schedule>
+            <action name="Repeat" />
+          </results>
+        </run>
+      </test>
+      <test name="OneProdOneClear">
+        <carg>/arg:OneProdOneClear</carg>
+        <run>
+          <name>Run</name>
+          <backend>Local (4)</backend>
+          <taskindex>17</taskindex>
+          <taskid>0000017</taskid>
+          <testdir>c:\Users\tball\chess\dev\main\Installer\taskdir.0000017</testdir>
+          <startscript>c:\Users\tball\chess\dev\main\Installer\taskdir.0000017\start.cmd</startscript>
+          <pid>14476</pid>
+          <starttime>3/9/2010 3:36:28 PM</starttime>
+          <results xmlns="http://research.microsoft.com/chess">
+            <starttime>Tue Mar 09 03:36:31 2010 PM</starttime>
+            <commandline>
+              <executable>c:\Users\tball\chess\dev\main\scripts\..\bin\mchess.exe</executable>
+              <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\ProducerConsumerQueue\BoundedQueueTest\bin\Debug</startdir>
+              <carg>BoundedQueueTest.dll</carg>
+              <carg>/ia:ProducerConsumerQueue</carg>
+              <carg>/arg:OneProdOneClear</carg>
+              <carg>/schedulefile:c:\Users\tball\chess\dev\main\Installer\taskdir.0000017\inputschedule</carg>
+              <carg>/outputprefix:c:\Users\tball\chess\dev\main\Installer\taskdir.0000017\</carg>
+            </commandline>
+            <result>
+              <label>W1</label>
+              <description>Race Detection Disabled. Races May Hide Bugs.</description>
+            </result>
+            <result>
+              <label>E</label>
+              <description>Deadlock</description>
+              <action name="Repro" />
+              <schedule format="hex">
+     01000000 01000000 15000000 01000000 FF010000 01000000 01000000 FF010000 12000000 01000000 02000000 05000000 01000000 02000000 09000000 01000000
+     03000000 05000000 01000000 03000000 09000000 02000000 02000000 06000000 02000000 00020000 02000000 02000000 00020000 04000000 02000000 00020000
+     04000000 02000000 00020000 02000000 02000000 00020000 04000000 02000000 00020000 02000000 02000000 00020000 04000000 02000000 02000000 0B000000
+     03000000 03000000 06000000 03000000 01020000 02000000 03000000 01020000 04000000 03000000 00020000 02000000 03000000 00020000 04000000 03000000
+     03000000 07000000 05000000 01000000 00000000 01000000 FF010000 12000000 01000000 01000000 01000000 00000000 00000000 01000000 00000000 06000000
+     02000000 08000000 02000000 00000000 0F000000 00020000 02000000 02000000 00000000 15000000 00020000 02000000
+    </schedule>
+            </result>
+            <endtime>Tue Mar 09 03:36:32 2010 PM</endtime>
+            <action name="Repro Last Schedule" />
+            <schedule format="hex">
+   01000000 01000000 02000000 01000000 FF010000 01000000 01000000 FF010000 12000000 02000000 01000000 00000000 01000000 FF010000 12000000 01000000
+   01000000 01000000 00000000 00000000</schedule>
+            <action name="Repeat" />
+          </results>
+        </run>
+      </test>
+    </testlist>
+    <testlist name="ThreadPoolWait Tests" xmlns="http://research.microsoft.com/chess">
+      <!--This element describes how to build solution -->
+      <build>
+        <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\ThreadPoolWait</startdir>
+        <executable>msbuild</executable>
+        <arg>ThreadPoolWait.sln</arg>
+        <run>
+          <backend>Local (4)</backend>
+          <taskindex>4</taskindex>
+          <taskid>0000004</taskid>
+          <testdir>c:\Users\tball\chess\dev\main\Installer\taskdir.0000004</testdir>
+          <startscript>c:\Users\tball\chess\dev\main\Installer\taskdir.0000004\start.cmd</startscript>
+          <pid>38684</pid>
+          <starttime>3/9/2010 3:35:34 PM</starttime>
+        </run>
+      </build>
+      <!--The following settings apply to all of the tests-->
+      <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\ThreadPoolWait\TestProject1\bin\Debug</startdir>
+      <executable>mchess.exe</executable>
+      <carg>TestProject1.dll</carg>
+      <carg>/ia:ThreadPoolWait</carg>
+      <carg>/detectraces</carg>
+      <!--These are the tests-->
+      <test name="MainTest">
+        <carg>/arg:Main</carg>
+        <run>
+          <name>Run</name>
+          <backend>Local (4)</backend>
+          <taskindex>6</taskindex>
+          <taskid>0000006</taskid>
+          <testdir>c:\Users\tball\chess\dev\main\Installer\taskdir.0000006</testdir>
+          <startscript>c:\Users\tball\chess\dev\main\Installer\taskdir.0000006\start.cmd</startscript>
+          <pid>20812</pid>
+          <starttime>3/9/2010 3:35:43 PM</starttime>
+          <results xmlns="http://research.microsoft.com/chess">
+            <starttime>Tue Mar 09 03:35:45 2010 PM</starttime>
+            <commandline>
+              <executable>c:\Users\tball\chess\dev\main\scripts\..\bin\mchess.exe</executable>
+              <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\ThreadPoolWait\TestProject1\bin\Debug</startdir>
+              <carg>TestProject1.dll</carg>
+              <carg>/ia:ThreadPoolWait</carg>
+              <carg>/detectraces</carg>
+              <carg>/arg:Main</carg>
+              <carg>/schedulefile:c:\Users\tball\chess\dev\main\Installer\taskdir.0000006\inputschedule</carg>
+              <carg>/outputprefix:c:\Users\tball\chess\dev\main\Installer\taskdir.0000006\</carg>
+            </commandline>
+            <result>
+              <label>R1</label>
+              <description>Found data race at WaitOne:ThreadPoolWait.cs(66)</description>
+              <action name="Repro" race="1" />
+              <schedule format="hex">
+     01000000 01000000 28000000 01000000 FF010000 01000000 01000000 FF010000 12000000 01000000 03020000 01000000 01000000 02000000 05000000 01000000
+     02000000 09000000 01000000 03020000 01000000 01000000 03000000 05000000 01000000 03000000 09000000 01000000 03020000 01000000 01000000 09020000
+     0C000000 01000000 01000000 0B000000 01000000 03020000 01000000 01000000 03020000 01000000 01000000 09020000 0C000000 01000000 01000000 0B000000
+     02000000 02000000 06000000 02000000 03020000 01000000 02000000 02000000 07000000 03000000 03000000 06000000 03000000 03020000 01000000 01000000
+     03020000 01000000 01000000 03020000 01000000 01000000 09020000 10000000 01000000 09020000 0C000000 01000000 09020000 10000000 01000000 03020000
+     01000000 01000000 04000000 05000000 01000000 04000000 09000000 01000000 03020000 01000000 01000000 05000000 05000000 01000000 05000000 09000000
+     01000000 03020000 01000000 03000000 09020000 10000000 03000000 03000000 07000000 04000000 04000000 06000000 04000000 03020000 01000000 04000000
+     04000000 07000000 05000000 05000000 06000000 05000000 03020000 01000000 01000000 09020000 0C000000 05000000 01000000 00000000 01000000 FF010000
+     12000000 01000000 01000000 01000000 00000000 00000000 01000000 04000000 09000000 00000000 00000000 01000000 04000000 0D000000 00000000 00000000
+     01000000 00000000 20000000 09020000 0C000000
+    </schedule>
+            </result>
+            <result>
+              <label>R2</label>
+              <description>Found data race at Dispose:ThreadPoolWait.cs(110)</description>
+              <action name="Repro" race="5" />
+              <schedule format="hex">
+     01000000 01000000 29000000 01000000 FF010000 01000000 01000000 FF010000 12000000 01000000 03020000 01000000 01000000 02000000 05000000 01000000
+     02000000 09000000 01000000 03020000 01000000 01000000 03000000 05000000 01000000 03000000 09000000 01000000 03020000 01000000 01000000 09020000
+     0C000000 01000000 01000000 0B000000 01000000 03020000 01000000 01000000 03020000 01000000 01000000 09020000 0C000000 01000000 01000000 0B000000
+     02000000 02000000 06000000 02000000 03020000 01000000 02000000 02000000 07000000 03000000 03000000 06000000 03000000 03020000 01000000 01000000
+     03020000 01000000 01000000 03020000 01000000 01000000 09020000 10000000 01000000 09020000 0C000000 01000000 09020000 10000000 01000000 03020000
+     01000000 01000000 04000000 05000000 01000000 04000000 09000000 01000000 03020000 01000000 01000000 05000000 05000000 01000000 05000000 09000000
+     01000000 03020000 01000000 03000000 09020000 10000000 03000000 03000000 07000000 04000000 04000000 06000000 04000000 03020000 01000000 04000000
+     04000000 07000000 05000000 05000000 06000000 05000000 03020000 01000000 01000000 09020000 0C000000 01000000 09020000 10000000 05000000 01000000
+     00000000 01000000 FF010000 12000000 01000000 01000000 01000000 00000000 00000000 01000000 04000000 09000000 00000000 00000000 01000000 04000000
+     0D000000 00000000 00000000 01000000 00000000 20000000 09020000 0C000000
+    </schedule>
+            </result>
+            <result>
+              <label>E</label>
+              <description>Child thread raised exception
+
+Safe handle has been closed
+
+Stack trace:
+
+   at Microsoft.ManagedChess.EREngine.Helper.&lt;&gt;c__DisplayClass2.&lt;WrapRelease&gt;b__0(ClrSyncManager manager)
+
+   at Microsoft.ManagedChess.EREngine.Helper.SimpleWrap[T](SimpleDelManager`1 foo, SimpleDel`1 bar)
+
+   at Microsoft.ManagedChess.EREngine.Helper.WrapRelease(Object o, MSyncVarOp mop, ReleaseOp ro, String instrMethod)
+
+   at __Substitutions.System.Threading.EventWaitHandle.Set(EventWaitHandle h)
+
+   at NetMatters.ThreadPoolWait.DoneWorkItem() in c:\Users\tball\chess\dev\main\Installer\Samples\Managed\ThreadPoolWait\ThreadPoolWait.cs:line 86
+
+   at NetMatters.ThreadPoolWait.HandleWorkItem(Object state) in c:\Users\tball\chess\dev\main\Installer\Samples\Managed\ThreadPoolWait\ThreadPoolWait.cs:line 79
+
+   at Microsoft.ManagedChess.EREngine.Helper.&lt;&gt;c__DisplayClass1b.&lt;ThreadCreateWrapper&gt;b__1a(Object o)
+
+</description>
+              <action name="Repro" />
+              <schedule format="hex">
+     01000000 01000000 2B000000 01000000 FF010000 01000000 01000000 FF010000 12000000 01000000 03020000 01000000 01000000 02000000 05000000 01000000
+     02000000 09000000 01000000 03020000 01000000 01000000 03000000 05000000 01000000 03000000 09000000 01000000 03020000 01000000 01000000 09020000
+     0C000000 01000000 01000000 0B000000 01000000 03020000 01000000 01000000 03020000 01000000 01000000 09020000 0C000000 01000000 01000000 0B000000
+     02000000 02000000 06000000 02000000 03020000 01000000 02000000 02000000 07000000 03000000 03000000 06000000 03000000 03020000 01000000 01000000
+     03020000 01000000 01000000 03020000 01000000 01000000 09020000 10000000 01000000 09020000 0C000000 01000000 09020000 10000000 01000000 03020000
+     01000000 01000000 04000000 05000000 01000000 04000000 09000000 01000000 03020000 01000000 01000000 05000000 05000000 01000000 05000000 09000000
+     01000000 03020000 01000000 03000000 09020000 10000000 03000000 03000000 07000000 04000000 04000000 06000000 04000000 03020000 01000000 04000000
+     04000000 07000000 05000000 05000000 06000000 05000000 03020000 01000000 01000000 09020000 0C000000 01000000 09020000 10000000 01000000 FF010000
+     01000000 05000000 09020000 10000000 06000000 01000000 00000000 01000000 FF010000 12000000 01000000 01000000 01000000 00000000 00000000 01000000
+     04000000 09000000 00000000 00000000 01000000 04000000 0D000000 00000000 00000000 01000000 00000000 20000000 09020000 0C000000 01000000 00000000
+     2A000000 FF010000 12000000
+    </schedule>
+            </result>
+            <result>
+              <label>W</label>
+              <description>Data races found. For full coverage, fix races or preempt on all accesses.</description>
+              <preemptionvars>515,516</preemptionvars>
+            </result>
+            <endtime>Tue Mar 09 03:35:46 2010 PM</endtime>
+            <action name="Repro Last Schedule" />
+            <schedule format="hex">
+   01000000 01000000 28000000 01000000 FF010000 01000000 01000000 FF010000 12000000 01000000 03020000 01000000 01000000 02000000 05000000 01000000
+   02000000 09000000 01000000 03020000 01000000 01000000 03000000 05000000 01000000 03000000 09000000 01000000 03020000 01000000 01000000 09020000
+   0C000000 01000000 01000000 0B000000 01000000 03020000 01000000 01000000 03020000 01000000 01000000 09020000 0C000000 01000000 01000000 0B000000
+   02000000 02000000 06000000 02000000 03020000 01000000 02000000 02000000 07000000 03000000 03000000 06000000 03000000 03020000 01000000 01000000
+   03020000 01000000 01000000 03020000 01000000 01000000 09020000 10000000 01000000 09020000 0C000000 01000000 09020000 10000000 01000000 03020000
+   01000000 01000000 04000000 05000000 01000000 04000000 09000000 01000000 03020000 01000000 01000000 05000000 05000000 01000000 05000000 09000000
+   01000000 03020000 01000000 03000000 09020000 10000000 03000000 03000000 07000000 04000000 04000000 06000000 04000000 03020000 01000000 04000000
+   04000000 07000000 05000000 05000000 06000000 05000000 03020000 01000000 01000000 09020000 0C000000 05000000 01000000 00000000 01000000 FF010000
+   12000000 01000000 01000000 01000000 00000000 00000000 01000000 04000000 09000000 00000000 00000000 01000000 04000000 0D000000 00000000 00000000
+   01000000 00000000 20000000 09020000 0C000000</schedule>
+            <action name="Repeat" />
+          </results>
+        </run>
+      </test>
+      <test name="MainTestFixed">
+        <carg>/arg:MainFixed</carg>
+        <run>
+          <name>Run</name>
+          <backend>Local (4)</backend>
+          <taskindex>7</taskindex>
+          <taskid>0000007</taskid>
+          <testdir>c:\Users\tball\chess\dev\main\Installer\taskdir.0000007</testdir>
+          <startscript>c:\Users\tball\chess\dev\main\Installer\taskdir.0000007\start.cmd</startscript>
+          <pid>21000</pid>
+          <starttime>3/9/2010 3:35:48 PM</starttime>
+          <results xmlns="http://research.microsoft.com/chess">
+            <starttime>Tue Mar 09 03:35:50 2010 PM</starttime>
+            <commandline>
+              <executable>c:\Users\tball\chess\dev\main\scripts\..\bin\mchess.exe</executable>
+              <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\ThreadPoolWait\TestProject1\bin\Debug</startdir>
+              <carg>TestProject1.dll</carg>
+              <carg>/ia:ThreadPoolWait</carg>
+              <carg>/detectraces</carg>
+              <carg>/arg:MainFixed</carg>
+              <carg>/schedulefile:c:\Users\tball\chess\dev\main\Installer\taskdir.0000007\inputschedule</carg>
+              <carg>/outputprefix:c:\Users\tball\chess\dev\main\Installer\taskdir.0000007\</carg>
+            </commandline>
+            <result>
+              <label>N</label>
+              <description>Search Completed</description>
+            </result>
+            <endtime>Tue Mar 09 03:36:17 2010 PM</endtime>
+            <action name="Repro Last Schedule" />
+            <schedule format="hex">
+   01000000 01000000 08000000 01000000 FF010000 01000000 01000000 FF010000 12000000 01000000 07020000 02000000 01000000 07020000 04000000 01000000
+   02000000 05000000 01000000 02000000 09000000 02000000 02000000 06000000 01000000 07020000 02000000 02000000 01000000 00000000 01000000 FF010000
+   12000000 01000000 01000000 01000000 00000000 00000000</schedule>
+            <action name="Repeat" />
+          </results>
+        </run>
+      </test>
+    </testlist>
+    <testlist name="Dekker" xmlns="http://research.microsoft.com/chess">
+      <!-- This element describes how to build the SimpleBank example -->
+      <build>
+        <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\Dekker</startdir>
+        <executable>msbuild</executable>
+        <arg>Dekker.sln</arg>
+        <arg>/p:Configuration=Debug</arg>
+        <run>
+          <backend>Local (4)</backend>
+          <taskindex>5</taskindex>
+          <taskid>0000005</taskid>
+          <testdir>c:\Users\tball\chess\dev\main\Installer\taskdir.0000005</testdir>
+          <startscript>c:\Users\tball\chess\dev\main\Installer\taskdir.0000005\start.cmd</startscript>
+          <pid>38872</pid>
+          <starttime>3/9/2010 3:35:38 PM</starttime>
+        </run>
+      </build>
+      <!-- Define the test -->
+      <test name="Test">
+        <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\Dekker\bin\Debug</startdir>
+        <executable>mchess</executable>
+        <carg>Dekker.dll</carg>
+        <carg>/testclass:Dekker.Test</carg>
+        <run>
+          <name>Run</name>
+          <backend>Local (4)</backend>
+          <taskindex>8</taskindex>
+          <taskid>0000008</taskid>
+          <testdir>c:\Users\tball\chess\dev\main\Installer\taskdir.0000008</testdir>
+          <startscript>c:\Users\tball\chess\dev\main\Installer\taskdir.0000008\start.cmd</startscript>
+          <pid>22128</pid>
+          <starttime>3/9/2010 3:36:18 PM</starttime>
+          <results xmlns="http://research.microsoft.com/chess">
+            <starttime>Tue Mar 09 03:36:21 2010 PM</starttime>
+            <commandline>
+              <executable>c:\Users\tball\chess\dev\main\scripts\..\bin\mchess.exe</executable>
+              <startdir>c:\Users\tball\chess\dev\main\Installer\Samples\Managed\Dekker\bin\Debug</startdir>
+              <carg>Dekker.dll</carg>
+              <carg>/testclass:Dekker.Test</carg>
+              <carg>/schedulefile:c:\Users\tball\chess\dev\main\Installer\taskdir.0000008\inputschedule</carg>
+              <carg>/outputprefix:c:\Users\tball\chess\dev\main\Installer\taskdir.0000008\</carg>
+            </commandline>
+            <result>
+              <label>W1</label>
+              <description>Race Detection Disabled. Races May Hide Bugs.</description>
+            </result>
+            <result>
+              <label>N</label>
+              <description>Search Completed</description>
+            </result>
+            <endtime>Tue Mar 09 03:36:22 2010 PM</endtime>
+            <action name="Repro Last Schedule" />
+            <schedule format="hex">
+   01000000 01000000 0B000000 01000000 FF010000 01000000 01000000 FF010000 12000000 01000000 00020000 14000000 01000000 01020000 14000000 01000000
+   02000000 05000000 01000000 02000000 09000000 01000000 03000000 05000000 01000000 03000000 09000000 03000000 03000000 06000000 02000000 02000000
+   06000000 03000000 01020000 14000000 03000000 01000000 00000000 01000000 FF010000 12000000 01000000 01000000 01000000 00000000 00000000 01000000
+   00000000 08000000 02000000 08000000</schedule>
+            <action name="Repeat" />
+          </results>
+        </run>
+      </test>
+    </testlist>
+  </testlist>
+  <taskcounter>17</taskcounter>
+</session>

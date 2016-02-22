@@ -1,0 +1,16 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing choizeller.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+Tests: 1 Threads: 3 ExecSteps: 28 HBExecs: 1 
+Tests: 2 Threads: 3 ExecSteps: 28 HBExecs: 1 
+Tests: 3 Threads: 3 ExecSteps: 28 HBExecs: 1 
+Tests: 4 Threads: 3 ExecSteps: 28 HBExecs: 1 
+Tests: 5 Threads: 3 ExecSteps: 28 HBExecs: 1 
+Tests: 6 Threads: 3 ExecSteps: 28 HBExecs: 1 
+Tests: 7 Threads: 3 ExecSteps: 28 HBExecs: 1 
+Tests: 8 Threads: 3 ExecSteps: 28 HBExecs: 1 
+Tests: 9 Threads: 3 ExecSteps: 28 HBExecs: 1 
+
+***************** CHESS assertion ***********************
+ChessTest.Run returned false.
+Exit code = -1 

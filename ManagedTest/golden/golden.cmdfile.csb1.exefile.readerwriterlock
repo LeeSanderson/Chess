@@ -1,0 +1,18 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing readerwriterlock.exe  ...
+Tests: 1 Threads: 3 ExecSteps: 31 HBExecs: 1 
+Tests: 2 Threads: 3 ExecSteps: 31 HBExecs: 1 
+Tests: 3 Threads: 3 ExecSteps: 31 HBExecs: 1 
+Tests: 4 Threads: 3 ExecSteps: 31 HBExecs: 1 
+Tests: 5 Threads: 3 ExecSteps: 31 HBExecs: 1 
+Tests: 6 Threads: 3 ExecSteps: 31 HBExecs: 1 
+Tests: 7 Threads: 3 ExecSteps: 31 HBExecs: 1 
+Tests: 8 Threads: 3 ExecSteps: 31 HBExecs: 2 
+Tests: 9 Threads: 3 ExecSteps: 31 HBExecs: 2 
+Tests: 10 Threads: 3 ExecSteps: 31 HBExecs: 3 
+Tests: 20 Threads: 3 ExecSteps: 31 HBExecs: 4 
+Tests: 30 Threads: 3 ExecSteps: 31 HBExecs: 8 
+Tests: 40 Threads: 3 ExecSteps: 31 HBExecs: 10 
+Tests: 50 Threads: 3 ExecSteps: 35 HBExecs: 13 
+Tests: 54 Threads: 3 ExecSteps: 43 HBExecs: 16 
+Exit code = 0 

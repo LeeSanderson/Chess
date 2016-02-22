@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testlist name="Samples" xmlns="http://research.microsoft.com/chess">
+
+  <!-- This testlist includes all testlists for managed samples -->
+  <include>@\SimpleBank\testlist.xml</include>
+  <include>@\BankAccount\testlist.xml</include>
+  <include>@\ProducerConsumerQueue\testlist.xml</include>
+  <include>@\ThreadPoolWait\testlist.xml</include>
+  <include>@\Dekker\testlist.xml</include>
+</testlist>

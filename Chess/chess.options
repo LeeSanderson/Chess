@@ -1,0 +1,64 @@
+# CHESS fast options 
+
+# set the preemption bound. Alias: csb
+#preemption_bound = 1
+#csb = 1
+
+# CHESS loads the execution trace from the file. Alias: ls
+#load_schedule = 0
+#ls = 0
+
+# Maximum number of executions (Tests) that CHESS will run (0 == inf)
+#max_executions = 0
+
+# CHESS calls a DebugBreak() on some events
+#break_on_deadlock = 0
+#break_on_timeout = 0
+#break_on_preemptions = 0
+#break_on_context_switch = 0
+#break_on_task_resume = 0
+#break_on_race = 0
+
+
+#Advanced parameters
+#do_idfs = 0
+#idfs_bound = 10
+
+#random_seed = 0
+#do_random = 0
+
+#do_sleep_sets = true
+
+#fairness_parameter = 1
+
+#max_stack_size = 20000
+#max_exec_time = 10
+#max_chess_time = 0
+#depth_bound = 0
+#use_exec_printer = 0
+
+#handle_nondeterminism = 0
+
+#notime = 0
+#nopopups = 0
+#print_sched_on_error = 0
+
+#quiescence = true
+
+#sober = 0
+#sober_dataracesonly = 0
+
+#trace = 0
+#gui = 0
+
+#debug_output_flag = 0
+#show_stacksplit = 0
+#show_hbexecs = 0
+#show_nlb = 0
+
+
+# CHESS slow options
+
+#StatsMonitor::maxDisplayFrequency = 1000
+
+

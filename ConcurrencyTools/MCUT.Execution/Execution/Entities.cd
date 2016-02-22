@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.BuildEntity" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAQAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Execution\BuildEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.BuildRunEntity" Collapsed="true">
+    <Position X="19.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAEAAAAAABAAAAAAAgAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Execution\BuildRunEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.ConflictSerializabilityTestEntity" Collapsed="true">
+    <Position X="28.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAEAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Execution\ConflictSerializabilityTestEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.CustomBuildEntity" Collapsed="true">
+    <Position X="1.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAABBAAAAAAAAAAAAEAIAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Execution\CustomBuildEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.DataRaceTestEntity" Collapsed="true">
+    <Position X="32.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAEAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Execution\DataRaceTestEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.DeterminismTestEntity" Collapsed="true">
+    <Position X="37.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAEAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Execution\DeterminismTestEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.EntityBase" Collapsed="true">
+    <Position X="27" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAAAGAEEACAAAACEIAAEQAAAAKGABAQQIBgAAAEIIAA=</HashCode>
+      <FileName>Execution\EntityBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.ErrorEntity" Collapsed="true">
+    <Position X="10.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAACAAAAAAAAAAAAAQAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Execution\ErrorEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.ExceptionErrorEntity" Collapsed="true">
+    <Position X="10.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAEAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Execution\ErrorEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.ExpectedRegressionTestResultEntity" Collapsed="true">
+    <Position X="17" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Execution\ExpectedRegressionTestResultEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.ExpectedTestResultEntity" Collapsed="true">
+    <Position X="41.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAABAAQAAAAAAAAAABAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Execution\ExpectedTestResultEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.MChessBasedTestEntity" Collapsed="true">
+    <Position X="33.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAEAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAgEA=</HashCode>
+      <FileName>Execution\MChessBasedTestEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.MCutTestCaseRunEntity" Collapsed="true">
+    <Position X="21.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAAAAEAAAABAAAAAAAAAAAAAIAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Execution\MCutTestCaseRunEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.MCutTestEntity" Collapsed="true">
+    <Position X="31.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAACAAAIAAAAAAAgACAAAAAEQ=</HashCode>
+      <FileName>Execution\MCutTestEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.MCutTestEntityBase&lt;TContext&gt;" Collapsed="true">
+    <Position X="31.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAABAAAAAAAABAAAIAAAAAAAAAAAAAAQAAAAAAAAgAA=</HashCode>
+      <FileName>Execution\MCutTestEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.MSBuildEntity" Collapsed="true">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAABAAAEAIAAAAAAAACEIAAAgAAAAAEAAAA=</HashCode>
+      <FileName>Execution\MSBuildEntity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.ObservationGeneratorEntity" Collapsed="true">
+    <Position X="35" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAABAAAAFAAEAAAQAACQAAAABAAAAQAAAAAAAAAg=</HashCode>
+      <FileName>Execution\ObservationGeneratorEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.ObservationTestEntity" Collapsed="true">
+    <Position X="39.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAABAgEAAAAAACQAEAAAAAAACAAAAIAAAAg=</HashCode>
+      <FileName>Execution\ObservationTestEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.TaskoMeterEntity" Collapsed="true">
+    <Position X="53" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAABABAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Execution\PerformanceTestEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.PerformanceTestEntity" Collapsed="true">
+    <Position X="23.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAABABIAAAAAACAAAAAAAAAAAAAEAAAAgEA=</HashCode>
+      <FileName>Execution\PerformanceTestEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.PlaceholderEntity" Collapsed="true">
+    <Position X="12.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAEAAAAAABAAAAAAAAAAQAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Execution\PlaceholderEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.ScheduleTestEntity" Collapsed="true">
+    <Position X="30.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Execution\ScheduleTestEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.TaskRunEntity" Collapsed="true">
+    <Position X="20.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAFAAAAAAAAAAAAAAAAAAAAAgAAgAAAAAAAEAAAAA=</HashCode>
+      <FileName>Execution\TaskRunEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.TestAssemblyEntity" Collapsed="true">
+    <Position X="44" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAEAEAAAABDCAEgAAAAAAAAIAAYAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Execution\TestAssemblyEntity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.TestClassEntity" Collapsed="true">
+    <Position X="48.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAAAEAEAAACBBAAAIAAAQAAABIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Execution\TestClassEntity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.TestCaseEntity" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAEAAAAAAJAAAAAAEAAAEAAAAEAQAAABAAAEMAAAA=</HashCode>
+      <FileName>Execution\TestCaseEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.TestContextEntityBase" Collapsed="true">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAEAAAAAAAAAAAAAAAAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Execution\TestContextEntityBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.NullTestContextEntity" Collapsed="true">
+    <Position X="14.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Execution\TestContextEntityBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.TestEntity" Collapsed="true">
+    <Position X="31.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAEAAAAAAgIAAAAAAAAAAAAAAAAAAAACAAAAIAQ=</HashCode>
+      <FileName>Execution\TestEntity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.TestGroupingEntity" Collapsed="true">
+    <Position X="47.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Execution\TestGroupingEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.TestListEntity" Collapsed="true">
+    <Position X="46.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAEAEAAAABACAEAAAAAAAAAAAAIAAAAAAAAAFAAAA=</HashCode>
+      <FileName>Execution\TestListEntity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.TestMethodEntity" Collapsed="true">
+    <Position X="50.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAEAUgAABFgAAAIACAABAAgIAAAAAAAIgCIIAAAQA=</HashCode>
+      <FileName>Execution\TestMethodEntity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.TestResultEntity" Collapsed="true">
+    <Position X="8" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAEAAAABAQAAAAIAAAAAABAIAAAAAAAAMAAAAAA=</HashCode>
+      <FileName>Execution\TestResultEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.TestRunEntity" Collapsed="true">
+    <Position X="21.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAEAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Execution\TestRunEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Concurrency.TestTools.Execution.UnitTestEntity" Collapsed="true">
+    <Position X="26" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAABAAAAAAAAACAAAAAAAAAAAAAAAAAAgEA=</HashCode>
+      <FileName>Execution\UnitTestEntities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="9" />
+</ClassDiagram>

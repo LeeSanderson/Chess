@@ -1,0 +1,3 @@
+csb1 : ..\bin\wchess.exe -mp:1 -notime -maxexectime:1 -showhbexecs -nopopups -printschedonerror
+csb2 : ..\bin\wchess.exe -mp:2 -notime -maxexectime:1 -showhbexecs -nopopups -printschedonerror
+csb3 : ..\bin\wchess.exe -mp:3 -notime -maxexectime:1 -showhbexecs -nopopups -printschedonerror

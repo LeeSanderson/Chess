@@ -1,0 +1,17 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing quiescence.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+Tests: 1 Threads: 4 ExecSteps: 14 HBExecs: 1 
+Tests: 2 Threads: 4 ExecSteps: 14 HBExecs: 1 
+Tests: 3 Threads: 4 ExecSteps: 14 HBExecs: 1 
+Tests: 4 Threads: 4 ExecSteps: 14 HBExecs: 1 
+Tests: 5 Threads: 4 ExecSteps: 14 HBExecs: 1 
+Tests: 6 Threads: 4 ExecSteps: 14 HBExecs: 1 
+Tests: 7 Threads: 4 ExecSteps: 14 HBExecs: 1 
+Tests: 8 Threads: 4 ExecSteps: 14 HBExecs: 1 
+Tests: 9 Threads: 4 ExecSteps: 14 HBExecs: 1 
+Tests: 10 Threads: 4 ExecSteps: 14 HBExecs: 1 
+Tests: 20 Threads: 4 ExecSteps: 14 HBExecs: 1 
+Tests: 21 Threads: 4 ExecSteps: 14 HBExecs: 1 
+Search Completed (1 Warning).
+Exit code = 0 

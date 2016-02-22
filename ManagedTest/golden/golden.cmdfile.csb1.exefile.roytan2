@@ -1,0 +1,10 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing roytan2.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+
+***************** CHESS assertion ***********************
+RunTest is not idempotent with respect to active threads
+ Threads at the start of RunTest(): {1, }
+ Threads at the end   of RunTest(): {1, 2, }
+
+Exit code = -6 

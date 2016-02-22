@@ -1,0 +1,577 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+    targetNamespace="http://research.microsoft.com/concurrency/unittesting"
+    attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:mc="http://research.microsoft.com/concurrency"
+    xmlns:mcut="http://research.microsoft.com/concurrency/unittesting"
+    xmlns:chess="http://research.microsoft.com/chess"
+>
+  <xs:import namespace="http://research.microsoft.com/concurrency"/>
+  <xs:import namespace="http://research.microsoft.com/chess"/>
+
+  <xs:element name="include">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="goldenObservationFilesFolderPath" type="xs:string" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              The path to the golden observation files folder to use for the test assembly once it's loaded.
+              This path should be relative to the include's folder location.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="mc:error" minOccurs="0" />
+      </xs:sequence>
+      <xs:attribute name="location" type="xs:string" use="required">
+        <xs:annotation>
+          <xs:documentation>Specifies the path to another test list or test assembly to include here.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- definition of builds -->
+  <xs:element name="build">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- information about how to build the testlist -->
+        <xs:element name="workingDirectory" type="xs:string" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>The working directory path to use. If not specified, the default is the location of the containing task list.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="shellline" type="xs:string"  minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="executable" type="xs:string"/>
+        <xs:element name="arg" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        <!--Allow for the session to add its 'run' elements.-->
+        <xs:any namespace="http://research.microsoft.com/concurrency/unittesting/session"
+                processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="msbuild_configuration">
+    <xs:union memberTypes="xs:string">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Debug"/>
+          <xs:enumeration value="Release"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+
+  <xs:simpleType name="msbuild_platform">
+    <xs:union memberTypes="xs:string">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="AnyCPU"/>
+          <xs:enumeration value="x86"/>
+          <xs:enumeration value="Win32"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+
+  <xs:element name="msbuild">
+    <xs:annotation>
+      <xs:documentation>Specifies an msbuild project or solution file to use to build the testlist.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="properties" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>Specify any additional properties on the cmd line to msbuild via the /property switch. e.g. "Optimize=true;Platform=x86"</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <!--Allow for the session to add its 'run' elements.-->
+        <xs:any namespace="http://research.microsoft.com/concurrency/unittesting/session"
+                processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="project" type="xs:string" use="required">
+        <xs:annotation>
+          <xs:documentation>The path to the project or solution file. Use the '@' char to specify the full path to this test list folder path.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="configuration" type="mcut:msbuild_configuration" use="optional" default="Debug">
+        <xs:annotation>
+          <xs:documentation>The default configuration to build. e.g. "Debug" or "Release". This is added to the /property switch to msbuild on the cmd line.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="nonEmptyString">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- definition of testlists -->
+  <xs:element name="testlist">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- optionally, include a build action -->
+        <xs:choice minOccurs="0">
+          <xs:element ref="mcut:build"/>
+          <xs:element ref="mcut:msbuild"/>
+        </xs:choice>
+        <!-- Allow these to be intermingled amongst each other -->
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="mcut:testlist"/>
+          <xs:element ref="mcut:testProject"/>
+          <xs:element ref="mcut:testAssembly"/>
+          <xs:element ref="mcut:include"/>
+          <!--<xs:element ref="mcut:test"/>-->
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="optional">
+        <xs:annotation>
+          <xs:documentation>The name to display for this testlist in a GUI.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="location" type="xs:string" use="optional">
+        <xs:annotation>
+          <xs:documentation>The path to the actual xml testlist file for this list. Use the '@' char to specify the full path to this test list folder path.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:anyAttribute namespace="http://research.microsoft.com/concurrency/unittesting/session"
+                       processContents="lax" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="testProject">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="goldenObservationFilesFolderPath" type="xs:string" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              The path to the golden observation files folder to use for this project.
+              This path is relative to the test project's location.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:choice minOccurs="0">
+          <!--In case there was some kind of error loading the project file, this will show up-->
+          <xs:element ref="mc:error"/>
+
+          <xs:sequence>
+            <!--Allow for the session to add the session state elements.-->
+            <xs:any namespace="http://research.microsoft.com/concurrency/unittesting/session"
+                    processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+            <xs:choice>
+              <xs:element ref="mcut:include"/>
+              <xs:element ref="mcut:testAssembly"/>
+            </xs:choice>
+            <!--Allow for the session to add the s:buildRun elements.-->
+            <xs:any namespace="http://research.microsoft.com/concurrency/unittesting/session"
+                    processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+          </xs:sequence>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="location" type="xs:string" use="required">
+        <xs:annotation>
+          <xs:documentation>The path to the assembly file (i.e. exe or dll). Use the '@' char to specify the full path to this test list folder path.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="configuration" type="mcut:msbuild_configuration" use="optional">
+        <xs:annotation>
+          <xs:documentation>Specifies the msbuild project configuration to use for this project within MCUT tools.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:anyAttribute namespace="http://research.microsoft.com/concurrency/unittesting/session"
+                       processContents="lax" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="testAssembly">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="goldenObservationFilesFolderPath" type="xs:string" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              The path to the golden observation files folder to use for this project.
+              This path is relative to the test assembly's location.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <!--These elements are equivalent to C# Attributes that can be applied to an assembly-->
+        <xs:element ref="chess:instrumentAssembly" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="chess:defaultPreemptability" minOccurs="0" />
+        <xs:element ref="chess:togglePreemptability" minOccurs="0" maxOccurs="unbounded" />
+
+        <xs:element ref="mcut:testClass" minOccurs="0" maxOccurs="unbounded"/>
+
+        <!--In case there was some kind of error loading the assembly, this will show up-->
+        <xs:element ref="mc:error" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="location" type="xs:string" use="required">
+        <xs:annotation>
+          <xs:documentation>The path to the assembly file (i.e. exe or dll). Use the '@' char to specify the full path to this test list folder path.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:anyAttribute namespace="http://research.microsoft.com/concurrency/unittesting/session"
+                       processContents="lax" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="testClass">
+    <xs:complexType>
+      <xs:sequence>
+        <!--These elements are equivalent to C# Attributes that can be applied to a class-->
+        <xs:element ref="chess:instrumentAssembly" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="chess:defaultPreemptability" minOccurs="0" />
+        <xs:element ref="chess:togglePreemptability" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="mcut:chessContext" minOccurs="0" maxOccurs="unbounded"/>
+
+        <xs:element ref="mcut:testMethod" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="fullName" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="testMethod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="parameters" type="mcut:XType_testParams" minOccurs="0"/>
+        <xs:element name="testArgs" type="mcut:XType_testArgs" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="mcut:expectedTestResult" minOccurs="0"/>
+        <xs:element ref="mcut:expectedRegressionTestResult" minOccurs="0"/>
+        <!--
+        Place these here so they can apply to chessTest, dataRaceTest, and scheduleTest and any
+        other test types that use chess to run.
+        -->
+        <xs:element ref="chess:instrumentAssembly" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="chess:defaultPreemptability" minOccurs="0" />
+        <xs:element ref="chess:togglePreemptability" minOccurs="0" maxOccurs="unbounded" />
+
+        <!--Information for supported test types-->
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="unitTest" type="mcut:testType_testWithNoParameters"/>
+          <xs:element name="chessTest" type="mcut:testType_chessTest"/>
+          <xs:element name="scheduleTest" type="mcut:testType_scheduleTest"/>
+          <xs:element name="dataRaceTest" type="mcut:testType_testWithNoParameters"/>
+          <xs:element name="conflictSerializabilityTest" type="mcut:testType_testWithNoParameters"/>
+          <xs:element name="determinismTest" type="mcut:testType_testWithNoParameters"/>
+          <xs:element name="observationGenerator" type="mcut:testType_observationGenerator"/>
+          <xs:element name="observationTest" type="mcut:testType_observationTest"/>
+          <xs:element name="performanceTest" type="mcut:testType_performanceTest"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+
+  <xs:complexType name="XType_testParams">
+    <xs:annotation>
+      <xs:documentation>
+        Specifies the named parameters available for a unit test.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="param" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="name" type="xs:string" use="required"/>
+          <xs:attribute name="type" type="xs:string" use="required">
+            <xs:annotation>
+              <xs:documentation>The type of the parameter. It is safest that this is the FullName of the Type.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="XType_testArgs">
+    <xs:annotation>
+      <xs:documentation>
+        Specifies the arguments to pass into a test that has parameters.
+        This is equivalent to one output of an ITestMethodArgsProvider
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="arg" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+
+  <xs:simpleType name="testTypeName">
+    <xs:union memberTypes="xs:string">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="MChess"/>
+          <xs:enumeration value="UnitTest"/>
+          <xs:enumeration value="PerformanceTest"/>
+
+          <!--Abstract test types, these types may be implemented using various tools available.-->
+          <xs:enumeration value="DataRaceTest"/>
+          <xs:enumeration value="ScheduleTest"/>
+          <xs:enumeration value="ConflictSerializabilityTest"/>
+          <xs:enumeration value="DeterminismTest"/>
+
+          <xs:enumeration value="ObservationGenerator"/>
+          <xs:enumeration value="ObservationTest"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+
+  <xs:simpleType name="testResultTypeXEnum">
+    <xs:annotation>
+      <xs:documentation>
+        The list of possible result types available to mcut.
+        Not all test runners are capable of emitting all of these types.
+        This enum matches the type: TestResultType
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Passed"/>
+      <xs:enumeration value="Error"/>
+
+      <xs:enumeration value="Exception"/>
+      <xs:enumeration value="AssertFailure"/>
+      <xs:enumeration value="Inconclusive"/>
+      <xs:enumeration value="ResultAssertFailure"/>
+      <xs:enumeration value="ResultInconclusive"/>
+
+      <xs:enumeration value="RegressionAssertFailure"/>
+
+      <xs:enumeration value="DataRace"/>
+      <xs:enumeration value="Deadlock"/>
+      <xs:enumeration value="Livelock"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="expectedTestResult">
+    <xs:annotation>
+      <xs:documentation>
+        Describes the expected result of a test case.
+        This may be used for any test type's test case.
+        This isn't often used as an equivalent to an attribute in code;
+        just specified in the test case xml element.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="message" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="key" type="xs:string" use="optional"/>
+      <xs:attribute name="resultType" type="mcut:testResultTypeXEnum" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="expectedRegressionTestResult">
+    <xs:annotation>
+      <xs:documentation>
+        Describes the expected end result of a test case even after the 'expectedTestResult'
+        has been asserted..
+        This may be used for any test type's test case.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="resultType" use="required">
+        <xs:simpleType>
+          <xs:list itemType="mcut:testResultTypeXEnum"/>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+
+  <xs:complexType name="XType_testContext" abstract="true">
+    <xs:annotation>
+      <xs:documentation>
+        Base implementation of a context in which to run a unit test.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="name" type="xs:string" use="optional"/>
+    <xs:attribute name="expectedResultKey" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <xs:element name="preRunScript" type="xs:string" />
+
+  <xs:element name="chessContext">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:documentation>
+          Specifies a context in which to run an mchessTest.
+          This is equivalent to what can be specified by the ChessTestContextAttribute attribute.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+        <xs:extension base="mcut:XType_testContext">
+          <xs:sequence>
+            <xs:element ref="mcut:preRunScript" minOccurs="0" />
+            <!--This is part of the MChessOptions xml element support-->
+            <xs:element ref="chess:cmdLineArg" minOccurs="0" maxOccurs="unbounded" />
+          </xs:sequence>
+          <xs:attribute name="expectedChessResultKey" type="xs:string" use="optional"/>
+          <xs:attributeGroup ref="chess:unitTestContextableAttributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="expectedChessResult">
+    <xs:complexType>
+      <xs:attribute name="key" type="xs:string" use="optional"/>
+      <!--These match the case of the properties for easier code modification-->
+      <xs:attribute name="ExitCode" type="chess:exitCodeType" use="optional"/>
+      <xs:attribute name="SchedulesRan" type="xs:int" use="optional"/>
+      <xs:attribute name="LastThreadCount" type="xs:int" use="optional"/>
+      <xs:attribute name="LastExecSteps" type="xs:int" use="optional"/>
+      <xs:attribute name="LastHBExecSteps" type="xs:int" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="testType_testWithNoParameters">
+    <xs:sequence>
+      <!--Allow for the session to add its 'run' elements.-->
+      <xs:any namespace="http://research.microsoft.com/concurrency/unittesting/session"
+              processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="testType_chessTest">
+    <xs:sequence>
+      <xs:element ref="mcut:chessContext" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="mcut:expectedChessResult" minOccurs="0" maxOccurs="unbounded"/>
+      <!--Allow for the session to add its 'run' elements.-->
+      <xs:any namespace="http://research.microsoft.com/concurrency/unittesting/session"
+              processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="testType_scheduleTest">
+    <xs:sequence>
+      <xs:element ref="chess:mchessOptions" minOccurs="0"/>
+      <!--Allow for the session to add its 'run' elements.-->
+      <xs:any namespace="http://research.microsoft.com/concurrency/unittesting/session"
+              processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="observationGranularity">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Serial"/>
+      <xs:enumeration value="Coarse"/>
+      <xs:enumeration value="All"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="observationTestCheckingMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Linearizability"/>
+      <xs:enumeration value="LinearizabilityNotBlock"/>
+      <xs:enumeration value="SequentialConsistency"/>
+      <xs:enumeration value="SequentialConsistencyNotBlock"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="observationFileIdentifier">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[_a-zA-Z][a-zA-Z0-9_]*" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="testType_observationGenerator">
+    <xs:sequence>
+      <!--Allow for the session to add its 'run' elements.-->
+      <xs:any namespace="http://research.microsoft.com/concurrency/unittesting/session"
+              processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="Granularity" type="mcut:observationGranularity" use="required" />
+    <xs:attribute name="FileIdentifier" type="mcut:observationFileIdentifier" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="testType_observationTest">
+    <xs:sequence>
+      <!--Allow for the session to add its 'run' elements.-->
+      <xs:any namespace="http://research.microsoft.com/concurrency/unittesting/session"
+              processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="CheckingMode" type="mcut:observationTestCheckingMode" use="required" />
+    <xs:attribute name="FileIdentifier" type="mcut:observationFileIdentifier" use="optional" />
+    <xs:attribute name="GeneratorFullName" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="testType_performanceTest">
+    <xs:sequence>
+      <!--Allow for the session to add its 'run' elements.-->
+      <xs:any namespace="http://research.microsoft.com/concurrency/unittesting/session"
+              processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="WarmupRepetitions" type="xs:int" use="optional" default="0"/>
+    <xs:attribute name="Repetitions" type="xs:int" use="optional" default="1"/>
+  </xs:complexType>
+
+  <xs:element name="taskoMeter">
+    <xs:complexType>
+      <xs:attribute name="WarmupRepetitions" type="xs:int" use="optional" default="0"/>
+      <xs:attribute name="Repetitions" type="xs:int" use="optional" default="1"/>
+    </xs:complexType>
+  </xs:element>
+
+
+
+
+  <xs:element name="testCase">
+    <xs:annotation>
+      <xs:documentation>
+        Represents the normalized data needed to run a unit test using mcut.
+        This element should be self-contained, meaning that no other information
+        is needed to run the test (with the exception of things like working directory,
+        output specs and any mcut-specific commandline flags).
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="managedTestMethod">
+          <xs:complexType>
+            <xs:attribute name="assemblyLocation" type="xs:string" use="required"/>
+            <xs:attribute name="fullClassName" type="xs:string" use="required"/>
+            <xs:attribute name="methodName" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="testArgs" type="mcut:XType_testArgs" minOccurs="0" />
+        <xs:element ref="mcut:expectedTestResult" minOccurs="0"/>
+        <xs:element ref="mcut:expectedRegressionTestResult" minOccurs="0"/>
+        <!--Test type options-->
+        <xs:element ref="mcut:preRunScript" minOccurs="0" />
+        <xs:element ref="mcut:expectedChessResult" minOccurs="0"/>
+        <xs:element ref="chess:mchessOptions" minOccurs="0"/>
+        <xs:element ref="mcut:taskoMeter" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="testTypeName" type="mcut:testTypeName" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="contextName" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="testResult">
+    <xs:annotation>
+      <xs:documentation>
+        Represents the standardized result data for a run of a test case.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="message" type="xs:string" minOccurs="0"/>
+        <xs:element ref="mc:error" minOccurs="0"/>
+        <xs:element ref="chess:chessResults" minOccurs="0" />
+        <!--Allow for the session to add its 'run' elements.-->
+        <xs:any namespace="http://research.microsoft.com/concurrency/unittesting/session"
+                processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="type" type="mcut:testResultTypeXEnum" use="required" />
+      <xs:attribute name="exitCode" type="xs:int" use="required"/>
+      <xs:attribute name="chessExitCode" type="chess:exitCodeType" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

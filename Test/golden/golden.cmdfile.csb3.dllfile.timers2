@@ -1,0 +1,57 @@
+Tests: 1 Threads: 4 ExecSteps: 23 HBExecs: 1 
+
+***************** CHESS assertion ***********************
+Deadlock
+ Error Trace (saved on errorsched)
+			 en = {1 }
+[0]: 1 511 RWVAR_READWRITE
+			 en = {1 }
+[1]: 1 511 QUIESCENT_WAIT
+			 en = {1 }
+[2]: 1 512 RWVAR_READWRITE
+			 en = {1 }
+[3]: 1 2 TASK_FORK
+			 en = {1 }
+[4]: 1 2 TASK_RESUME
+			 en = {1 2 }
+[5]: 1 512 RWVAR_READWRITE
+			 en = {1 2 }
+[6]: 1 3 TASK_FORK
+			 en = {1 2 }
+[7]: 1 3 TASK_RESUME
+			 en = {1 2 3 }
+[8]: 1 512 RWVAR_READWRITE
+			 en = {1 2 3 }
+[9]: 1 4 TASK_FORK
+			 en = {1 2 3 }
+[10]: 1 4 TASK_RESUME
+			 en = {2 3 4 }
+[11]: 2 2 TASK_BEGIN
+			 en = {2 3 4 }
+[12]: 2 2 RWVAR_READWRITE
+			 en = {1 2 3 4 }
+[13]: 2 2 TASK_END
+			 en = {1 3 4 }
+[14]: 3 3 TASK_BEGIN
+			 en = {1 3 4 }
+[15]: 3 3 RWVAR_READWRITE
+			 en = {1 3 4 }
+[16]: 3 513 RWEVENT
+			 en = {1 3 4 }
+[17]: 3 [512 3 ] RWVAR_READWRITE
+			 en = {1 3 4 }
+[18]: 3 3 TASK_END
+			 en = {1 4 }
+[19]: 4 4 TASK_BEGIN
+			 en = {1 4 }
+[20]: 4 4 RWVAR_READWRITE
+			 en = {1 4 }
+[21]: 4 514 RWEVENT
+			 en = {1 4 }
+[22]: 4 [512 4 ] RWVAR_READWRITE
+			 en = {1 4 }
+[23]: 4 4 TASK_END
+			 en = {1 }
+[24]: 1 2 WAIT_ANY
+
+Exit code = -2 

@@ -1,0 +1,22 @@
+Assertion failed: p, file eventstimeout.cpp, line 45
+
+This application has requested the Runtime to terminate it in an unusual way.
+Please contact the application's support team for more information.
+
+***************** CHESS assertion ***********************
+Program exited abnormally : Test called abort
+ Error Trace (saved on errorsched)
+			 en = {1 }
+[0]: 1 511 RWVAR_READWRITE
+			 en = {1 }
+[1]: 1 511 QUIESCENT_WAIT
+			 en = {1 }
+[2]: 1 2 TASK_FORK
+			 en = {1 }
+[3]: 1 2 TASK_RESUME
+			 en = {1 2 }
+[4]: 1 512 WAIT_ANY
+			 en = {1 2 }
+[5]: 1 1 TASK_YIELD
+
+Exit code = -1 

@@ -1,0 +1,12 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--
+    import this file in a .csproj to have the assembly automatically gaced, ungaced
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>$(PreBuildEvent)
+    "$(FrameworkSDKDIR)bin\gacutil.exe" /u $(TargetName) /nologo</PreBuildEvent>
+    <PostBuildEvent>$(PostBuildEvent)
+      "$(FrameworkSDKDIR)bin\gacutil.exe" /i "$(TargetPath)" /nologo
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

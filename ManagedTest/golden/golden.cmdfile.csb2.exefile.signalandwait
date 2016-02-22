@@ -1,0 +1,20 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing signalandwait.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+Tests: 1 Threads: 3 ExecSteps: 33 HBExecs: 1 
+Tests: 2 Threads: 3 ExecSteps: 33 HBExecs: 1 
+Tests: 3 Threads: 3 ExecSteps: 33 HBExecs: 1 
+Tests: 4 Threads: 3 ExecSteps: 33 HBExecs: 1 
+Tests: 5 Threads: 3 ExecSteps: 37 HBExecs: 2 
+Tests: 6 Threads: 3 ExecSteps: 37 HBExecs: 2 
+Tests: 7 Threads: 3 ExecSteps: 37 HBExecs: 2 
+Tests: 8 Threads: 3 ExecSteps: 37 HBExecs: 3 
+Tests: 9 Threads: 3 ExecSteps: 37 HBExecs: 3 
+Tests: 10 Threads: 3 ExecSteps: 37 HBExecs: 3 
+Tests: 20 Threads: 3 ExecSteps: 37 HBExecs: 6 
+Tests: 30 Threads: 3 ExecSteps: 41 HBExecs: 10 
+Tests: 40 Threads: 3 ExecSteps: 41 HBExecs: 14 
+Tests: 50 Threads: 3 ExecSteps: 41 HBExecs: 16 
+Tests: 54 Threads: 3 ExecSteps: 41 HBExecs: 18 
+Search Completed (1 Warning).
+Exit code = 0 

@@ -1,0 +1,4 @@
+csb1 : mchess.exe /volatile /p:notime=true /p:show_hbexecs=true /p:nopopups=true /maxpreemptions:1
+csb2 : mchess.exe /volatile /p:notime=true /p:show_hbexecs=true /p:nopopups=true /maxpreemptions:2
+
+

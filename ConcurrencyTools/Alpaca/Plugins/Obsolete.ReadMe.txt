@@ -1,0 +1,4 @@
+﻿Plugins have been made obsolete. A plugin generally was either some custom test or 
+custom task. To implement a plugin, think about creating a new AppTask or an application
+command that may spawn and coordinate amongst multiple AppTasks.
+JAM: I've kept the old engines and plugins around for reference purposes for the future.

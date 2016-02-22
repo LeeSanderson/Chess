@@ -1,0 +1,4 @@
+﻿Backends have been made obsolete and have been replaced with the AppTask APIs.
+The equivalent of the LocalBackend is the AppTaskController.
+JAM: I've kept the cluster/hpc code around for reference purposes for future implementation of 
+an AppTaskController that can use clusters or the cloud.

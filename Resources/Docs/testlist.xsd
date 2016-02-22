@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+    targetNamespace="http://research.microsoft.com/chess"
+    attributeFormDefault="unqualified" 
+    elementFormDefault="qualified"   
+    xmlns="http://research.microsoft.com/chess"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+  <!-- definition of simple elements -->
+  <xs:element name="executable" type="xs:string"/>
+  <xs:element name="arg" type="xs:string"/>
+  <xs:element name="carg" type="xs:string"/>
+  <xs:element name="shellline" type="xs:string"/>
+  <xs:element name="startdir" type="xs:string"/>
+  <xs:element name="include" type="xs:string"/>
+
+  <!-- definition of builds -->
+  <xs:element name="build">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- information about how to build the testlist -->
+        <xs:element ref="startdir" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="shellline"  minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="executable" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="arg" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- definition of tests -->
+  <xs:element name="test">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- information about how to run the test -->
+        <xs:element ref="startdir" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="shellline" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="executable" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="carg" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- definition of testlists -->
+  <xs:element name="testlist">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- optionally, include a build action -->
+        <xs:element ref="build" minOccurs="0" maxOccurs="1"/>
+        <!-- information about how to run tests -->
+        <xs:element ref="startdir" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="shellline" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="executable" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="carg" minOccurs="0" maxOccurs="unbounded"/>
+        <!-- list tests, testlists, or included testlists (usually only one of the three) -->
+        <xs:element ref="test" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="testlist" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="include" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

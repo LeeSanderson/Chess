@@ -1,0 +1,11 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing choose.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+Tests: 1 Threads: 1 ExecSteps: 3 HBExecs: 1 
+Tests: 2 Threads: 1 ExecSteps: 3 HBExecs: 2 
+Tests: 3 Threads: 1 ExecSteps: 3 HBExecs: 3 
+Tests: 4 Threads: 1 ExecSteps: 3 HBExecs: 4 
+Tests: 5 Threads: 1 ExecSteps: 3 HBExecs: 5 
+Tests: 6 Threads: 1 ExecSteps: 3 HBExecs: 6 
+Search Completed (1 Warning).
+Exit code = 0 

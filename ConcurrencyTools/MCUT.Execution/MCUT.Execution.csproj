@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{81771FD7-1DB0-4E13-BC88-6B1C8AE8AB97}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Concurrency.TestTools</RootNamespace>
+    <AssemblyName>Microsoft.Concurrency.UnitTesting.Execution</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>%24/ChessTesting/ConcurrencyTools/MCUT.Execution</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://tfs.codeplex.com/tfs/tfs06</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>MCUT.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Execution\AppTasks\ContinuationAppTask.cs" />
+    <Compile Include="Execution\AppTasks\AppTaskBuilder.cs" />
+    <Compile Include="Execution\AppTasks\IUsesInputObservationFile.cs" />
+    <Compile Include="Execution\AppTasks\ITaskDefinesARun.cs" />
+    <Compile Include="Execution\AppTasks\IHasMChessOptions.cs" />
+    <Compile Include="Execution\AppTasks\IRunTestTask.cs" />
+    <Compile Include="Execution\AppTasks\IAcceptsRunTestOptions.cs" />
+    <Compile Include="Execution\AppTasks\IRunTestOptions.cs" />
+    <Compile Include="Execution\AppTasks\delegates.cs" />
+    <Compile Include="Execution\AppTasks\enums.cs" />
+    <Compile Include="Execution\AppTasks\IAppTaskController.cs" />
+    <Compile Include="Execution\AppTasks\AppTaskStatusChangedEventArgs.cs" />
+    <Compile Include="Execution\AssertMessagesUtil.cs" />
+    <Compile Include="Execution\AutoRegisterEntityAttribute.cs" />
+    <Compile Include="Execution\AppTasks\AppTask.cs" />
+    <Compile Include="Execution\AppTasks\AppProcessTask.cs" />
+    <Compile Include="Execution\AppTasks\AppScriptProcessTask.cs" />
+    <Compile Include="Execution\AppTasks\BuildAppTaskBase.cs" />
+    <Compile Include="Execution\AppTasks\CustomBuildAppTask.cs" />
+    <Compile Include="Execution\AppTasks\MSBuildAppTask.cs" />
+    <Compile Include="Execution\AppTasks\RunPerformanceTestTask.cs" />
+    <Compile Include="Execution\AppTasks\AppTaskController.cs" />
+    <Compile Include="Execution\AppTasks\RunMCutTestCaseAppTask.cs" />
+    <Compile Include="Execution\AppTasks\RunUnitTestTask.cs" />
+    <Compile Include="Execution\AppTasks\RunMChessBasedTestTask.cs" />
+    <Compile Include="Execution\AppTasks\RunMChessTestTask.cs" />
+    <Compile Include="Execution\AppTasks\ExecuteMChessTask.cs" />
+    <Compile Include="Execution\IEntity.cs" />
+    <Compile Include="Execution\IMSBuildSettings.cs" />
+    <Compile Include="Execution\IBuildableEntity.cs" />
+    <Compile Include="Execution\IncludeEntity.cs" />
+    <Compile Include="Execution\XElementDataObject.cs" />
+    <Compile Include="Execution\MSBuild\XSessionMSBuildNames.cs" />
+    <Compile Include="Execution\MSBuild\XMSBuild03Names.cs" />
+    <Compile Include="Execution\MSBuild\MSBuildProjectConfiguration.cs" />
+    <Compile Include="Execution\MSBuild\enums.cs" />
+    <Compile Include="Execution\MSBuild\MSBuildProject.cs" />
+    <Compile Include="Execution\TestProjectEntity.cs" />
+    <Compile Include="Execution\EntityExtensions.cs" />
+    <Compile Include="Execution\ITestUsesMChess.cs" />
+    <Compile Include="Execution\ProcessOutputReader.cs" />
+    <Compile Include="Execution\Chess\ChessTestUtil.cs" />
+    <Compile Include="Execution\Chess\ChessXResultUtil.cs" />
+    <Compile Include="Execution\Chess\ChessResultsReader.cs" />
+    <Compile Include="Execution\ConflictSerializabilityTestEntity.cs" />
+    <Compile Include="Execution\ISessionEntity.cs" />
+    <Compile Include="Execution\MCutToolsUtil.cs" />
+    <Compile Include="Execution\ObservationTestEntity.cs" />
+    <Compile Include="Execution\ObservationGeneratorEntity.cs" />
+    <Compile Include="Execution\DeterminismTestEntity.cs" />
+    <Compile Include="Execution\MChessBasedTestEntity.cs" />
+    <Compile Include="Execution\TaskRunEntity.cs" />
+    <Compile Include="Execution\TestExecutionException.cs" />
+    <Compile Include="Execution\TestGroupingEntity.cs" />
+    <Compile Include="Execution\TestListEntity.cs" />
+    <Compile Include="Execution\TestAssemblyEntity.cs" />
+    <Compile Include="Execution\TestClassEntity.cs" />
+    <Compile Include="Execution\TestMethodEntity.cs" />
+    <Compile Include="Execution\ErrorEntity.cs" />
+    <Compile Include="Execution\PerformanceTestEntity.cs" />
+    <Compile Include="Execution\PlaceholderEntity.cs" />
+    <Compile Include="Execution\ScheduleTestEntity.cs" />
+    <Compile Include="Execution\ExpectedRegressionTestResultEntity.cs" />
+    <Compile Include="Execution\DataRaceTestEntity.cs" />
+    <Compile Include="Execution\ITestSource.cs" />
+    <Compile Include="Execution\IDefinesTestContexts.cs" />
+    <Compile Include="Execution\MCutTestEntity.cs" />
+    <Compile Include="Execution\TestResultUtil.cs" />
+    <Compile Include="Execution\TestTypeNames.cs" />
+    <Compile Include="Execution\Chess\ChessResultEntity.cs" />
+    <Compile Include="Execution\MSBuildEntity.cs" />
+    <Compile Include="Execution\BuildEntity.cs" />
+    <Compile Include="Execution\Chess\ChessScheduleUtil.cs" />
+    <Compile Include="Execution\Chess\ChessTestEntities.cs" />
+    <Compile Include="Execution\Chess\PreemptionVarsUtil.cs" />
+    <Compile Include="Execution\CustomBuildEntity.cs" />
+    <Compile Include="Execution\EntityBuilderBase.cs" />
+    <Compile Include="Execution\EntityUtil.cs" />
+    <Compile Include="Execution\BuildRunEntity.cs" />
+    <Compile Include="Execution\TestCaseEntity.cs" />
+    <Compile Include="Execution\MCutTestCaseRunEntity.cs" />
+    <Compile Include="Execution\TestResultEntity.cs" />
+    <Compile Include="Execution\TestEntity.cs" />
+    <Compile Include="Execution\TestMethodParameter.cs" />
+    <Compile Include="Execution\TestArgs.cs" />
+    <Compile Include="Execution\ExpectedTestResultEntity.cs" />
+    <Compile Include="Execution\EntityBase.cs" />
+    <Compile Include="Execution\enums.cs" />
+    <Compile Include="Execution\IDefinesBuild.cs" />
+    <Compile Include="Execution\IEntityModel.cs" />
+    <Compile Include="Execution\IHasTestContainerSourceFile.cs" />
+    <None Include="Execution\Entities.cd" />
+    <Compile Include="Execution\TestContextEntityBase.cs" />
+    <Compile Include="Execution\CommandlineUtil.cs" />
+    <Compile Include="Execution\TestRunEntity.cs" />
+    <Compile Include="Execution\UnitTestEntities.cs" />
+    <Compile Include="Execution\PseudoDependencyObject.cs" />
+    <Compile Include="Execution\ManagedTestCase.cs" />
+    <Compile Include="Execution\UnitTestsUtil.cs" />
+    <Compile Include="Execution\Xml\TestContainerLoader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Execution\Xml\TestContainerUtil.cs" />
+    <Compile Include="Execution\Xml\XSessionUtil.cs" />
+    <Compile Include="Execution\Xml\XSessionNames.cs" />
+    <None Include="MCUT.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MCUT.Framework\MCUT.Framework.csproj">
+      <Project>{E7F4455E-DBF6-4D36-8ACB-DA2106C5FCC3}</Project>
+      <Name>MCUT.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Execution\Xml\XSession.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Execution\Backends\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+See http://www.tramontana.co.hu/wix/ for a good tutorial
+on Wix.
+-->
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?if $(var.Win64) = yes ?>
+  <?define Platform = x64 ?>
+  <?define PlatformText = "64-bit (x64)" ?>
+  <?define PlatformProgramFiles = ProgramFiles64Folder ?>
+  <?else?>
+  <?define Platform = x86 ?>
+  <?define PlatformText = "32-bit (x86)" ?>
+  <?define PlatformProgramFiles = ProgramFilesFolder ?>
+  <?endif?>
+  <?define HomePage = http://chesstool.codeplex.com/ ?>
+  <?define UpgradeCode = {C22DBF0A-AD12-4866-A922-14A2207F0B1D} ?>
+  <Product
+    Id="$(var.ProductGuid)"
+    Name="Microsoft Alpaca $(var.VersionNumber) $(var.Flavor) for $(var.PlatformText)"
+    Language="1033"
+    Version="$(var.VersionNumber)"
+    Manufacturer="Microsoft Corporation"
+    UpgradeCode="$(var.UpgradeCode)">
+    <Package
+      InstallerVersion="300"
+      Compressed="yes"
+      InstallPrivileges="elevated"
+      Manufacturer="Microsoft Corporation"
+      Platform="$(var.Platform)" />
+    <!-- VersionNT64 can be used to determine wheter it's an x64 install -->
+    <?if $(var.Win64) = yes ?>
+    <Condition Message="This installer is targetted at the 64-bit platform">VersionNT64</Condition>
+    <?else?>
+    <!--   <Condition Message="This installer is targetted at the 32-bit platform.">NOT(VersionNT64)</Condition> -->
+    <?endif?>
+    <!-- icons -->
+    <!--    <Icon Id="pex.logo.ico" SourceFile="..\doc\logo\iconlogo.ico"  /> -->
+    <!--    <Icon Id="html.shortcut.ico" SourceFile="..\doc\icons\html.shortcut.ico"/> -->
+
+    <!-- This property defines the ALLUSERS property to be 1, which indicates that this product will be  -->
+    <!-- installed per-machine instead of per-user.                                                      -->
+    <Property Id="ALLUSERS" Value="1"/>
+    <!-- application home page -->
+    <Property Id="ARPURLINFOABOUT" Value="$(var.HomePage)" />
+    <!-- technical help link -->
+    <Property Id="ARPHELPLINK" Value="$(var.HomePage)" />
+    <!-- icon in Add/Remove dialog -->
+    <Property Id="ARPPRODUCTICON" Value="Alpaca.ico" />
+
+    <!-- shortcut to homepage -->
+    <Property Id="ALPACA_HOMEPAGE" Value="$(var.HomePage)" />
+    <Media Id="1" Cabinet="Product.cab" EmbedCab="yes" />
+
+    <!-- icons -->
+    <Icon Id="Alpaca.ico" SourceFile="$(var.InstallerDirectory)\Alpaca.ico"  />
+    <Icon Id="zip.ico" SourceFile="$(var.InstallerDirectory)\folderopen.ico"/>
+    <Icon Id="html.shortcut.ico" SourceFile="$(var.InstallerDirectory)\html.shortcut.ico"/>
+    
+    <!-- Removing any previous install -->
+    <Upgrade Id="$(var.UpgradeCode)">
+      <UpgradeVersion
+        Minimum="0.0.0.0"
+        Property="OLDVERSIONFOUND"
+        IncludeMinimum="yes"
+        MigrateFeatures="yes" />
+    </Upgrade>
+
+    <InstallExecuteSequence>
+      <!-- automatically uninstall previous installation -->
+      <RemoveExistingProducts Before="InstallInitialize">
+        <![CDATA[OLDVERSIONFOUND]]>
+      </RemoveExistingProducts>
+    </InstallExecuteSequence>
+
+    <!-- directory structure -->
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <!-- we need a 32bit installation folder -->
+      <?if $(var.Win64) = yes?>
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALL32LOCATION" Name="Microsoft Alpaca">
+          <!-- 
+            registry key to specify the install location (native registry)
+          -->
+          <Component
+              Id="AlpacaPathRegistryKeyx86Component"
+              Guid="{AD1793B2-D0E9-415D-B52C-DD44E2F18528}"
+              Win64="no">
+            <RegistryKey Root="HKLM" Key="SOFTWARE\Microsoft" Action="none">
+              <RegistryKey Key="Research" Action="none">
+                <RegistryKey Key="Alpaca" Action="createAndRemoveOnUninstall">
+                  <RegistryKey Key="CurrentVersion" Action="createAndRemoveOnUninstall">
+                    <RegistryValue Name="Version" Type="string" Value="$(var.VersionNumber)" Action="write" />
+                    <RegistryValue Name="Flavor" Type="string" Value="$(var.Flavor)" Action="write" />
+                    <RegistryValue Name="InstallPath" Type="string" Value="[INSTALLLOCATION]" Action="write" />
+                  </RegistryKey>
+                </RegistryKey>
+              </RegistryKey>
+            </RegistryKey>
+            <CreateFolder />
+          </Component>
+
+          <Directory Id="INSTALLBIN32LOCATION" Name="bin"/>
+        </Directory>
+      </Directory>
+      <?endif?>
+
+      <!-- program files -->
+      <Directory Id="$(var.PlatformProgramFiles)">
+        <Directory Id="INSTALLLOCATION" Name="Microsoft Alpaca">
+          <!-- 
+            registry key to specify the install location (native registry)
+            [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319\AssemblyFoldersEx\Microsoft CUT Framework (dev)]
+@="C:\\Chess\\dev\\main\\bin\\Reference Assemblies"
+          -->
+          <Component
+              Id="AlpacaPathRegistryKeyComponent"
+              Guid="{EEDE2052-BAD2-4088-BAF3-F264A6EB358D}"
+              Win64="$(var.Win64)">
+            <RegistryKey Root="HKLM" Key="SOFTWARE\Microsoft" Action="none">
+              <RegistryKey Key="Research">
+                <RegistryKey Key="Alpaca" Action="createAndRemoveOnUninstall">
+                  <RegistryKey Key="CurrentVersion" Action="createAndRemoveOnUninstall">
+                    <RegistryValue Name="Version" Type="string" Value="$(var.VersionNumber)" Action="write" />
+                    <RegistryValue Name="Flavor" Type="string" Value="$(var.Flavor)" Action="write" />
+                    <RegistryValue Name="InstallPath" Type="string" Value="[INSTALLLOCATION]" Action="write" />
+                  </RegistryKey>
+                </RegistryKey>
+              </RegistryKey>
+            </RegistryKey>
+            <CreateFolder />
+          </Component>
+          <Directory Id="INSTALLBINLOCATION" Name="bin">
+            <Directory Id="INSTALLBINGACLOCATION" Name="GAC" />
+            <?if $(var.Win64) = yes ?>
+            <Directory Id="INSTALLBINX64LOCATION" Name="x64">
+              <Directory Id="INSTALLBINX64GACLOCATION" Name="GAC" />
+            </Directory>
+            <?endif?>
+          </Directory>
+          <Directory Id="INSTALLDOCLOCATION" Name="Documentation" />
+        </Directory>
+      </Directory>
+
+      <!-- program menu items -->
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ProgramMenuDir" Name="Microsoft Alpaca" />
+      </Directory>
+    </Directory>
+
+    <!-- requires .net 4.0 
+    
+    TODO - needs to be fixed
+    
+    <PropertyRef Id="NETFRAMEWORK40"/>
+    <Condition Message="The .NET Framework 4.0 or higher must be installed">
+      <![CDATA[Installed OR NETFRAMEWORK40]]>
+    </Condition>
+-->
+    
+    <!-- requires VS Dev 10 -->
+    <PropertyRef Id="VS10DEVENV"/>
+    <Condition Message="This installer requires Visual Studio 2010.">
+      <![CDATA[Installed OR VS10DEVENV]]>
+    </Condition>
+
+    <Feature
+      Id="ProductFeature"
+      Title="Alpaca $(var.VersionNumber)"
+      Level="1"
+      Description="Alpaca: A lovely parallelism and concurrency analyzer"
+      Display="expand"
+      ConfigurableDirectory="INSTALLLOCATION">
+      
+      <ComponentRef Id="AlpacaPathRegistryKeyComponent" Primary="yes"/>
+      <ComponentRef Id="AlpacaReferenceAssembliesComponent32" Primary="yes"/>
+      <ComponentRef Id="AlpacaReferenceAssembliesComponent64" Primary="yes"/>
+      <ComponentRef Id="AlpacaHomePageComponent" Primary="yes"/>
+      <!-- <FeatureRef Id="CRTFeature" /> -->
+      <FeatureRef Id="AlpacaFeature"/>
+      <!-- <FeatureRef Id ="DocFeature"/> -->
+      <!-- environment variables -->
+    </Feature>
+
+    <DirectoryRef Id="INSTALLBINLOCATION">
+      <Directory Id="AlpacaReferenceAssemblies" Name="Reference Assemblies">
+        <Component
+         Id="AlpacaReferenceAssembliesComponent32"
+         Guid="{2D26195B-975B-4067-B0BD-471F900F1681}"
+         Win64="no"
+       >
+          <RegistryKey Root="HKLM" Key="Software\Microsoft\.NETFramework\v4.0.30319\AssemblyFoldersEx" Action="none">
+            <RegistryKey Key="Microsoft Alpaca Reference Assemblies" Action="createAndRemoveOnUninstall">
+              <RegistryValue Type="string" KeyPath="yes"
+                             Value="[AlpacaReferenceAssemblies]"
+              />
+            </RegistryKey>
+          </RegistryKey>
+          <CreateFolder />
+        </Component>
+        <Component
+           Id="AlpacaReferenceAssembliesComponent64"
+           Guid="{FDB6C4C9-13EE-4163-85E8-D56871D7E0EE}"
+           Win64="no"
+        >
+          <RegistryKey Root="HKLM" Key="Software\Wow6432Node\Microsoft\.NETFramework\v4.0.30319\AssemblyFoldersEx" Action="none">
+            <RegistryKey Key="Microsoft Alpaca Reference Assemblies" Action="createAndRemoveOnUninstall">
+              <RegistryValue Type="string" KeyPath="yes"
+                             Value="[AlpacaReferenceAssemblies]"
+              />
+            </RegistryKey>
+          </RegistryKey>          
+        </Component>
+      </Directory>
+    </DirectoryRef>
+    
+    <!-- shortcuts -->
+    <DirectoryRef Id="INSTALLLOCATION">
+      <Component
+        Id="AlpacaHomePageComponent"
+        Guid="{7463CB44-2D66-4189-B237-1B279BD62472}"
+        Win64="$(var.Win64)">
+        <RegistryKey Root="HKCU" Key="Software\Microsoft" Action="none">
+          <RegistryKey Key="Research">
+            <RegistryKey Key="Alpaca" Action="createAndRemoveOnUninstall">
+              <RegistryValue Type="string" KeyPath="yes" Name="HomePage" Value="[CHESS_HOMEPAGE]" />
+            </RegistryKey>
+          </RegistryKey>
+        </RegistryKey>
+
+        <Shortcut Id="HomePageShortcut"
+                  Directory="ProgramMenuDir"
+                  Name="Home Page"
+                  Target="[ALPACA_HOMEPAGE]"
+                  Icon="html.shortcut.ico"
+                  />
+        <CreateFolder Directory="INSTALLLOCATION" />
+        <RemoveFolder Id="RemoveProgramMenuDir" Directory="ProgramMenuDir" On="uninstall"/>
+        <RemoveFolder Id="RemoveMicrosoftAlpaca" Directory="INSTALLLOCATION" On="both"/>
+        <Environment
+            Id="AlpacaPathEnvironment"
+            Permanent="yes"
+            System="yes"
+            Name="PATH"
+            Value="[INSTALLBINLOCATION]"
+            Part="last"
+            Action="set" />
+        <Environment
+            Id="NtSymbolPathEnvironment"
+            Permanent="yes"
+            System="yes"
+            Name="_NT_SYMBOL_PATH"
+            Value="[INSTALLBINLOCATION]"
+            Part="last"
+            Action="set" />
+      </Component>
+    </DirectoryRef>
+    
+    <!-- Installation Prequisites -->
+    <!-- admin only -->
+    <Condition Message="You need to be an administrator to install this product.">
+      <![CDATA[Privileged]]>
+    </Condition>
+    <!-- built in UI -->
+    <UI>
+      <UIRef Id="WixUI_Mondo" />
+      <UIRef Id="WixUI_ErrorProgressText" />
+      <Publish
+        Dialog="ExitDialog"
+        Control="Finish"
+        Event="EndDialog"
+        Value="Return"
+        Order="2">NOT Installed AND WIXUI_EXITDIALOGOPTIONALCHECKBOX</Publish>
+    </UI>
+    <!--         Event="DoAction"
+        Value="GettingStartedAction"-->
+  </Product>
+</Wix>

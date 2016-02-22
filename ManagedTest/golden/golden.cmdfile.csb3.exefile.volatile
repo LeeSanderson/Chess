@@ -1,0 +1,21 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing volatile.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+2 2
+Tests: 1 Threads: 2 ExecSteps: 18 HBExecs: 1 
+2 1
+Tests: 2 Threads: 2 ExecSteps: 21 HBExecs: 2 
+2 2
+Tests: 3 Threads: 2 ExecSteps: 21 HBExecs: 2 
+2 2
+Tests: 4 Threads: 2 ExecSteps: 21 HBExecs: 2 
+1 1
+Tests: 5 Threads: 2 ExecSteps: 21 HBExecs: 3 
+1 2
+Tests: 6 Threads: 2 ExecSteps: 21 HBExecs: 4 
+1 1
+Tests: 7 Threads: 2 ExecSteps: 21 HBExecs: 4 
+2 2
+Tests: 8 Threads: 2 ExecSteps: 21 HBExecs: 4 
+Search Completed (1 Warning).
+Exit code = 0 

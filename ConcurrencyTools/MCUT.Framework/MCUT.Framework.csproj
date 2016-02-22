@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E7F4455E-DBF6-4D36-8ACB-DA2106C5FCC3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Concurrency.TestTools.UnitTesting</RootNamespace>
+    <AssemblyName>Microsoft.Concurrency.UnitTestingFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>%24/ChessTesting/ConcurrencyTools/MCUT.Framework</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://tfs.codeplex.com/tfs/tfs06</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <DocumentationFile>..\..\Debug\Microsoft.Concurrency.UnitTestingFramework.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <DocumentationFile>..\..\Release\Microsoft.Concurrency.UnitTestingFramework.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>MCUT.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assert.cs" />
+    <Compile Include="ChessAPI.cs" />
+    <Compile Include="Chess\ChessTogglePreemptabilityAttribute.cs" />
+    <Compile Include="Chess\ChessDefaultPreemptabilityAttribute.cs" />
+    <Compile Include="CollectionAssert.cs" />
+    <Compile Include="ConflictSerializabilityTestMethodAttribute.cs" />
+    <Compile Include="ObservationTestMethodAttribute.cs" />
+    <Compile Include="ObservationGeneratorAttribute.cs" />
+    <Compile Include="DeterminismTestMethodAttribute.cs" />
+    <Compile Include="DebugAssertFailedException.cs" />
+    <Compile Include="ExpectedResultAttribute.cs" />
+    <Compile Include="TaskoMeterTestContext.cs" />
+    <Compile Include="TaskMeter.cs" />
+    <Compile Include="TestTypeAttributeBase.cs" />
+    <Compile Include="ITestTypeAttribute.cs" />
+    <Compile Include="RegressionTestExpectedResultAttribute.cs" />
+    <Compile Include="PerformanceTestMethodAttribute.cs" />
+    <Compile Include="ScheduleTestMethodAttribute.cs" />
+    <Compile Include="DataRaceTestMethodAttribute.cs" />
+    <Compile Include="enums.cs" />
+    <Compile Include="Chess\ChessInstrumentAssemblyAttribute.cs" />
+    <Compile Include="Chess\ChessTestMethodAttribute.cs" />
+    <Compile Include="Chess\ChessTestContext.cs" />
+    <Compile Include="Chess\ChessTestContextAttribute.cs" />
+    <Compile Include="Chess\ExpectedChessResultAttribute.cs" />
+    <Compile Include="ConcurrencyUnitTestException.cs" />
+    <Compile Include="AssertFailedException.cs" />
+    <Compile Include="AssertInconclusiveException.cs" />
+    <Compile Include="UnitTestingExtensions.cs" />
+    <Compile Include="IgnoreAttribute.cs" />
+    <Compile Include="InvalidUnitTestConfigurationException.cs" />
+    <Compile Include="TestContext.cs" />
+    <Compile Include="Chess\MChessEnums.cs" />
+    <Compile Include="Chess\MChessOptions.cs" />
+    <Compile Include="ExpectedExceptionAttribute.cs" />
+    <Compile Include="TestTools\XmlExtensions.cs" />
+    <Compile Include="TestTools\XmlUtil.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="TestArgsAttribute.cs" />
+    <Compile Include="ITestContext.cs" />
+    <Compile Include="ITestContextsProviderAttribute.cs" />
+    <Compile Include="ITestMethodArgsProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestArgsProviderPropertyAttribute.cs" />
+    <Compile Include="ContextsPropertyAttribute.cs" />
+    <Compile Include="UnitTestMethodAttribute.cs" />
+    <Compile Include="Xml\XConcurrencyNames.cs" />
+    <Compile Include="Xml\XTestResultNames.cs" />
+    <Compile Include="Xml\XTestCaseNames.cs" />
+    <Compile Include="Xml\UnitTestingSchemaUtil.cs" />
+    <Compile Include="Xml\TestAssemblyReader.cs" />
+    <Compile Include="Chess\XChessNames.cs" />
+    <Compile Include="Xml\XNames.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Xml\TestListSchema.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chess\ChessSchema.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xml\ConcurrencySchema.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MCUT.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

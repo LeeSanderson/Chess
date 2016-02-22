@@ -1,0 +1,140 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing pinvoke2.exe  ...
+Parent
+Child
+Child
+Tests: 1 Threads: 3 ExecSteps: 17 HBExecs: 1 
+Parent
+Child
+Child
+Tests: 2 Threads: 3 ExecSteps: 17 HBExecs: 1 
+Parent
+Child
+Child
+Tests: 3 Threads: 3 ExecSteps: 17 HBExecs: 2 
+Parent
+Child
+Child
+Tests: 4 Threads: 3 ExecSteps: 17 HBExecs: 2 
+Parent
+Child
+Child
+Tests: 5 Threads: 3 ExecSteps: 17 HBExecs: 2 
+Parent
+Child
+Child
+Tests: 6 Threads: 3 ExecSteps: 17 HBExecs: 2 
+Parent
+Child
+Child
+Tests: 7 Threads: 3 ExecSteps: 17 HBExecs: 2 
+Parent
+Child
+Child
+Tests: 8 Threads: 3 ExecSteps: 17 HBExecs: 2 
+Parent
+Child
+Child
+Tests: 9 Threads: 3 ExecSteps: 17 HBExecs: 2 
+Parent
+Child
+Child
+Tests: 10 Threads: 3 ExecSteps: 17 HBExecs: 2 
+Parent
+Child
+Child
+Parent
+Child
+Child
+Parent
+Child
+Child
+Parent
+Child
+Child
+Parent
+Child
+Child
+Parent
+Child
+Child
+Parent
+Child
+Child
+Parent
+Child
+Child
+Parent
+Child
+Child
+Child
+Child
+Parent
+Tests: 20 Threads: 3 ExecSteps: 17 HBExecs: 3 
+Child
+Parent
+Child
+Child
+Parent
+Child
+Child
+Parent
+Child
+Child
+Child
+Parent
+Child
+Parent
+Child
+Child
+Child
+Parent
+Parent
+Child
+Child
+Child
+Child
+Parent
+Parent
+Child
+Child
+Parent
+Child
+Child
+Tests: 30 Threads: 3 ExecSteps: 17 HBExecs: 6 
+Child
+Parent
+Child
+Child
+Parent
+Child
+Child
+Child
+Parent
+Child
+Parent
+Child
+Child
+Parent
+Child
+Child
+Child
+Parent
+Parent
+Child
+Child
+Parent
+Child
+Child
+Child
+Child
+Parent
+Child
+Parent
+Child
+Tests: 40 Threads: 3 ExecSteps: 17 HBExecs: 6 
+Parent
+Child
+Child
+Tests: 41 Threads: 3 ExecSteps: 17 HBExecs: 6 
+Exit code = 0 

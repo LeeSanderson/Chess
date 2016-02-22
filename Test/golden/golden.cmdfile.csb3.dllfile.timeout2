@@ -1,0 +1,10 @@
+Tests: 1 Threads: 2 ExecSteps: 11 HBExecs: 1 
+Tests: 2 Threads: 2 ExecSteps: 11 HBExecs: 1 
+Tests: 3 Threads: 2 ExecSteps: 17 HBExecs: 2 
+Tests: 4 Threads: 2 ExecSteps: 17 HBExecs: 2 
+Tests: 5 Threads: 2 ExecSteps: 17 HBExecs: 3 
+Tests: 6 Threads: 2 ExecSteps: 17 HBExecs: 3 
+Tests: 7 Threads: 2 ExecSteps: 17 HBExecs: 3 
+Tests: 8 Threads: 2 ExecSteps: 17 HBExecs: 3 
+Search Completed (0 Warnings).
+Exit code = 0 

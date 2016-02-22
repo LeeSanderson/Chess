@@ -1,0 +1,9 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing deadlock2.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+Tests: 1 Threads: 3 ExecSteps: 20 HBExecs: 1 
+
+***************** CHESS assertion ***********************
+Length of the execution exceeded 20000, a strong indication of a livelock 
+
+Exit code = -3 

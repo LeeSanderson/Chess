@@ -1,0 +1,23 @@
+Egar flag - indicates to tell the MPI runtime to automatically mark the S as completed (this would be like the MPI runtime on the sender has buffered it). otherwise, the S is only completed when the corresponding R has finished (i.e. so the seneder's runtime has someplace to send the data).
+
+W - blocks until the C state for the handle has been marked (whether via eager or actual matched R finishes).
+
+B - 
+
+
+
+In rules syntax, a blocking call is where the PC (l) is not incremented by that rule.
+e.g. Pw, Pb do not increment PC, only add the instruction. When it's completed, is when the PC will be allowed to increment and move to the next instruction.
+
+
+Px rules are rules executed by a process.
+Rx are rules for the runtime itself.
+
+
+
+TODO:
+The following tests, when run with race condition tests failed with the error:
+	"Found store buffer vulnerability at RuntimeWorker..."
+	SendRecvWaitTests.SendToSelf_WS_WR
+	SendRecvWaitTests.etc - I didn't proceed with any of the other tests until I know what this error means.
+

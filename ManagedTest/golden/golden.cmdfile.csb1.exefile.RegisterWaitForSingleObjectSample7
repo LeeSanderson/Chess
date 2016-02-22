@@ -1,0 +1,33 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing RegisterWaitForSingleObjectSample7.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+Main thread signals.
+WaitProc( First task ) executes on thread 5; cause = SIGNALED.
+Tests: 1 Threads: 2 ExecSteps: 13 HBExecs: 1 
+Main thread signals.
+WaitProc( First task ) executes on thread 5; cause = SIGNALED.
+Tests: 2 Threads: 2 ExecSteps: 13 HBExecs: 1 
+Main thread signals.
+WaitProc( First task ) executes on thread 5; cause = SIGNALED.
+Tests: 3 Threads: 2 ExecSteps: 13 HBExecs: 1 
+Main thread signals.
+WaitProc( First task ) executes on thread 5; cause = SIGNALED.
+Tests: 4 Threads: 2 ExecSteps: 13 HBExecs: 1 
+Main thread signals.
+WaitProc( First task ) executes on thread 5; cause = SIGNALED.
+Tests: 5 Threads: 2 ExecSteps: 13 HBExecs: 1 
+Main thread signals.
+WaitProc( First task ) executes on thread 5; cause = SIGNALED.
+Tests: 6 Threads: 2 ExecSteps: 13 HBExecs: 1 
+Main thread signals.
+WaitProc( First task ) executes on thread 5; cause = TIMED OUT.
+WaitProc( First task ) executes on thread 5; cause = TIMED OUT.
+WaitProc( First task ) executes on thread 5; cause = SIGNALED.
+Tests: 7 Threads: 2 ExecSteps: 19 HBExecs: 2 
+WaitProc( First task ) executes on thread 5; cause = TIMED OUT.
+WaitProc( First task ) executes on thread 5; cause = TIMED OUT.
+Main thread signals.
+WaitProc( First task ) executes on thread 5; cause = SIGNALED.
+Tests: 8 Threads: 2 ExecSteps: 19 HBExecs: 2 
+Search Completed (1 Warning).
+Exit code = 0 

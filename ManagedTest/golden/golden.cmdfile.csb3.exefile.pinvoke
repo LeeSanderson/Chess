@@ -1,0 +1,30 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing pinvoke.exe  ...
+Parent
+Child
+Tests: 1 Threads: 2 ExecSteps: 10 HBExecs: 1 
+Parent
+Child
+Tests: 2 Threads: 2 ExecSteps: 10 HBExecs: 1 
+Parent
+Child
+Tests: 3 Threads: 2 ExecSteps: 10 HBExecs: 1 
+Parent
+Child
+Tests: 4 Threads: 2 ExecSteps: 10 HBExecs: 1 
+Parent
+Child
+Tests: 5 Threads: 2 ExecSteps: 10 HBExecs: 1 
+Parent
+Child
+Tests: 6 Threads: 2 ExecSteps: 10 HBExecs: 1 
+Parent
+Child
+Tests: 7 Threads: 2 ExecSteps: 10 HBExecs: 1 
+Child
+Parent
+Tests: 8 Threads: 2 ExecSteps: 10 HBExecs: 2 
+Parent
+Child
+Tests: 9 Threads: 2 ExecSteps: 10 HBExecs: 2 
+Exit code = 0 

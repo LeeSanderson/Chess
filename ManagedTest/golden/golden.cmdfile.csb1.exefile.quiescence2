@@ -1,0 +1,34 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing quiescence2.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+Tests: 1 Threads: 5 ExecSteps: 29 HBExecs: 1 
+Tests: 2 Threads: 5 ExecSteps: 29 HBExecs: 1 
+Tests: 3 Threads: 5 ExecSteps: 29 HBExecs: 2 
+Tests: 4 Threads: 5 ExecSteps: 29 HBExecs: 2 
+Tests: 5 Threads: 5 ExecSteps: 29 HBExecs: 2 
+Tests: 6 Threads: 5 ExecSteps: 29 HBExecs: 2 
+Tests: 7 Threads: 5 ExecSteps: 29 HBExecs: 2 
+Tests: 8 Threads: 5 ExecSteps: 29 HBExecs: 2 
+Tests: 9 Threads: 5 ExecSteps: 29 HBExecs: 2 
+Tests: 10 Threads: 5 ExecSteps: 29 HBExecs: 2 
+Tests: 20 Threads: 5 ExecSteps: 29 HBExecs: 6 
+Tests: 30 Threads: 5 ExecSteps: 29 HBExecs: 6 
+Tests: 40 Threads: 5 ExecSteps: 29 HBExecs: 6 
+Tests: 50 Threads: 5 ExecSteps: 29 HBExecs: 6 
+Tests: 60 Threads: 5 ExecSteps: 29 HBExecs: 6 
+Tests: 70 Threads: 5 ExecSteps: 29 HBExecs: 6 
+Tests: 80 Threads: 5 ExecSteps: 29 HBExecs: 6 
+Tests: 90 Threads: 5 ExecSteps: 29 HBExecs: 6 
+Tests: 100 Threads: 5 ExecSteps: 29 HBExecs: 6 
+Tests: 200 Threads: 5 ExecSteps: 29 HBExecs: 6 
+Tests: 300 Threads: 5 ExecSteps: 29 HBExecs: 6 
+Tests: 400 Threads: 5 ExecSteps: 29 HBExecs: 6 
+Tests: 500 Threads: 5 ExecSteps: 29 HBExecs: 6 
+Tests: 600 Threads: 5 ExecSteps: 29 HBExecs: 6 
+Tests: 700 Threads: 5 ExecSteps: 29 HBExecs: 6 
+Tests: 800 Threads: 5 ExecSteps: 29 HBExecs: 6 
+Tests: 900 Threads: 5 ExecSteps: 29 HBExecs: 6 
+Tests: 1000 Threads: 5 ExecSteps: 29 HBExecs: 6 
+Tests: 1039 Threads: 5 ExecSteps: 29 HBExecs: 6 
+Search Completed (1 Warning).
+Exit code = 0 

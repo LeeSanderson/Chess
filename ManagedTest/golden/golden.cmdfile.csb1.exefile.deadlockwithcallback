@@ -1,0 +1,12 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing deadlockwithcallback.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+Tests: 1 Threads: 2 ExecSteps: 15 HBExecs: 1 
+Tests: 2 Threads: 2 ExecSteps: 15 HBExecs: 1 
+Tests: 3 Threads: 2 ExecSteps: 15 HBExecs: 1 
+Tests: 4 Threads: 2 ExecSteps: 15 HBExecs: 2 
+Chess is exiting with -2 : Deadlock
+
+***************** CHESS assertion ***********************
+Deadlock
+Exit code = -2 

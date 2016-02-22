@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testlist name="Managed Tests" xmlns="http://research.microsoft.com/concurrency/unittesting">
+  <startdir>@</startdir>
+
+  <!--This element describes how to build all managed tests using nmake -->
+  <build>
+    <shellline>CALL "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat"</shellline>
+    <executable>nmake</executable>
+    <arg>build</arg>
+  </build>
+
+  <!--The following settings apply to all tests-->
+  <executable>mchess.exe</executable>
+
+  <!--Now we are giving all the tests with their default arguments-->
+
+  <test name="autoresetevent">
+    <carg>autoresetevent.exe</carg>
+  </test>
+  <test name="autoresetevent1">
+    <carg>autoresetevent1.exe</carg>
+  </test>
+  <test name="autoresetevent2">
+    <carg>autoresetevent2.exe</carg>
+  </test>
+  <test name="balance">
+    <carg>balance.exe</carg>
+  </test>
+  <test name="balance2">
+    <carg>balance2.exe</carg>
+  </test>
+  <test name="boundedqueue">
+    <carg>boundedqueue.exe</carg>
+  </test>
+  <test name="boundedqueue2">
+    <carg>boundedqueue2.exe</carg>
+  </test>
+  <test name="choizeller">
+    <carg>choizeller.exe</carg>
+  </test>
+  <test name="choose">
+    <carg>choose.exe</carg>
+  </test>
+  <test name="deadlock">
+    <carg>deadlock.exe</carg>
+  </test>
+  <test name="deadlock2">
+    <carg>deadlock2.exe</carg>
+  </test>
+  <test name="deadlock3">
+    <carg>deadlock3.exe</carg>
+  </test>
+  <test name="deadlock4">
+    <carg>deadlock4.exe</carg>
+  </test>
+  <test name="deadlockwithcallback">
+    <carg>deadlockwithcallback.exe</carg>
+  </test>
+  <test name="example">
+    <carg>example.exe</carg>
+  </test>
+  <test name="example3">
+    <carg>example.exe</carg>
+    <carg>/arg:3</carg>
+  </test>
+  <test name="example5">
+    <carg>example.exe</carg>
+    <carg>/arg:5</carg>
+  </test>
+  <test name="Exception1">
+    <carg>Exception1.exe</carg>
+  </test>
+  <test name="Exception2">
+    <carg>Exception2.exe</carg>
+  </test>
+  <test name="interlock1">
+    <carg>interlock1.exe</carg>
+  </test>
+  <test name="interlock3">
+    <carg>interlock3.exe</carg>
+  </test>
+  <test name="invoke">
+    <carg>invoke.exe</carg>
+  </test>
+  <test name="lazyinit">
+    <carg>lazyinit.exe</carg>
+  </test>
+  <test name="monitor">
+    <carg>monitor.exe</carg>
+  </test>
+  <test name="monitor2">
+    <carg>monitor2.exe</carg>
+  </test>
+  <test name="monitor3">
+    <carg>monitor3.exe</carg>
+  </test>
+  <test name="mres">
+    <carg>mres.exe</carg>
+    <carg>/preemptaccesses</carg>
+  </test>
+  <test name="ManualResetEventSlim">
+    <carg>ManualResetEventSlim.exe</carg>
+    <carg>/preemptaccesses</carg>
+  </test>
+  <test name="ManualResetEventSlimFixed">
+    <carg>ManualResetEventSlimFixed.exe</carg>
+    <carg>/preemptaccesses</carg>
+  </test>
+  <test name="mutex">
+    <carg>mutex.exe</carg>
+  </test>
+  <test name="preempt1">
+    <carg>preempt1.exe</carg>
+  </test>
+  <test name="preempt2">
+    <carg>preempt2.exe</carg>
+  </test>
+  <test name="preempt3">
+    <carg>preempt3.exe</carg>
+  </test>
+  <test name="preempt4">
+    <carg>preempt4.exe</carg>
+  </test>
+  <test name="preempt5">
+    <carg>preempt5.exe</carg>
+  </test>
+  <test name="preempt6">
+    <carg>preempt6.exe</carg>
+  </test>
+  <test name="proccount1">
+    <carg>proccount.exe</carg>
+    <carg>/pc:1</carg>
+  </test>
+  <test name="proccount5">
+    <carg>proccount.exe</carg>
+    <carg>/pc:5</carg>
+  </test>
+  <test name="proccount16">
+    <carg>proccount.exe</carg>
+    <carg>/pc:16</carg>
+  </test>
+  <test name="quiescence">
+    <carg>quiescence.exe</carg>
+  </test>
+  <test name="quiescence2">
+    <carg>quiescence2.exe</carg>
+  </test>
+  <test name="races1">
+    <carg>/detectraces</carg>
+    <carg>races.exe</carg>
+    <carg>/arg:RaceTest1</carg>
+  </test>
+  <test name="races2">
+    <carg>/detectraces</carg>
+    <carg>races.exe</carg>
+    <carg>/arg:RaceTest2</carg>
+  </test>
+  <test name="races3a">
+    <carg>/detectraces</carg>
+    <carg>races.exe</carg>
+    <carg>/arg:RaceTest3a</carg>
+  </test>
+  <test name="races3b">
+    <carg>/detectraces</carg>
+    <carg>races.exe</carg>
+    <carg>/arg:RaceTest3b</carg>
+  </test>
+  <test name="races3c">
+    <carg>/detectraces</carg>
+    <carg>races.exe</carg>
+    <carg>/arg:RaceTest3c</carg>
+  </test>
+  <test name="races3d">
+    <carg>/detectraces</carg>
+    <carg>races.exe</carg>
+    <carg>/arg:RaceTest3d</carg>
+  </test>
+  <test name="races4">
+    <carg>/detectraces</carg>
+    <carg>races.exe</carg>
+    <carg>/arg:RaceTest4</carg>
+  </test>
+  <test name="RegisterWaitForSingleObjectSample">
+    <carg>RegisterWaitForSingleObjectSample.exe</carg>
+  </test>
+  <test name="RegisterWaitForSingleObjectSample2">
+    <carg>RegisterWaitForSingleObjectSample2.exe</carg>
+  </test>
+  <test name="RegisterWaitForSingleObjectSample3">
+    <carg>RegisterWaitForSingleObjectSample3.exe</carg>
+  </test>
+  <test name="RegisterWaitForSingleObjectSample4">
+    <carg>RegisterWaitForSingleObjectSample4.exe</carg>
+  </test>
+  <test name="RegisterWaitForSingleObjectSample5">
+    <carg>RegisterWaitForSingleObjectSample5.exe</carg>
+  </test>
+  <test name="RegisterWaitForSingleObjectSample6">
+    <carg>RegisterWaitForSingleObjectSample6.exe</carg>
+  </test>
+  <test name="RegisterWaitForSingleObjectSample7">
+    <carg>RegisterWaitForSingleObjectSample7.exe</carg>
+  </test>
+  <test name="roytan1">
+    <carg>roytan1.exe</carg>
+  </test>
+  <test name="roytan2">
+    <carg>roytan2.exe</carg>
+  </test>
+  <test name="rwls-sample">
+    <carg>rwls-sample.exe</carg>
+  </test>
+  <test name="semaphore">
+    <carg>semaphore.exe</carg>
+  </test>
+  <test name="signalandwait">
+    <carg>signalandwait.exe</carg>
+  </test>
+  <test name="signalwait2">
+    <carg>signalwait2.exe</carg>
+  </test>
+  <test name="SlimManualResetEvent">
+    <carg>SlimManualResetEvent.exe</carg>
+  </test>
+  <test name="threadpool">
+    <carg>threadpool.exe</carg>
+  </test>
+  <test name="timer">
+    <carg>timer.exe</carg>
+  </test>
+  <test name="timer2">
+    <carg>timer2.exe</carg>
+  </test>
+  <test name="timer3">
+    <carg>timer3.exe</carg>
+  </test>
+  <test name="timer4">
+    <carg>timer4.exe</carg>
+  </test>
+  <test name="volatile">
+    <carg>volatile.exe</carg>
+  </test>
+  <test name="volatile2">
+    <carg>volatile2.exe</carg>
+  </test>
+  <test name="volatile3">
+    <carg>volatile3.exe</carg>
+  </test>
+  <test name="volatile4">
+    <carg>volatile4.exe</carg>
+  </test>
+  <test name="waitany">
+    <carg>waitany.exe</carg>
+  </test>
+  <test name="waitall">
+    <carg>waitall.exe</carg>
+  </test>
+  <test name="waitinit">
+    <carg>waitinit.exe</carg>
+  </test>
+</testlist>

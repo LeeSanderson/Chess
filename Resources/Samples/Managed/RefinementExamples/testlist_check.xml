@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testlist name="Refinement (Check Observations)" xmlns="http://research.microsoft.com/chess">
+    
+  <build>
+    <startdir>@</startdir>
+    <executable>msbuild</executable>
+    <arg>RefinementExamples.sln</arg>
+    <arg>/p:Configuration=Debug</arg>
+  </build>
+
+  <!-- The following parameters apply to all tests -->
+  <startdir>@\RefinementExamples\bin\Debug</startdir>
+  <executable>mchess</executable>
+  <carg>RefinementExamples.exe</carg>
+
+  <test name="Check0">
+    <carg>/arg:i0</carg>
+    <carg>/checkobservations:obs0.xml</carg>
+  </test>
+  <test name="Check1">
+    <carg>/arg:i1</carg>
+    <carg>/checkobservations:obs1.xml</carg>
+  </test>
+  <test name="Check2">
+    <carg>/arg:i2</carg>
+    <carg>/checkobservations:obs2.xml</carg>
+  </test>
+  <test name="Check3">
+    <carg>/arg:i3</carg>
+    <carg>/checkobservations:obs3.xml</carg>
+  </test>
+  <test name="Check4">
+    <carg>/arg:i4</carg>
+    <carg>/checkobservations:obs4.xml</carg>
+  </test>
+  <test name="Check5">
+    <carg>/arg:i5</carg>
+    <carg>/checkobservations:obs5.xml</carg>
+  </test>
+  <test name="Check6">
+    <carg>/arg:i6</carg>
+    <carg>/checkobservations:obs6.xml</carg>
+  </test>
+  <test name="Check7">
+    <carg>/arg:i7</carg>
+    <carg>/checkobservations:obs7.xml</carg>
+  </test>
+
+</testlist>

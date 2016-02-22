@@ -1,0 +1,7 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing Exception1.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+
+***************** CHESS assertion ***********************
+ChessTest.Run raised exception
+Exit code = -201 

@@ -1,0 +1,8 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing synchashtbl.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+Tests: 1 Threads: 2 ExecSteps: 4 HBExecs: 1 
+
+***************** CHESS assertion ***********************
+Deadlock
+Exit code = -2 

@@ -1,0 +1,57 @@
+apc : apc.dll
+apc2 : apc2.dll
+# TODO: these are failing on XP when run from installer, but not from build!!!
+# asyncio : asyncio.dll
+# asyncio2 : asyncio2.dll
+# TODO
+cp-fs : cp-fs.dll
+cp-hash : cp-hash.dll
+deadlock : deadlock.dll
+diamond : diamond.dll
+diningphil : diningphil.dll
+diningphilwithstate : diningphilwithstate.dll
+duphandle : duphandle.dll
+duphandle2 : duphandle2.dll
+duphandle3 : duphandle3.dll
+events : events.dll
+fairness1 : fairness1.dll
+fairness2 : fairness2.dll
+fairness3 : fairness3.dll
+fairness4 : fairness4.dll
+interlock1 : interlock1.dll
+interlock3 : interlock3.dll
+interlock4 : interlock4.dll
+interlock5 : interlock5.dll
+intrinsics1 : intrinsics1.dll
+iocompletion : iocompletion.dll
+iocompletion2  : iocompletion2.dll
+iocompletion3  : iocompletion3.dll
+iocompletion4  : iocompletion4.dll
+iocompletion5  : iocompletion5.dll
+livelockfreediningphilwithstate : livelockfreediningphilwithstate.dll
+mutex : mutex.dll
+nondet : nondet.dll
+nondet2 : nondet2.dll
+onethread : onethread.dll
+qworkitem : qworkitem.dll
+selfdeadlock : selfdeadlock.dll
+semaphore : semaphore.dll
+signalobjectandwait : signalobjectandwait.dll
+timeout : timeout.dll
+timeout2 : timeout2.dll
+timeout3 : timeout3.dll
+timers2 : timers2.dll
+timers3 : timers3.dll
+timers4 : timers4.dll
+timers5 : timers5.dll
+trep : trep.dll
+twothreads : twothreads.dll
+WorkStealQueue : WorkStealQueue.dll
+orphanthread : orphanthread.dll
+et : et.dll
+beginthreadex1 : beginthreadex1.dll
+beginthreadex2 : beginthreadex2.dll
+beginthreadex3 : beginthreadex3.dll
+rand1 : rand1.dll
+rand2 : rand2.dll
+runtestloader : /dep:twothreads.dll runtestloader.dll

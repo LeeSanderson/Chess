@@ -1,0 +1,17 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing deadlock4.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+Tests: 1 Threads: 2 ExecSteps: 15 HBExecs: 1 
+Tests: 2 Threads: 2 ExecSteps: 23 HBExecs: 2 
+Tests: 3 Threads: 2 ExecSteps: 23 HBExecs: 2 
+Tests: 4 Threads: 2 ExecSteps: 23 HBExecs: 2 
+Tests: 5 Threads: 2 ExecSteps: 23 HBExecs: 3 
+Tests: 6 Threads: 2 ExecSteps: 23 HBExecs: 3 
+Tests: 7 Threads: 2 ExecSteps: 23 HBExecs: 3 
+Tests: 8 Threads: 2 ExecSteps: 23 HBExecs: 3 
+Tests: 9 Threads: 2 ExecSteps: 23 HBExecs: 3 
+Tests: 10 Threads: 2 ExecSteps: 23 HBExecs: 3 
+Tests: 20 Threads: 2 ExecSteps: 31 HBExecs: 8 
+Tests: 28 Threads: 2 ExecSteps: 31 HBExecs: 12 
+Search Completed (1 Warning).
+Exit code = 0 

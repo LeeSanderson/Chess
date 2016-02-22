@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testlist name="SimpleBank" xmlns="http://research.microsoft.com/chess">
+    
+  <!-- This element describes how to build the SimpleBank example -->
+  <build>
+    <startdir>@</startdir>
+    <executable>msbuild</executable>
+    <arg>SimpleBank.sln</arg>
+    <arg>/p:Configuration=Debug</arg>
+  </build>
+
+  <!-- The following parameters apply to all tests -->
+  <startdir>@\bin\Debug</startdir>
+  <executable>mchess</executable>
+  <carg>SimpleBank.dll</carg>
+
+  <!-- Define the 2 tests with their respective parameters -->
+  <test name="Test1">
+    <carg>/testclass:SimpleBank.Test1</carg>
+  </test>
+  <test name="Test2">
+    <carg>/testclass:SimpleBank.Test2</carg>
+  </test>
+
+</testlist>

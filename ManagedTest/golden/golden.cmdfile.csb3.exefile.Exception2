@@ -1,0 +1,8 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing Exception2.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+
+***************** CHESS assertion ***********************
+Child thread raised exception
+Exception of type 'System.Exception' was thrown.
+Exit code = -1 

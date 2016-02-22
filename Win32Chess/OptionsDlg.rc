@@ -1,0 +1,18 @@
+#include <windows.h>
+#include "OptionsDlg.h"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_OPTIONS_DLG DIALOG DISCARDABLE 0, 0, 173, 110
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Generated Shim"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Enter a value here:",IDC_STATIC,7,81,70,8
+    EDITTEXT        IDC_EDIT_FOO,84,77,30,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Default",IDC_DEFAULT,135,94,33,11
+END
+

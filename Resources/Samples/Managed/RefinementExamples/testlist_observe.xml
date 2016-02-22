@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testlist name="Refinement (Enumerate Observations)" xmlns="http://research.microsoft.com/chess">
+    
+  <build>
+    <startdir>@</startdir>
+    <executable>msbuild</executable>
+    <arg>RefinementExamples.sln</arg>
+    <arg>/p:Configuration=Debug</arg>
+  </build>
+
+  <!-- The following parameters apply to all tests -->
+  <startdir>@\RefinementExamples\bin\Debug</startdir>
+  <executable>mchess</executable>
+  <carg>RefinementExamples.exe</carg>
+
+  <test name="Enumerate0">
+    <carg>/arg:i0</carg>
+    <carg>/enumerateobservations:obs0.xml</carg>
+  </test>
+  <test name="Enumerate1">
+    <carg>/arg:i1</carg>
+    <carg>/enumerateobservations:obs1.xml</carg>
+  </test>
+  <test name="Enumerate2">
+    <carg>/arg:i2</carg>
+    <carg>/enumerateobservations:obs2.xml</carg>
+  </test>
+  <test name="Enumerate3">
+    <carg>/arg:i3</carg>
+    <carg>/enumerateobservations:obs3.xml</carg>
+  </test>
+  <test name="Enumerate4">
+    <carg>/arg:i4</carg>
+    <carg>/enumerateobservations:obs4.xml</carg>
+  </test>
+  <test name="Enumerate5">
+    <carg>/arg:i5</carg>
+    <carg>/enumerateobservations:obs5.xml</carg>
+  </test>
+  <test name="Enumerate6">
+    <carg>/arg:i6</carg>
+    <carg>/enumerateobservations:obs6.xml</carg>
+  </test>
+  <test name="Enumerate7">
+    <carg>/arg:i7</carg>
+    <carg>/enumerateobservations:obs7.xml</carg>
+  </test>
+
+</testlist>

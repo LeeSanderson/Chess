@@ -1,0 +1,47 @@
+Here are some general steps to add a new test type to MCUT and Alpaca
+integration.
+
+Step 1: Add the test attribute to the MCUT.Framework project
+- Inherit from TestTypeAttributeBase
+- Implement the CreateTestTypeXml method. See existing test types for examples.
+- Update Xml\TestListSchema.xsd with the new test type and any enum settings.
+- Update the TestAssemblyReader if needed. If inheriting from TestTypeAttribute
+  base the attribute will already be detected and rendered to the output xml.
+Guidelines:
+I've found it easier to make these attributes as dumb as possible, delaying any
+complex business logic till the execution stage (i.e. MCUT.Execution or 
+Alpaca). This allows less logic being needed if someone was to (heaven forbid)
+create the xml manually vs auto-generating it. This way, someone may 'annotate'
+an existing test assembly by specifying the attributes directly in xml rather
+than needing to change the code.
+
+Step 2: Create test entity in the MCUT.Execution project
+This project should contain all the logic for creating test case data so it can
+be sent over to mcut to run the test.
+- Create entity class that inherits from ManagedTestEntity<TContext>. If the test
+  is a derivative that just uses MChess, think about inheriting from MChessBasedTestEntity.
+- Odds are, you'll want to override the GetInvocationDetails and AddCustomTestCaseData
+  (or CreateTestCaseMChessOptions if inheriting from MChessBasedTestEntity) methods.
+  For examples, check out the DataRaceTestEntity and PerformanceTestEntity
+- Add the AutoRegisterEntity and the 'public static readonly XName EntityXName'
+  field to enable auto registration of the entity with the xml element.
+  This will also make the test entity (if it inherits from MCutTestMethod) automatically
+  detectable under a test method and will show up in Alpaca's entity tree.
+- You may need to update an existing ProcessTask for the underlying test type
+  or create a new one if the test type isn't an extension to an existing core
+  test type.
+  e.g. MChessTestProcessTask, MCutRunTestCaseProcessTask
+Guidelines:
+The test case xml should reflect settings that can assume all data is in the current
+working folder. Thus paths to input data should be relative to the test folder.
+Also note that the test case data should be used to specify input into the mcut
+console application which will run the test.
+
+Step 3: Setup test to run in Alpaca (Alpaca project)
+The main work here is to give the right-click options to run the test and perform
+any custom actions on the test or its results like rerunning a test, repro, etc.
+- Create a new controller for your new test type by inheriting from TestTypeController.
+  You must expose a public, empty constructor. A controller will control all tests of
+  the specified type and should be treated as a Singleton.
+
+...

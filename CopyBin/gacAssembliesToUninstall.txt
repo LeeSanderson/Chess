@@ -1,0 +1,8 @@
+Microsoft.ManagedChess.MChess
+Microsoft.ManagedChess.ThreadingWrappers
+Microsoft.ManagedChess.Framework35Wrappers
+Microsoft.ManagedChess.Engine
+Microsoft.ManagedChess.Launcher
+Microsoft.Concurrency.UnitTestingFramework
+Microsoft.Concurrency.UnitTesting.Extensions
+Microsoft.ExtendedReflection

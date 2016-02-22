@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testlist name="Recursive Build Test" xmlns="http://research.microsoft.com/concurrency/unittesting">
+  <build>
+    <executable>ECHO</executable>
+    <arg>Build complete!</arg>
+  </build>
+
+  <testlist name="1">
+    <build>
+      <executable>ECHO</executable>
+      <arg>Build complete!</arg>
+    </build>
+
+    <testlist name="1.1">
+      <build>
+        <executable>ECHO</executable>
+        <arg>Build complete!</arg>
+      </build>
+
+      <testlist name="1.1.1">
+        <build>
+          <executable>ECHO</executable>
+          <arg>Build complete!</arg>
+        </build>
+
+      </testlist>
+
+      <testlist name="1.1.2">
+        <build>
+          <executable>ECHO</executable>
+          <arg>Build complete!</arg>
+        </build>
+
+      </testlist>
+
+    </testlist>
+
+    <testlist name="1.2">
+      <build>
+        <executable>ECHO</executable>
+        <arg>Build complete!</arg>
+      </build>
+
+    </testlist>
+
+  </testlist>
+
+  <testlist name="2">
+    <build>
+      <executable>ECHO</executable>
+      <arg>Build complete!</arg>
+    </build>
+
+    <testlist name="2.1">
+      <build>
+        <executable>ECHO</executable>
+        <arg>Build complete!</arg>
+      </build>
+
+      <testlist name="2.1.1">
+        <build>
+          <executable>ECHO</executable>
+          <arg>Build complete!</arg>
+        </build>
+
+      </testlist>
+
+      <testlist name="2.1.2">
+        <build>
+          <executable>ECHO</executable>
+          <arg>Build complete!</arg>
+        </build>
+
+      </testlist>
+
+    </testlist>
+
+    <testlist name="2.2">
+      <build>
+        <executable>ECHO</executable>
+        <arg>Build complete!</arg>
+      </build>
+
+    </testlist>
+
+    <testlist name="2.3">
+      <build>
+        <executable>ECHO</executable>
+        <arg>Build complete!</arg>
+      </build>
+
+    </testlist>
+
+  </testlist>
+</testlist>

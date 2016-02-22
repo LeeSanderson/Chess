@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0B1DE473-47B2-4E8A-B456-B65B91B1DDC3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Concurrency.TestTools.Alpaca</RootNamespace>
+    <AssemblyName>Alpaca</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>%24/ChessTesting/ConcurrencyTools/Alpaca</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://tfs.codeplex.com/tfs/tfs06</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\Alpaca.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AActions\AAction.cs" />
+    <Compile Include="AActions\AActionContext.cs" />
+    <Compile Include="AActions\AActionMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AActions\AActionModifier.cs" />
+    <Compile Include="AActions\ABuildAction.cs" />
+    <Compile Include="AActions\ARunAllTestsAction.cs" />
+    <Compile Include="AActions\ARunAllMCutTestCasesAction.cs" />
+    <Compile Include="AActions\ARerunTestAction.cs" />
+    <Compile Include="AActions\ARunTestActionBase.cs" />
+    <Compile Include="AActions\ARunAllObservationGeneratorsAction.cs" />
+    <Compile Include="AActions\RunMCutTestOptions.cs" />
+    <Compile Include="AActions\MChessActions\AReproChessResultAction.cs" />
+    <Compile Include="AActions\MChessActions\AViewConcurrencyExplorerAction.cs" />
+    <Compile Include="AActions\MChessActions\AContinueMChessTestRunAction.cs" />
+    <Compile Include="AActions\MChessActions\ARerunMChessTestAction.cs" />
+    <Compile Include="AActions\MChessActions\AReproLastMChessTestRunScheduleAction.cs" />
+    <Compile Include="AActions\MChessActions\RunMChessTestOptions.cs" />
+    <Compile Include="AActions\SeparatorFauxAction.cs" />
+    <Compile Include="AActions\TestRunOptions.cs" />
+    <Compile Include="Base\SelectionContext.cs" />
+    <Compile Include="Commands\CustomCommand.cs" />
+    <Compile Include="Commands\LoadIncludeCommand.cs" />
+    <Compile Include="Commands\DeleteObservationFilesCommand.cs" />
+    <Compile Include="Commands\SpawnAppTaskCommand.cs" />
+    <Compile Include="TestTypeControllers\ConflictSerializabilityTestController.cs" />
+    <Compile Include="TestTypeControllers\ObservationTestController.cs" />
+    <Compile Include="TestTypeControllers\ObservationGeneratorController.cs" />
+    <Compile Include="TestTypeControllers\DeterminismTestController.cs" />
+    <Compile Include="TestTypeControllers\ScheduleTestController.cs" />
+    <Compile Include="TestTypeControllers\DataRaceTestController.cs" />
+    <Compile Include="TestTypeControllers\MChessTestController.cs" />
+    <Compile Include="TestTypeControllers\PerformanceTestController.cs" />
+    <Compile Include="TestTypeControllers\UnitTestController.cs" />
+    <Compile Include="TestTypeControllers\TestTypeController.cs" />
+    <Compile Include="Actions\EntityActionUtil.cs" />
+    <None Include="Plugins\PluginEngineEntity.cs" />
+    <Compile Include="Aspects\EntityBuilder.cs" />
+    <Compile Include="Commands\BuildCommand.cs" />
+    <Compile Include="Commands\RunAllMCutTestsCommand.cs" />
+    <Compile Include="Views\AppRibbonStripControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AppRibbonStripControl.Designer.cs">
+      <DependentUpon>AppRibbonStripControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BoundRunItem.cs" />
+    <Compile Include="Views\EntityViewUtil.cs" />
+    <Compile Include="Aspects\SessionEntity.cs" />
+    <None Include="Plugins\Engine.cs" />
+    <None Include="Plugins\Engines.cs" />
+    <Compile Include="Base\ModelEventArgs.cs" />
+    <Compile Include="Commands\AddCommand.cs" />
+    <Compile Include="Commands\BrowseCommand.cs" />
+    <Compile Include="Commands\BuildAndRunCommand.cs" />
+    <Compile Include="Commands\RunMCutTestCaseCommand.cs" />
+    <Compile Include="Commands\RunAllMCutTestCasesCommand.cs" />
+    <Compile Include="Commands\RefreshCommand.cs" />
+    <Compile Include="Commands\DeleteCommand.cs" />
+    <Compile Include="Commands\QuiesceCommand.cs" />
+    <Compile Include="Commands\QuitCommand.cs" />
+    <Compile Include="Commands\StagedCommand.cs" />
+    <None Include="Plugins\API.cs" />
+    <None Include="Plugins\MultipleErrors.cs" />
+    <None Include="Plugins\RaceReduction.cs" />
+    <Compile Include="Views\BottomTabs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\BottomTabs.Designer.cs">
+      <DependentUpon>BottomTabs.cs</DependentUpon>
+    </Compile>
+    <None Include="Backends\ClusterBackend.cs" />
+    <None Include="Backends\ClusterTask.cs" />
+    <Compile Include="Views\BucketView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\BucketView.designer.cs">
+      <DependentUpon>BucketView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Base\CommandController.cs" />
+    <Compile Include="Aspects\Session.cs" />
+    <Compile Include="Base\delegates.cs" />
+    <Compile Include="Views\Explorer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Explorer.Designer.cs">
+      <DependentUpon>Explorer.cs</DependentUpon>
+    </Compile>
+    <None Include="Backends\HpcInterface.cs" />
+    <Compile Include="Base\Model.cs" />
+    <Compile Include="Base\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Actions\PopupMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PropertyBindingList.cs" />
+    <Compile Include="Views\PropertyComparer.cs" />
+    <Compile Include="Views\ResultList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ResultList.Designer.cs">
+      <DependentUpon>ResultList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aspects\Runs.cs" />
+    <Compile Include="Base\Selection.cs" />
+    <Compile Include="Views\StreamBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\StreamBox.Designer.cs">
+      <DependentUpon>StreamBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TaskList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\TaskList.Designer.cs">
+      <DependentUpon>TaskList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\XTreeNode.cs" />
+    <None Include="Images\Alpaca.psd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\AppRibbonStripControl.resx">
+      <DependentUpon>AppRibbonStripControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BottomTabs.resx">
+      <DependentUpon>BottomTabs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BucketView.resx">
+      <DependentUpon>BucketView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Explorer.resx">
+      <DependentUpon>Explorer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ResultList.resx">
+      <DependentUpon>ResultList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StreamBox.resx">
+      <DependentUpon>StreamBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TaskList.resx">
+      <DependentUpon>TaskList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ConcurrencyExplorer\ConcurrencyExplorer.csproj">
+      <Project>{9EEC29D8-B25D-41D3-8EF7-265A9B636833}</Project>
+      <Name>ConcurrencyExplorer</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\MCUT.Execution\MCUT.Execution.csproj">
+      <Project>{81771FD7-1DB0-4E13-BC88-6B1C8AE8AB97}</Project>
+      <Name>MCUT.Execution</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MCUT.Framework\MCUT.Framework.csproj">
+      <Project>{E7F4455E-DBF6-4D36-8ACB-DA2106C5FCC3}</Project>
+      <Name>MCUT.Framework</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Backends\Obsolete.ReadMe.txt" />
+    <Content Include="Images\Alpaca.ico" />
+    <Content Include="Images\Alpaca.ico.txt" />
+    <Content Include="Images\Alpaca.jpg" />
+    <Content Include="Images\Alpaca16.png" />
+    <Content Include="Images\Alpaca32.png" />
+    <Content Include="Images\Alpaca64.png" />
+    <Content Include="Plugins\Obsolete.ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

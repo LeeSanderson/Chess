@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testlist name="Producer-Consumer Queue Tests" xmlns="http://research.microsoft.com/chess">
+
+  <!--This element describes how to build the queue and the queue tests -->
+
+  <build>
+    <startdir>@</startdir>
+    <executable>msbuild</executable>
+    <arg>ProducerConsumerQueue.sln</arg>
+  </build>
+
+  <!--The following settings apply to all of the tests-->
+
+  <startdir>@/BoundedQueueTest/bin/Debug</startdir>
+  <executable>mchess.exe</executable>
+  <carg>BoundedQueueTest.dll</carg>
+  <carg>/ia:ProducerConsumerQueue</carg>
+
+  <!--These are the tests-->
+
+  <test name="NoConsumer">
+    <carg>/arg:NoConsumer</carg>
+  </test>
+  <test name="NoProducer">
+    <carg>/arg:NoProducer</carg>
+  </test>
+  <test name="OneProdOneCons">
+    <carg>/arg:OneProdOneCons</carg>
+  </test>
+  <test name="OneProdTwoCons">
+    <carg>/arg:OneProdTwoCons</carg>
+  </test>
+  <test name="TwoProdOneCons">
+    <carg>/arg:TwoProdOneCons</carg>
+  </test>
+  <test name="OneProdOneClear">
+    <carg>/arg:OneProdOneClear</carg>
+  </test>
+
+</testlist>

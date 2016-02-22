@@ -1,0 +1,3655 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing mutex.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Tests: 1 Threads: 4 ExecSteps: 26 HBExecs: 1 
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Tests: 2 Threads: 4 ExecSteps: 26 HBExecs: 1 
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Tests: 3 Threads: 4 ExecSteps: 26 HBExecs: 1 
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Tests: 4 Threads: 4 ExecSteps: 26 HBExecs: 1 
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Tests: 5 Threads: 4 ExecSteps: 26 HBExecs: 1 
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Tests: 6 Threads: 4 ExecSteps: 26 HBExecs: 1 
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Tests: 7 Threads: 4 ExecSteps: 26 HBExecs: 1 
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Tests: 8 Threads: 4 ExecSteps: 26 HBExecs: 1 
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Tests: 9 Threads: 4 ExecSteps: 26 HBExecs: 1 
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Tests: 10 Threads: 4 ExecSteps: 26 HBExecs: 1 
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Tests: 20 Threads: 4 ExecSteps: 26 HBExecs: 1 
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Tests: 30 Threads: 4 ExecSteps: 26 HBExecs: 1 
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Tests: 40 Threads: 4 ExecSteps: 26 HBExecs: 2 
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Tests: 50 Threads: 4 ExecSteps: 26 HBExecs: 2 
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Tests: 60 Threads: 4 ExecSteps: 26 HBExecs: 2 
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Tests: 70 Threads: 4 ExecSteps: 26 HBExecs: 2 
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Tests: 80 Threads: 4 ExecSteps: 26 HBExecs: 2 
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Tests: 90 Threads: 4 ExecSteps: 26 HBExecs: 2 
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Tests: 100 Threads: 4 ExecSteps: 26 HBExecs: 2 
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Tests: 200 Threads: 4 ExecSteps: 26 HBExecs: 4 
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Tests: 300 Threads: 4 ExecSteps: 26 HBExecs: 6 
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Tests: 400 Threads: 4 ExecSteps: 26 HBExecs: 6 
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread3 has entered the protected area
+Thread3 is leaving the protected area
+
+Thread1 has entered the protected area
+Thread1 is leaving the protected area
+
+Thread2 has entered the protected area
+Thread2 is leaving the protected area
+
+Tests: 403 Threads: 4 ExecSteps: 26 HBExecs: 6 
+Search Completed (1 Warning).
+Exit code = 0 

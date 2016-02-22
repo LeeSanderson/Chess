@@ -1,0 +1,10 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing autoresetevent1.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+child thread
+parent thread
+Tests: 1 Threads: 2 ExecSteps: 7 HBExecs: 1 
+
+***************** CHESS assertion ***********************
+Deadlock
+Exit code = -2 

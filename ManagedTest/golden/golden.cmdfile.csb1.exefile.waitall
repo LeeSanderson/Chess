@@ -1,0 +1,519 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing waitall.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+Starting work item 0.
+Ending work item 0.
+Starting work item 1.
+Ending work item 1.
+Starting work item 2.
+Ending work item 2.
+Files written - main exiting.
+Tests: 1 Threads: 4 ExecSteps: 21 HBExecs: 1 
+Starting work item 3.
+Ending work item 3.
+Starting work item 4.
+Ending work item 4.
+Starting work item 5.
+Ending work item 5.
+Files written - main exiting.
+Tests: 2 Threads: 4 ExecSteps: 21 HBExecs: 1 
+Starting work item 6.
+Ending work item 6.
+Starting work item 7.
+Ending work item 7.
+Starting work item 8.
+Ending work item 8.
+Files written - main exiting.
+Tests: 3 Threads: 4 ExecSteps: 21 HBExecs: 1 
+Starting work item 9.
+Ending work item 9.
+Starting work item 10.
+Ending work item 10.
+Starting work item 11.
+Ending work item 11.
+Files written - main exiting.
+Tests: 4 Threads: 4 ExecSteps: 21 HBExecs: 1 
+Starting work item 12.
+Ending work item 12.
+Starting work item 13.
+Ending work item 13.
+Starting work item 14.
+Ending work item 14.
+Files written - main exiting.
+Tests: 5 Threads: 4 ExecSteps: 21 HBExecs: 1 
+Starting work item 15.
+Ending work item 15.
+Starting work item 16.
+Ending work item 16.
+Starting work item 17.
+Ending work item 17.
+Files written - main exiting.
+Tests: 6 Threads: 4 ExecSteps: 21 HBExecs: 1 
+Starting work item 18.
+Ending work item 18.
+Starting work item 19.
+Ending work item 19.
+Starting work item 19.
+Ending work item 19.
+Files written - main exiting.
+Tests: 7 Threads: 4 ExecSteps: 21 HBExecs: 2 
+Starting work item 21.
+Ending work item 21.
+Starting work item 22.
+Ending work item 22.
+Starting work item 23.
+Ending work item 23.
+Files written - main exiting.
+Tests: 8 Threads: 4 ExecSteps: 21 HBExecs: 2 
+Starting work item 24.
+Ending work item 24.
+Starting work item 25.
+Ending work item 25.
+Starting work item 26.
+Ending work item 26.
+Files written - main exiting.
+Tests: 9 Threads: 4 ExecSteps: 21 HBExecs: 2 
+Starting work item 27.
+Ending work item 27.
+Starting work item 28.
+Ending work item 28.
+Starting work item 29.
+Ending work item 29.
+Files written - main exiting.
+Tests: 10 Threads: 4 ExecSteps: 21 HBExecs: 2 
+Starting work item 30.
+Ending work item 30.
+Starting work item 31.
+Ending work item 31.
+Starting work item 32.
+Ending work item 32.
+Files written - main exiting.
+Starting work item 33.
+Ending work item 33.
+Starting work item 34.
+Ending work item 34.
+Starting work item 35.
+Ending work item 35.
+Files written - main exiting.
+Starting work item 36.
+Ending work item 36.
+Starting work item 37.
+Ending work item 37.
+Starting work item 38.
+Ending work item 38.
+Files written - main exiting.
+Starting work item 39.
+Ending work item 39.
+Starting work item 40.
+Ending work item 40.
+Starting work item 40.
+Ending work item 40.
+Files written - main exiting.
+Starting work item 42.
+Ending work item 42.
+Starting work item 43.
+Ending work item 43.
+Starting work item 44.
+Ending work item 44.
+Files written - main exiting.
+Starting work item 45.
+Ending work item 45.
+Starting work item 46.
+Ending work item 46.
+Starting work item 47.
+Ending work item 47.
+Files written - main exiting.
+Starting work item 48.
+Ending work item 48.
+Starting work item 49.
+Ending work item 49.
+Starting work item 50.
+Ending work item 50.
+Files written - main exiting.
+Starting work item 51.
+Ending work item 51.
+Starting work item 52.
+Ending work item 52.
+Starting work item 53.
+Ending work item 53.
+Files written - main exiting.
+Starting work item 54.
+Ending work item 54.
+Starting work item 55.
+Ending work item 55.
+Starting work item 56.
+Ending work item 56.
+Files written - main exiting.
+Starting work item 57.
+Ending work item 57.
+Starting work item 58.
+Ending work item 58.
+Starting work item 59.
+Ending work item 59.
+Files written - main exiting.
+Tests: 20 Threads: 4 ExecSteps: 21 HBExecs: 2 
+Starting work item 60.
+Ending work item 60.
+Starting work item 61.
+Ending work item 61.
+Starting work item 60.
+Ending work item 60.
+Files written - main exiting.
+Starting work item 63.
+Ending work item 63.
+Starting work item 64.
+Ending work item 64.
+Starting work item 63.
+Ending work item 63.
+Files written - main exiting.
+Starting work item 66.
+Ending work item 66.
+Starting work item 66.
+Ending work item 66.
+Starting work item 68.
+Ending work item 68.
+Files written - main exiting.
+Starting work item 69.
+Ending work item 69.
+Starting work item 69.
+Ending work item 69.
+Starting work item 71.
+Ending work item 71.
+Files written - main exiting.
+Starting work item 72.
+Ending work item 72.
+Starting work item 72.
+Ending work item 72.
+Starting work item 74.
+Ending work item 74.
+Files written - main exiting.
+Starting work item 75.
+Ending work item 75.
+Starting work item 75.
+Ending work item 75.
+Starting work item 77.
+Ending work item 77.
+Files written - main exiting.
+Starting work item 78.
+Ending work item 78.
+Starting work item 79.
+Ending work item 79.
+Starting work item 78.
+Ending work item 78.
+Files written - main exiting.
+Starting work item 81.
+Ending work item 81.
+Starting work item 82.
+Ending work item 82.
+Starting work item 83.
+Ending work item 83.
+Files written - main exiting.
+Starting work item 84.
+Ending work item 84.
+Starting work item 85.
+Ending work item 85.
+Starting work item 86.
+Ending work item 86.
+Files written - main exiting.
+Starting work item 87.
+Ending work item 87.
+Starting work item 88.
+Ending work item 88.
+Starting work item 89.
+Ending work item 89.
+Files written - main exiting.
+Tests: 30 Threads: 4 ExecSteps: 21 HBExecs: 6 
+Starting work item 90.
+Ending work item 90.
+Starting work item 91.
+Ending work item 91.
+Starting work item 92.
+Ending work item 92.
+Files written - main exiting.
+Starting work item 93.
+Ending work item 93.
+Starting work item 94.
+Ending work item 94.
+Starting work item 95.
+Ending work item 95.
+Files written - main exiting.
+Starting work item 96.
+Ending work item 96.
+Starting work item 97.
+Ending work item 97.
+Starting work item 97.
+Ending work item 97.
+Files written - main exiting.
+Starting work item 99.
+Ending work item 99.
+Starting work item 100.
+Ending work item 100.
+Starting work item 100.
+Ending work item 100.
+Files written - main exiting.
+Starting work item 102.
+Ending work item 102.
+Starting work item 103.
+Ending work item 103.
+Starting work item 104.
+Ending work item 104.
+Files written - main exiting.
+Starting work item 105.
+Ending work item 105.
+Starting work item 106.
+Ending work item 106.
+Starting work item 107.
+Ending work item 107.
+Files written - main exiting.
+Starting work item 108.
+Ending work item 108.
+Starting work item 109.
+Ending work item 109.
+Starting work item 110.
+Ending work item 110.
+Files written - main exiting.
+Starting work item 111.
+Ending work item 111.
+Starting work item 112.
+Ending work item 112.
+Starting work item 113.
+Ending work item 113.
+Files written - main exiting.
+Starting work item 114.
+Ending work item 114.
+Starting work item 115.
+Ending work item 115.
+Starting work item 116.
+Ending work item 116.
+Files written - main exiting.
+Starting work item 117.
+Ending work item 117.
+Starting work item 118.
+Ending work item 118.
+Starting work item 119.
+Ending work item 119.
+Files written - main exiting.
+Tests: 40 Threads: 4 ExecSteps: 21 HBExecs: 6 
+Starting work item 120.
+Ending work item 120.
+Starting work item 121.
+Ending work item 121.
+Starting work item 121.
+Ending work item 121.
+Files written - main exiting.
+Starting work item 123.
+Ending work item 123.
+Starting work item 124.
+Ending work item 124.
+Starting work item 125.
+Ending work item 125.
+Files written - main exiting.
+Starting work item 126.
+Ending work item 126.
+Starting work item 127.
+Ending work item 127.
+Starting work item 128.
+Ending work item 128.
+Files written - main exiting.
+Starting work item 129.
+Ending work item 129.
+Starting work item 130.
+Ending work item 130.
+Starting work item 131.
+Ending work item 131.
+Files written - main exiting.
+Starting work item 132.
+Ending work item 132.
+Starting work item 133.
+Ending work item 133.
+Starting work item 134.
+Ending work item 134.
+Files written - main exiting.
+Starting work item 135.
+Ending work item 135.
+Starting work item 136.
+Ending work item 136.
+Starting work item 137.
+Ending work item 137.
+Files written - main exiting.
+Starting work item 138.
+Ending work item 138.
+Starting work item 139.
+Ending work item 139.
+Starting work item 140.
+Ending work item 140.
+Files written - main exiting.
+Starting work item 141.
+Ending work item 141.
+Starting work item 142.
+Ending work item 142.
+Starting work item 141.
+Ending work item 141.
+Files written - main exiting.
+Starting work item 144.
+Ending work item 144.
+Starting work item 145.
+Ending work item 145.
+Starting work item 144.
+Ending work item 144.
+Files written - main exiting.
+Starting work item 147.
+Ending work item 147.
+Starting work item 147.
+Ending work item 147.
+Starting work item 149.
+Ending work item 149.
+Files written - main exiting.
+Tests: 50 Threads: 4 ExecSteps: 21 HBExecs: 6 
+Starting work item 150.
+Ending work item 150.
+Starting work item 150.
+Ending work item 150.
+Starting work item 152.
+Ending work item 152.
+Files written - main exiting.
+Starting work item 153.
+Ending work item 153.
+Starting work item 154.
+Ending work item 154.
+Starting work item 155.
+Ending work item 155.
+Files written - main exiting.
+Starting work item 156.
+Ending work item 156.
+Starting work item 157.
+Ending work item 157.
+Starting work item 158.
+Ending work item 158.
+Files written - main exiting.
+Starting work item 159.
+Ending work item 159.
+Starting work item 160.
+Ending work item 160.
+Starting work item 161.
+Ending work item 161.
+Files written - main exiting.
+Starting work item 162.
+Ending work item 162.
+Starting work item 163.
+Ending work item 163.
+Starting work item 164.
+Ending work item 164.
+Files written - main exiting.
+Starting work item 165.
+Ending work item 165.
+Starting work item 166.
+Ending work item 166.
+Starting work item 167.
+Ending work item 167.
+Files written - main exiting.
+Starting work item 168.
+Ending work item 168.
+Starting work item 169.
+Ending work item 169.
+Starting work item 169.
+Ending work item 169.
+Files written - main exiting.
+Starting work item 171.
+Ending work item 171.
+Starting work item 172.
+Ending work item 172.
+Starting work item 173.
+Ending work item 173.
+Files written - main exiting.
+Starting work item 174.
+Ending work item 174.
+Starting work item 175.
+Ending work item 175.
+Starting work item 176.
+Ending work item 176.
+Files written - main exiting.
+Starting work item 177.
+Ending work item 177.
+Starting work item 178.
+Ending work item 178.
+Starting work item 179.
+Ending work item 179.
+Files written - main exiting.
+Tests: 60 Threads: 4 ExecSteps: 21 HBExecs: 6 
+Starting work item 180.
+Ending work item 180.
+Starting work item 181.
+Ending work item 181.
+Starting work item 181.
+Ending work item 181.
+Files written - main exiting.
+Starting work item 183.
+Ending work item 183.
+Starting work item 184.
+Ending work item 184.
+Starting work item 185.
+Ending work item 185.
+Files written - main exiting.
+Starting work item 186.
+Ending work item 186.
+Starting work item 187.
+Ending work item 187.
+Starting work item 188.
+Ending work item 188.
+Files written - main exiting.
+Starting work item 189.
+Ending work item 189.
+Starting work item 190.
+Ending work item 190.
+Starting work item 191.
+Ending work item 191.
+Files written - main exiting.
+Starting work item 192.
+Ending work item 192.
+Starting work item 193.
+Ending work item 193.
+Starting work item 194.
+Ending work item 194.
+Files written - main exiting.
+Starting work item 195.
+Ending work item 195.
+Starting work item 196.
+Ending work item 196.
+Starting work item 197.
+Ending work item 197.
+Files written - main exiting.
+Starting work item 198.
+Ending work item 198.
+Starting work item 199.
+Ending work item 199.
+Starting work item 200.
+Ending work item 200.
+Files written - main exiting.
+Starting work item 201.
+Ending work item 201.
+Starting work item 202.
+Ending work item 202.
+Starting work item 203.
+Ending work item 203.
+Files written - main exiting.
+Starting work item 204.
+Ending work item 204.
+Starting work item 205.
+Ending work item 205.
+Starting work item 206.
+Ending work item 206.
+Files written - main exiting.
+Starting work item 207.
+Ending work item 207.
+Starting work item 208.
+Ending work item 208.
+Starting work item 207.
+Ending work item 207.
+Files written - main exiting.
+Tests: 70 Threads: 4 ExecSteps: 21 HBExecs: 6 
+Starting work item 210.
+Ending work item 210.
+Starting work item 210.
+Ending work item 210.
+Starting work item 212.
+Ending work item 212.
+Files written - main exiting.
+Tests: 71 Threads: 4 ExecSteps: 21 HBExecs: 6 
+Search Completed (1 Warning).
+Exit code = 0 

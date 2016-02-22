@@ -1,0 +1,30 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing RegisterWaitForSingleObjectSample4.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+Main thread does some work, then sleeps.
+True
+Main thread exits.
+Tests: 1 Threads: 2 ExecSteps: 11 HBExecs: 1 
+Main thread does some work, then sleeps.
+True
+Main thread exits.
+Tests: 2 Threads: 2 ExecSteps: 11 HBExecs: 1 
+Main thread does some work, then sleeps.
+True
+Main thread exits.
+Tests: 3 Threads: 2 ExecSteps: 11 HBExecs: 1 
+Main thread does some work, then sleeps.
+True
+Main thread exits.
+Tests: 4 Threads: 2 ExecSteps: 11 HBExecs: 1 
+Main thread does some work, then sleeps.
+True
+Hello from the thread pool.
+Main thread exits.
+Tests: 5 Threads: 2 ExecSteps: 13 HBExecs: 2 
+Main thread does some work, then sleeps.
+True
+Main thread exits.
+Tests: 6 Threads: 2 ExecSteps: 13 HBExecs: 2 
+Search Completed (1 Warning).
+Exit code = 0 

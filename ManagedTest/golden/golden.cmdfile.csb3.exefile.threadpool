@@ -1,0 +1,6 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing threadpool.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+Tests: 1 Threads: 2 ExecSteps: 8 HBExecs: 1 
+Search Completed (1 Warning).
+Exit code = 0 

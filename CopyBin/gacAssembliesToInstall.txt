@@ -1,0 +1,3 @@
+..\ManagedChess\external\Microsoft.ExtendedReflection.dll
+..\bin\Microsoft.Concurrency.UnitTestingFramework.dll
+..\bin\Microsoft.Concurrency.UnitTesting.Extensions.dll

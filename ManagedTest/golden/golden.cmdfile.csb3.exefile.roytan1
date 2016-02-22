@@ -1,0 +1,9 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing roytan1.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+Tests: 1 Threads: 2 ExecSteps: 11 HBExecs: 1 
+Tests: 2 Threads: 2 ExecSteps: 11 HBExecs: 1 
+Tests: 3 Threads: 2 ExecSteps: 11 HBExecs: 2 
+Tests: 4 Threads: 2 ExecSteps: 11 HBExecs: 2 
+Search Completed (1 Warning).
+Exit code = 0 

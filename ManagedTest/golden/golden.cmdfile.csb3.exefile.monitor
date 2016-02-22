@@ -1,0 +1,27 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing monitor.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+Tests: 1 Threads: 3 ExecSteps: 52 HBExecs: 1 
+Tests: 2 Threads: 3 ExecSteps: 52 HBExecs: 1 
+Tests: 3 Threads: 3 ExecSteps: 52 HBExecs: 1 
+Tests: 4 Threads: 3 ExecSteps: 52 HBExecs: 1 
+Tests: 5 Threads: 3 ExecSteps: 52 HBExecs: 1 
+Tests: 6 Threads: 3 ExecSteps: 52 HBExecs: 1 
+Tests: 7 Threads: 3 ExecSteps: 52 HBExecs: 1 
+Tests: 8 Threads: 3 ExecSteps: 52 HBExecs: 1 
+Tests: 9 Threads: 3 ExecSteps: 52 HBExecs: 1 
+Tests: 10 Threads: 3 ExecSteps: 52 HBExecs: 1 
+Tests: 20 Threads: 3 ExecSteps: 52 HBExecs: 4 
+Tests: 30 Threads: 3 ExecSteps: 52 HBExecs: 6 
+Tests: 40 Threads: 3 ExecSteps: 52 HBExecs: 6 
+Tests: 50 Threads: 3 ExecSteps: 52 HBExecs: 10 
+Tests: 60 Threads: 3 ExecSteps: 52 HBExecs: 13 
+Tests: 70 Threads: 3 ExecSteps: 52 HBExecs: 15 
+Tests: 80 Threads: 3 ExecSteps: 52 HBExecs: 19 
+Tests: 90 Threads: 3 ExecSteps: 52 HBExecs: 23 
+Tests: 100 Threads: 3 ExecSteps: 52 HBExecs: 26 
+Tests: 200 Threads: 3 ExecSteps: 52 HBExecs: 66 
+Tests: 300 Threads: 3 ExecSteps: 52 HBExecs: 90 
+Tests: 311 Threads: 3 ExecSteps: 52 HBExecs: 90 
+Search Completed (1 Warning).
+Exit code = 0 

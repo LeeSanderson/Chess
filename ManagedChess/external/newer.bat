@@ -1,0 +1,13 @@
+sd edit ...
+copy %1%\bin\Debug\Microsoft.ExtendedReflection.ClrMonitor.* debug\
+copy %1%\bin\Debug\Microsoft.ExtendedReflection.dll debug\
+copy %1%\bin\Debug\Microsoft.ExtendedReflection.pdb debug\
+copy %1%\bin\Debug\Microsoft.ExtendedReflection.xml debug\
+copy %1%\bin\ReleasePublicSigned\Microsoft.ExtendedReflection.ClrMonitor.* release\
+copy %1%\bin\ReleasePublicSigned\Microsoft.ExtendedReflection.dll release\
+copy %1%\bin\ReleasePublicSigned\Microsoft.ExtendedReflection.pdb release\
+copy %1%\bin\ReleasePublicSigned\Microsoft.ExtendedReflection.xml release\
+copy release\* .
+sd edit ..\..\..\..\automation\extendedreflection*
+copy %1%\bin\msi\extendedreflection_x86_dbg.* ..\..\..\..\automation\
+copy %1%\bin\msi\extendedreflection_x86_ret.* ..\..\..\..\automation\

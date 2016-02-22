@@ -1,0 +1,1872 @@
+ManagedCHESS. Copyright (C) Microsoft Corporation, 2008.
+Analyzing waitany.exe  ...
+WARNING: Race Detection Disabled. Races May Hide Bugs.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Tests: 1 Threads: 4 ExecSteps: 19 HBExecs: 1 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Tests: 2 Threads: 4 ExecSteps: 19 HBExecs: 1 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Tests: 3 Threads: 4 ExecSteps: 19 HBExecs: 1 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Tests: 4 Threads: 4 ExecSteps: 19 HBExecs: 1 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Tests: 5 Threads: 4 ExecSteps: 19 HBExecs: 1 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Tests: 6 Threads: 4 ExecSteps: 19 HBExecs: 1 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Tests: 7 Threads: 4 ExecSteps: 19 HBExecs: 1 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Tests: 8 Threads: 4 ExecSteps: 19 HBExecs: 1 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Tests: 9 Threads: 4 ExecSteps: 19 HBExecs: 1 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Tests: 10 Threads: 4 ExecSteps: 19 HBExecs: 1 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Tests: 20 Threads: 4 ExecSteps: 19 HBExecs: 1 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Tests: 30 Threads: 4 ExecSteps: 19 HBExecs: 1 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Tests: 40 Threads: 4 ExecSteps: 19 HBExecs: 1 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Tests: 50 Threads: 4 ExecSteps: 19 HBExecs: 1 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Tests: 60 Threads: 4 ExecSteps: 19 HBExecs: 1 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Tests: 70 Threads: 4 ExecSteps: 19 HBExecs: 1 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Tests: 80 Threads: 4 ExecSteps: 19 HBExecs: 1 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Tests: 90 Threads: 4 ExecSteps: 19 HBExecs: 1 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Tests: 100 Threads: 4 ExecSteps: 19 HBExecs: 1 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Tests: 200 Threads: 4 ExecSteps: 19 HBExecs: 5 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Tests: 300 Threads: 4 ExecSteps: 19 HBExecs: 8 
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on D.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on E.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo not found.
+Searching for foo on C.
+Searching for foo on D.
+Searching for foo on E.
+
+foo found on C.
+Tests: 369 Threads: 4 ExecSteps: 19 HBExecs: 8 
+Search Completed (1 Warning).
+Exit code = 0 

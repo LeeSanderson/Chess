@@ -4,6 +4,7 @@
 *                                                       *
 ********************************************************/
 
+#include <algorithm>
 #include "BestFirstStrategy.h"
 #include "StatsMonitor.h"
 #include "Chess.h"

@@ -4,6 +4,7 @@
 *                                                       *
 ********************************************************/
 
+#include <algorithm>
 #include "Dpor.h"
 #include "ChessImpl.h"
 #include "EnabledSet.h"

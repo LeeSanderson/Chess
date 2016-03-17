@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<project name="Chess" default="all" basedir=".">
+  <!-- ============================================================ 
+  Build script for the Chess solution.
+  ============================================================ -->
+
+  <target name="all" depends="init, build"/>
+
+  <target name="init">
+    <property name="solutionFile" value="All.sln"/>
+
+    <property name="msbuildCmd" value="${environment::get-folder-path('ProgramFilesX86')}\MSBuild\14.0\bin\amd64\msbuild.exe"/>
+    <fail unless="${file::exists(msbuildCmd)}">
+      Unable to find msbuild.exe - file ${msbuildCmd} does not exist.
+      Try downloading the Microsoft Build Tools 2015 from https://www.microsoft.com/en-us/download/details.aspx?id=48159
+    </fail>
+    <echo>Using msbuild.exe from ${msbuildCmd}</echo>
+    <property name="config" value="debug" overwrite="false"/>
+  </target>
+
+  <target name="build" depends="init">
+    <exec program="${msbuildCmd}" >
+	    <arg value="${solutionFile}" />
+	    <arg value="/p:configuration=${config}" />
+	    <arg value="/t:Rebuild" />
+	    <arg value='/p:DefineConstants="TRACE;DEBUG;CODE_ANALYSIS;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS"'/>
+	  </exec>
+  </target>
+
+</project>

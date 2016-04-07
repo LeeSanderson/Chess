@@ -1,0 +1,1733 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Useful.Utilities</name>
+    </assembly>
+    <members>
+        <member name="T:Useful.Utilities.Certificate">
+            <summary>
+            Deals with windows x509 certificates
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.Certificate.Select(System.Security.Cryptography.X509Certificates.StoreName,System.Security.Cryptography.X509Certificates.StoreLocation,System.String,System.String,System.String)">
+            <summary>
+            Selects the specified store using built-in windows UI
+            </summary>
+            <param name="store">The store to look in</param>
+            <param name="location">The location to look in</param>
+            <param name="remoteComputer">remote computer to run on</param>
+            <param name="windowTitle">The window title.</param>
+            <param name="windowMsg">The window message.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.Certificate.GetByThumbprint(System.String,System.Security.Cryptography.X509Certificates.StoreName,System.Security.Cryptography.X509Certificates.StoreLocation,System.String)">
+            <summary>
+            Gets a certificate by thumb print.
+            </summary>
+            <param name="thumbprint">the cert thumbprint to find</param>
+            <param name="store">The store to look in</param>
+            <param name="location">The location to look in</param>
+            <param name="remoteComputer">remote computer to run on</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.Certificate.GetCerts(System.Security.Cryptography.X509Certificates.StoreName,System.Security.Cryptography.X509Certificates.StoreLocation,System.String)">
+            <summary>
+            Gets a list of Cert names and thumbprints in a tuple
+            </summary>
+            <param name="store">The store to look in</param>
+            <param name="location">The location to look in</param>
+            <param name="remoteComputer">remote computer to run on</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.Certificate.Setup(System.String,System.String,System.Security.Cryptography.X509Certificates.StoreName,System.Security.Cryptography.X509Certificates.StoreLocation,System.String)">
+            <summary>
+            Install a PFX file to the cert store
+            </summary>
+            <param name="fileName">Name of the PFX file.</param>
+            <param name="password">The password.</param>
+            <param name="store">The store to look in</param>
+            <param name="location">The location to look in</param>
+            <param name="remoteComputer">remote computer to run on</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.Certificate.GetStore(System.Security.Cryptography.X509Certificates.StoreName,System.Security.Cryptography.X509Certificates.StoreLocation,System.String)">
+            <summary>
+            Helper function to connect to a cert store. Can be local or remote
+            </summary>
+            <param name="store">The store to look in</param>
+            <param name="location">The location to look in</param>
+            <param name="remoteComputer">remote computer to run on</param>
+            <returns></returns>
+        </member>
+        <member name="T:Useful.Utilities.CryptoManager">
+            <summary>
+            Used to Encrypt / Decrypt strings and byte arrays
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.CryptoManager.NewKey">
+            <summary>
+            Helper that generates a random key on each call.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.CryptoManager.Encrypt(System.String,System.Byte[],System.Byte[],System.Byte[])">
+            <summary>
+             Encryption (AES) then Authentication (HMAC) for a UTF8 Message.
+            </summary>
+            <param name="secretMessage">The secret message.</param>
+            <param name="cryptKey">The crypt key.</param>
+            <param name="authKey">The auth key.</param>
+            <param name="nonSecretPayload">(Optional) Non-Secret Payload.</param>
+            <returns>
+            Encrypted Message
+            </returns>
+            <exception cref="T:System.ArgumentException">Secret Message Required!;secretMessage</exception>
+            <remarks>
+            Adds overhead of (Optional-Payload + BlockSize(16) + Message-Padded-To-Blocksize +  HMac-Tag(32)) * 1.33 Base64
+            </remarks>
+        </member>
+        <member name="M:Useful.Utilities.CryptoManager.Decrypt(System.String,System.Byte[],System.Byte[],System.Int32)">
+            <summary>
+             Authentication (HMAC) then Decryption (AES) for a secrets UTF8 Message.
+            </summary>
+            <param name="encryptedMessage">The encrypted message.</param>
+            <param name="cryptKey">The crypt key.</param>
+            <param name="authKey">The auth key.</param>
+            <param name="nonSecretPayloadLength">Length of the non secret payload.</param>
+            <returns>
+            Decrypted Message
+            </returns>
+            <exception cref="T:System.ArgumentException">Encrypted Message Required!;encryptedMessage</exception>
+        </member>
+        <member name="M:Useful.Utilities.CryptoManager.EncryptWithPassword(System.String,System.String,System.Byte[])">
+            <summary>
+             Encryption (AES) then Authentication (HMAC) of a UTF8 message
+            using Keys derived from a Password (PBKDF2).
+            </summary>
+            <param name="secretMessage">The secret message.</param>
+            <param name="password">The password.</param>
+            <param name="nonSecretPayload">The non secret payload.</param>
+            <returns>
+            Encrypted Message
+            </returns>
+            <exception cref="T:System.ArgumentException">password</exception>
+            <remarks>
+            Significantly less secure than using random binary keys.
+            Adds additional non secret payload for key generation parameters.
+            </remarks>
+        </member>
+        <member name="M:Useful.Utilities.CryptoManager.DecryptWithPassword(System.String,System.String,System.Int32)">
+            <summary>
+             Authentication (HMAC) and then Descryption (AES) of a UTF8 Message
+            using keys derived from a password (PBKDF2). 
+            </summary>
+            <param name="encryptedMessage">The encrypted message.</param>
+            <param name="password">The password.</param>
+            <param name="nonSecretPayloadLength">Length of the non secret payload.</param>
+            <returns>
+            Decrypted Message
+            </returns>
+            <exception cref="T:System.ArgumentException">Encrypted Message Required!;encryptedMessage</exception>
+            <remarks>
+            Significantly less secure than using random binary keys.
+            </remarks>
+        </member>
+        <member name="T:Useful.Utilities.Database">
+            <summary>
+            SQL Database functions
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.Database.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Useful.Utilities.Database"/> class.
+            </summary>
+            <param name="connection">The connection string.</param>
+        </member>
+        <member name="M:Useful.Utilities.Database.ConnectionParts">
+            <summary>
+            Parses the connection string in to a <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder"/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.Database.ConnectionParts(System.String)">
+            <summary>
+            Parses the connection string in to a <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder"/>
+            </summary>
+            <param name="connection">The connection string to parse</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.Database.TestConnection(System.Boolean)">
+            <summary>
+            Tests the connection.
+            </summary>
+            <param name="throwOnError">Flag to throw or hide connection errors</param>
+            <returns>True if successful</returns>
+        </member>
+        <member name="M:Useful.Utilities.Database.TestConnection(System.String,System.Boolean)">
+            <summary>
+            Tests the connection.
+            </summary>
+            <param name="connection">The connection string.</param>
+            <param name="throwOnError">Flag to throw or hide connection errors</param>
+            <returns>
+            True if successful
+            </returns>
+            <exception cref="T:System.ArgumentNullException">Connection string must have Data Source and Initial Catalog both set</exception>
+        </member>
+        <member name="M:Useful.Utilities.Database.Databases(System.String,System.String,System.String)">
+            <summary>
+            Gets a list of databases on a given server. To use NT Auth leave user/pass blank
+            </summary>
+            <param name="server">Server to connect to</param>
+            <param name="username">SQL Auth user. To use NT Auth leave blank</param>
+            <param name="password">SQL Auth password</param>
+            <returns>string array of database names</returns>
+        </member>
+        <member name="M:Useful.Utilities.Database.ExecuteSql(System.String,System.String)">
+            <summary>
+            Executes a non query.
+            </summary>
+            <param name="sql">SQL statement to execute</param>
+            <param name="connection">SQL connection string</param>
+        </member>
+        <member name="M:Useful.Utilities.Database.ExecuteScalar(System.Data.SqlClient.SqlCommand,System.String)">
+            <summary>
+            Executes a scalar
+            </summary>
+            <param name="sqlCmd">The command to execute</param>
+            <param name="connection">SQL connection string</param>
+            <returns>Scalar result</returns>
+        </member>
+        <member name="M:Useful.Utilities.Database.ExecuteNonQuery(System.Data.SqlClient.SqlCommand,System.String)">
+            <summary>
+            Executes a non query.
+            </summary>
+            <param name="sqlCmd">The command to execute</param>
+            <param name="connection">SQL connection string</param>
+        </member>
+        <member name="M:Useful.Utilities.Database.ExecuteCount(System.Data.SqlClient.SqlCommand,System.String)">
+            <summary>
+            Executes a scalar and attempts to parse the result to integer. If parse fails -1 is returned
+            </summary>
+            <param name="sqlCmd">The command to execute</param>
+            <param name="connection">SQL connection string</param>
+            <returns>Scalar result as integer or -1</returns>
+        </member>
+        <member name="M:Useful.Utilities.Database.ExecuteStoredProc(System.String,System.String)">
+            <summary>
+            Executes a stored procedure as a non query
+            </summary>
+            <param name="storedProcName"></param>
+            <param name="connection">SQL connection string</param>
+        </member>
+        <member name="M:Useful.Utilities.Database.GetDataset(System.Data.SqlClient.SqlCommand,System.String)">
+            <summary>
+            Executes a Sql Adapter and fills a dataset
+            </summary>
+            <param name="sqlCmd">The command to execute</param>
+            <param name="connection">SQL connection string</param>
+            <returns>A Filled DataSet</returns>
+        </member>
+        <member name="M:Useful.Utilities.Database.Run(System.String,System.String)">
+            <summary>
+            Run a SQL command and return each row as a dynamic row
+            </summary>
+            <param name="sql"></param>
+            <returns>Enumeration of <see cref="T:Useful.Utilities.DynamicRow"/></returns>
+        </member>
+        <member name="P:Useful.Utilities.Database.Connection">
+            <summary>
+            The database connection string.
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.Database.Servers">
+            <summary>
+            Gets a list of all available instances of SQL Server within the local network.
+            </summary>
+            <value>
+            string array of server names
+            </value>
+        </member>
+        <member name="T:Useful.Utilities.DynamicRow">
+            <summary>
+            Custom Dynamic Object for dealing with DataRow Objects
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.DynamicRow.#ctor(System.Data.DataRow)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Useful.Utilities.DynamicRow"/> class.
+            </summary>
+            <param name="row">The data row object.</param>
+        </member>
+        <member name="M:Useful.Utilities.DynamicRow.Convert(System.Data.DataTable)">
+            <summary>
+            Converts the specified table to Enumeration of <see cref="T:Useful.Utilities.DynamicRow"/>.
+            </summary>
+            <param name="table">The data table to convert.</param>
+            <returns>Enumeration of <see cref="T:Useful.Utilities.DynamicRow"/></returns>
+        </member>
+        <member name="P:Useful.Utilities.DynamicRow.DataRow">
+            <summary>
+            Gets the data row that created this DynamicRow object
+            </summary>
+        </member>
+        <member name="T:Useful.Utilities.FileUtility">
+            <summary>
+            File Utility functions
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.FileUtility.WaitForFile(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,System.Int32,System.Int32)">
+            <summary>
+            Tries to create a file stream. On error, the thread sleeps and retries until the max retry number is hit.
+            </summary>
+            <param name="file">File path</param>
+            <param name="mode">file mode</param>
+            <param name="access">file access</param>
+            <param name="share">file share</param>
+            <param name="retry">Number of retries to attempt on error</param>
+            <param name="waitMs">number of milliseconds to sleep between retries</param>
+            <returns></returns>
+            <exception cref="T:System.IO.IOException">Throws IOExecption if max retry is hit</exception>
+        </member>
+        <member name="M:Useful.Utilities.FileUtility.IsFileLocked(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)">
+            <summary>
+            Checks if a file is locked by attempting to open it. 
+            </summary>
+            <param name="file">File Path to open</param>
+            <param name="mode"></param>
+            <param name="access"></param>
+            <param name="share"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.FileUtility.FileExists(System.String,System.String)">
+            <summary>
+            Checks if a file exists. If remote computer is passed in the path is converted to a UNC first
+            </summary>
+            <param name="path">File path to check</param>
+            <param name="computer">optional remote computer name to check for the file</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.FileUtility.CopyFile(System.String,System.String,System.Boolean)">
+            <summary>
+            Ensures the destination directory exists then copies a file.
+            </summary>
+            <param name="source">The source file path.</param>
+            <param name="dest">The destination file path.</param>
+            <param name="overwrite">allow destination file to be overwritten if it exists.</param>
+        </member>
+        <member name="M:Useful.Utilities.FileUtility.GetUniversalPath(System.String,System.String)">
+            <summary>
+            Takes a local file path and translates it into a UNC file path where possible.
+            </summary>
+            <param name="path">Path to convert to UNC.</param>
+            <param name="computer">Machine name to use, if not set uses local machine</param>
+            <returns>UNC path otherwise throws arg error.</returns>
+        </member>
+        <member name="M:Useful.Utilities.FileUtility.ClearReadOnly(System.String)">
+            <summary>
+            Clears the read only flag on a file
+            </summary>
+            <param name="path">Path to the file</param>
+        </member>
+        <member name="T:Useful.Utilities.FileUtility.WindowsShares">
+            <summary>
+            Support class for listing windows shares
+            </summary>
+        </member>
+        <member name="T:Useful.Utilities.GacUtility">
+            <summary>
+            A utility class for interacting with the Global Assembly Cache.
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.GacUtility.Remove(System.String)">
+            <summary>
+            Removes an assembly from the GAC.
+            </summary>
+            <param name="assemblyName">The name of the assembly to remove.</param>
+            <returns>A magic number.</returns>
+        </member>
+        <member name="M:Useful.Utilities.GacUtility.Add(System.String)">
+            <summary>
+            Adds an assembly to the GAC.
+            </summary>
+            <param name="assemblyName">The name of the assembly to add.</param>
+            <returns>A magic number.</returns>
+        </member>
+        <member name="M:Useful.Utilities.GacUtility.AddAssembly(System.String)">
+            <summary>
+            Adds an assembly to the GAC.
+            </summary>
+            <param name="assemblyName">The name of the assembly to add.</param>
+            <returns>A magic number.</returns>
+        </member>
+        <member name="M:Useful.Utilities.GacUtility.RemoveAssembly(System.String)">
+            <summary>
+            Removes an assembly from the GAC.
+            </summary>
+            <param name="assemblyName">The name of the assembly to remove.</param>
+            <returns>A magic number.</returns>
+        </member>
+        <member name="M:Useful.Utilities.GacUtility.RemoveByKey(System.String)">
+            <summary>
+            Starts a background task that removes all assemblies from the GAC matching a given key
+            </summary>
+            <param name="key">The key to remove</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.GacUtility.GetByKey(System.String)">
+            <summary>
+            Gets a list of paths to all files matching the given key
+            </summary>
+            <param name="key">The key to find</param>
+            <returns>list of file paths</returns>
+        </member>
+        <member name="T:Useful.Utilities.IAssemblyCache">
+            <summary>
+            Defines a contract for interacting with the Global Assembly Cache.
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.IAssemblyCache.UninstallAssembly(System.UInt32,System.String,System.IntPtr,System.UInt32@)">
+            <summary>
+            Uninstalls the assembly.
+            </summary>
+            <param name="dwFlags">The dw flags.</param>
+            <param name="pszAssemblyName">Name of the PSZ assembly.</param>
+            <param name="pvReserved">The pv reserved.</param>
+            <param name="pulDisposition">The pul disposition.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.IAssemblyCache.QueryAssemblyInfo(System.UInt32,System.String,System.IntPtr)">
+            <summary>
+            Queries the assembly information.
+            </summary>
+            <param name="dwFlags">The dw flags.</param>
+            <param name="pszAssemblyName">Name of the PSZ assembly.</param>
+            <param name="pAsmInfo">The p asm information.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.IAssemblyCache.CreateAssemblyCacheItem(System.UInt32,System.IntPtr,System.IntPtr@,System.String)">
+            <summary>
+            Creates the assembly cache item.
+            </summary>
+            <param name="dwFlags">The dw flags.</param>
+            <param name="pvReserved">The pv reserved.</param>
+            <param name="ppAsmItem">The pp asm item.</param>
+            <param name="pszAssemblyName">Name of the PSZ assembly.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.IAssemblyCache.CreateAssemblyScavenger(System.Object@)">
+            <summary>
+            Creates the assembly scavenger.
+            </summary>
+            <param name="ppAsmScavenger">The pp asm scavenger.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.IAssemblyCache.InstallAssembly(System.UInt32,System.String,System.IntPtr)">
+            <summary>
+            Installs the assembly.
+            </summary>
+            <param name="dwFlags">The dw flags.</param>
+            <param name="pszManifestFilePath">The PSZ manifest file path.</param>
+            <param name="pvReserved">The pv reserved.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Useful.Utilities.Helpers">
+            <summary>
+            Extensions and helper methods
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.Helpers.ToEnum``1(System.Object,System.String)">
+            <summary>
+            Convert a string object to an Enum
+            </summary>
+            <typeparam name="T">The type of Enum to convert to</typeparam>
+            <param name="value">The object to convert</param>
+            <param name="spaceReplace">If value has spaces, They will be replaced</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.Helpers.ToEnum``1(System.String,System.String)">
+            <summary>
+            Convert a string to an Enum
+            </summary>
+            <typeparam name="T">The type of Enum to convert to</typeparam>
+            <param name="value">The object to convert</param>
+            <param name="spaceReplace">If value has spaces, They will be replaced</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.Helpers.ToHex(System.Byte[])">
+            <summary>
+            Convert a byte array to a hexadecimal string.
+            </summary>
+            <param name="bytes">The bytes.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.Helpers.GetAttribute``2(System.Enum,System.Func{``0,``1})">
+            <summary>
+            Gets attribute from an enumeration object
+            </summary>
+            <typeparam name="T">Input type</typeparam>
+            <typeparam name="TExpected">The return type</typeparam>
+            <param name="enumeration">The enum value</param>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.Helpers.Description(System.Enum)">
+            <summary>
+            Gets the description value from the <see cref="T:System.ComponentModel.DescriptionAttribute"/> of the enum. 
+            If enum doesn't have a description attribute, null is returned
+            </summary>
+            <param name="enumeration">The enum value to look at</param>
+            <returns>description value from the <see cref="T:System.ComponentModel.DescriptionAttribute"/> or null</returns>
+        </member>
+        <member name="M:Useful.Utilities.Helpers.IsTrue(System.Nullable{System.Boolean})">
+            <summary>
+            If the nullable Boolean value is null or false, false is returned. 
+            if the nullable Boolean has a value and its true, true is returned. 
+            </summary>
+            <param name="value">nullable Boolean</param>
+            <returns>true or false</returns>
+        </member>
+        <member name="M:Useful.Utilities.Helpers.IsTrueOrNull(System.Nullable{System.Boolean})">
+            <summary>
+            If the nullable Boolean value is null or true, true is returned. 
+            if the nullable Boolean has a value and its false, false is returned. 
+            </summary>
+            <param name="value">nullable Boolean</param>
+            <returns>true or false</returns>
+        </member>
+        <member name="M:Useful.Utilities.Helpers.Default(System.String,System.String)">
+            <summary>
+            If the string is null or whitespace the <see cref="!:value"/> is returned. 
+            If the string has a value it is returned.
+            </summary>
+            <param name="str">The string</param>
+            <param name="value">Default value to return when input is null or whitespace</param>
+            <returns>input string or default value</returns>
+        </member>
+        <member name="T:Useful.Utilities.ObjectCopier">
+            <summary>
+            Perform a deep copy of an object.
+            Binary Serialization is used to perform the copy.
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.ObjectCopier.Clone``1(``0)">
+            <summary>
+            Perform a deep Copy of the object.
+            </summary>
+            <typeparam name="T">The type of object being copied.</typeparam>
+            <param name="source">The object instance to copy.</param>
+            <returns>The copied object.</returns>
+        </member>
+        <member name="M:Useful.Utilities.ObjectCopier.ToBytes``1(``0)">
+            <summary>
+            Takes a serializable object and returns it as a byte array.
+            </summary>
+            <typeparam name="T">The Type of the Object</typeparam>
+            <param name="source">The source object to serialize.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">The type must be serializable.;source</exception>
+        </member>
+        <member name="M:Useful.Utilities.ObjectCopier.FromBytes``1(System.Byte[])">
+            <summary>
+            Takes a byte array and desterilizes it to a object. 
+            </summary>
+            <typeparam name="T">The Type of the Object</typeparam>
+            <param name="obj">byte array of the object.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">The type must be serializable.;source</exception>
+        </member>
+        <member name="M:Useful.Utilities.ObjectCopier.FromXml``1(System.String)">
+            <summary>
+            Load an object from XML string.
+            </summary>
+            <typeparam name="T">The Type of the Object</typeparam>
+            <param name="xml">The XML.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ObjectCopier.ToXml``1(``0)">
+            <summary>
+            Serialize an object to XML string.
+            </summary>
+            <typeparam name="T">The Type of Object</typeparam>
+            <param name="obj">The object.</param>
+            <returns>XML String</returns>
+        </member>
+        <member name="T:Useful.Utilities.IisManager">
+            <summary>
+            IIS Server Manager Wrapper. can be used for local and remote IIS settings
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Useful.Utilities.IisManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Useful.Utilities.IisManager"/> class connected to a remote computer
+            </summary>
+            <param name="remoateServer">The remote server.</param>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.ListSites">
+            <summary>
+            List all IIS web sites
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.ListSiteNames">
+            <summary>
+            List all IIS web sites
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.GetSite(System.String)">
+            <summary>
+            Get single site by name
+            </summary>
+            <param name="siteName">Name of the site.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.SiteState(System.String)">
+            <summary>
+            Get site state (stopped, running, etc)
+            </summary>
+            <param name="siteName">Name of the site.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.StopSite(System.String)">
+            <summary>
+            Stop IIS site by name
+            </summary>
+            <param name="siteName">Name of the site.</param>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.StartSite(System.String)">
+            <summary>
+            Attempt to start a site by name
+            </summary>
+            <param name="siteName">Name of the site.</param>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.Processes">
+            <summary>
+            Get all worker process for all application pools
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.CreateSslSite(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Create a new web site on port 443 
+            </summary>
+            <param name="siteName">site name</param>
+            <param name="path">root directory of site</param>
+            <param name="certHash">certificate thumbprint</param>
+            <param name="port">port</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.CreateSite(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Create a new web site
+            </summary>
+            <param name="siteName">display name</param>
+            <param name="path">Root directory</param>
+            <param name="port">port</param>
+            <param name="certHash">certificate thumbprint</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.DeleteSite(System.String)">
+            <summary>
+            delete a site
+            </summary>
+            <param name="siteName">Name of the site.</param>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.SetBinding(System.String,System.String,System.Int32,System.String,System.String,System.Boolean)">
+            <summary>
+            Create or update a binding on the given site. 
+            </summary>
+            <param name="siteName">Site name</param>
+            <param name="ip">Ip to apply binding to. Use * for all</param>
+            <param name="port">Port to apply binding to</param>
+            <param name="hostheader">Optional host header</param>
+            <param name="certThumb">Optional Cert thumb print, if Set protocol will be https</param>
+            <param name="removeAllOthers">Flag to clear all other bindings on site</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.ListApplications(System.String)">
+            <summary>
+            Get list of applications for a site
+            </summary>
+            <param name="siteName">Name of the site.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.GetApplication(System.String,System.String)">
+            <summary>
+            Get an application under the given site
+            </summary>
+            <param name="siteName">Name of the site.</param>
+            <param name="appName">Name of the application.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.SetApplication(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,Useful.Utilities.IisManager.ApplicationSslFlags)">
+            <summary>
+            create or update an application under a site
+            </summary>
+            <param name="siteName">Name of the site.</param>
+            <param name="appName">Name of the application.</param>
+            <param name="path">The physical path.</param>
+            <param name="poolName">Name of the application pool.</param>
+            <param name="allowAnonymousAccess">Flag to allow anonymous access.</param>
+            <param name="windowsAuth">Flag to enable windows authentication.</param>
+            <param name="sslFlags">The SSL flags.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.DeleteApplication(System.String,System.String)">
+            <summary>
+            Deletes an application under a site.
+            </summary>
+            <param name="siteName">Name of the site.</param>
+            <param name="appName">Name of the application.</param>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.SetApplicationPool(System.String,System.String,System.String)">
+            <summary>
+            Change the pool tied to an application
+            </summary>
+            <param name="siteName">Name of the site.</param>
+            <param name="appName">Name of the application.</param>
+            <param name="poolName">Name of the application pool.</param>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.ListPools">
+            <summary>
+            Lists all the application pools.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.GetPool(System.String)">
+            <summary>
+            Gets the application pool by name.
+            </summary>
+            <param name="poolName">Name of the application pool.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.RecyclePool(System.String)">
+            <summary>
+            Recycles the pool.
+            </summary>
+            <param name="poolName">Name of the application pool.</param>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.DeletePool(System.String)">
+            <summary>
+            Deletes the application pool.
+            </summary>
+            <param name="poolName">Name of the application pool.</param>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.SetPool(System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            create or update an application pool
+            </summary>
+            <param name="name">The application pool name.</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <param name="maxProcesses">The maximum processes. 0 for default</param>
+            <param name="version">The version.</param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.Refresh">
+            <summary>
+            Refreshes this instance and restarts the <see cref="P:Useful.Utilities.IisManager.serverManager"/>
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.CommitChanges">
+            <summary>
+            Commits the <see cref="P:Useful.Utilities.IisManager.serverManager"/> changes.
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.ResetIis(System.String)">
+            <summary>
+            Resets IIS. Mode can be Restart, Stop, or Start
+            </summary>
+            <param name="mode">The mode argument. Can be Restart, Stop, or Start</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.IisManager.IisVersion(System.String)">
+            <summary>
+            IIS version number. 0 if not installed or error
+            </summary>
+            <param name="remoteComputer">The remote computer.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Useful.Utilities.IisManager.RemoteServer">
+            <summary>
+            The remote server currently connected to.
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.IisManager.serverManager">
+            <summary>
+            Gets the server manager. Either local or remote based on <see cref="P:Useful.Utilities.IisManager.RemoteServer"/>
+            </summary>
+        </member>
+        <member name="T:Useful.Utilities.IisManager.ApplicationSslFlags">
+            <summary>
+            Application level Ssl Flags
+            </summary>
+        </member>
+        <member name="T:Useful.Utilities.Models.FeaturesAndRoles">
+            <summary>
+            List of Features and Roles that can be mapped to the FeatureInfo Id and Parent Id property
+            </summary>
+        </member>
+        <member name="T:Useful.Utilities.Models.ComputerInfo">
+            <summary>
+            Model for holding computer information. Also handles converting a <see cref="M:Useful.Utilities.Models.ComputerInfo.ManagementObject"/> to a model. 
+            <see href="http://msdn.microsoft.com/en-us/library/aa394102(v=vs.85).aspx"/>
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.Models.ComputerInfo.DNSHostName">
+            <summary>
+            Name of local computer according to the domain name server (DNS).
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.Models.ComputerInfo.Domain">
+            <summary>
+            Name of the domain to which a computer belongs.
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.Models.ComputerInfo.Manufacturer">
+            <summary>
+            Name of a computer manufacturer.
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.Models.ComputerInfo.Model">
+            <summary>
+            Product name that a manufacturer gives to a computer. This property must have a value.
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.Models.ComputerInfo.Name">
+            <summary>
+            Name of object
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.Models.ComputerInfo.NumberOfLogicalProcessors">
+            <summary>
+            Number of logical processors available on the computer.
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.Models.ComputerInfo.NumberOfProcessors">
+            <summary>
+            Number of all processors available on the computer.
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.Models.ComputerInfo.PartOfDomain">
+            <summary>
+            Null if unknown
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.Models.ComputerInfo.PrimaryOwnerContact">
+            <summary>
+            Contact information for the primary system owner,
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.Models.ComputerInfo.PrimaryOwnerName">
+            <summary>
+            Name of the primary system owner. 
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.Models.ComputerInfo.TotalPhysicalMemory">
+            <summary>
+            Total size of physical memory. Be aware this property may not return an accurate value
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.Models.ComputerInfo.UserName">
+            <summary>
+            Name of a user that is logged on currently to the console (not remote desktop users)
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.Models.ComputerInfo.Workgroup">
+            <summary>
+            Name of the workgroup for this computer. Only if the value of the PartOfDomain property is False
+            </summary>
+        </member>
+        <member name="T:Useful.Utilities.Models.FeatureInfo">
+            <summary>
+            Model for holding feature information. Also handles converting a <see cref="M:Useful.Utilities.Models.FeatureInfo.ManagementObject"/> to a model. 
+            <see href="http://msdn.microsoft.com/en-us/library/cc280268(v=vs.85).aspx"/>
+            </summary>
+        </member>
+        <member name="T:Useful.Utilities.ComputerManager">
+            <summary>
+            Collection of computer, domain, and user name functions
+            </summary>
+        </member>
+        <member name="T:Useful.Utilities.WMI">
+            <summary>
+            Windows Management Interface Wrapper class. Handles scoping WMI calls for local or remote computers
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.WMI.GetProperties(System.Management.ManagementBaseObject)">
+            <summary>
+            Convert the property data collection to a string object dictionary
+            </summary>
+            <param name="mo">ManagementBaseObject</param>
+            <returns>Dictionary{string,object}</returns>
+        </member>
+        <member name="M:Useful.Utilities.WMI.#ctor">
+            <summary>
+            Creates a new instance of the wrapper
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.WMI.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the wrapper connected to a remote server
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.WMI.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates a new instance of the wrapper connected to a remote server as a different user
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.WMI.Finalize">
+            <summary>
+            Clean up unmanaged references
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.WMI.Initialise(System.String,System.String,System.String)">
+            <summary>
+            Initializes the WMI connection
+            </summary>
+            <param name="username">Username to connect to server with</param>
+            <param name="password">Password to connect to server with</param>
+            <param name="server">Server to connect to</param>
+        </member>
+        <member name="M:Useful.Utilities.WMI.Scope">
+            <summary>
+            Creates a <see cref="T:System.Management.ManagementScope"/> scoped to the current connection
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.WMI.ScopedObject(System.String,System.Management.ObjectGetOptions)">
+            <summary>
+            Creates a <see cref="T:System.Management.ManagementObject"/> scoped to the current connection
+            </summary>
+            <param name="path">The WMI path</param>
+            <param name="options">Additional options, if needed</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.WMI.ScopedClass(System.String,System.Management.ObjectGetOptions)">
+            <summary>
+            Creates a <see cref="T:System.Management.ManagementClass"/> scoped to the current connection
+            </summary>
+            <param name="path">The WMI path</param>
+            <param name="options">Additional options, if needed</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.WMI.GetObjects(System.String)">
+            <summary>
+            Get an instance of the specified class
+            </summary>
+            <param name="wmiClass">Type of the class</param>
+            <returns>Array of management objects</returns>
+        </member>
+        <member name="M:Useful.Utilities.WMI.GetObjects(System.String,System.String)">
+            <summary>
+            Get an instance of the specified class filtered by a where clause
+            </summary>
+            <param name="wmiClass">Type of the class</param>
+            <param name="where">The where clause filter to apply</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.WMI.GetObjectsByName(System.String,System.String)">
+            <summary>
+            Get an instance of the specified class filtered by name
+            </summary>
+            <param name="wmiClass">Type of the class</param>
+            <param name="name">The name to filter by</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.WMI.Dispose">
+            <summary>
+            Managed dispose
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.WMI.Dispose(System.Boolean)">
+            <summary>
+            Dispose of managed and unmanaged objects
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="P:Useful.Utilities.WMI.ConnectionOptions">
+            <summary>
+            Gets or sets the management scope
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.WMI.Server">
+            <summary>
+            Gets the server connected to
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.WMI.Username">
+            <summary>
+            Gets the username used to connect
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.WMI.Password">
+            <summary>
+            Gets the password used to connect
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.WMI.WmiNameSpace">
+            <summary>
+            Gets or sets the WMI namespace. default is CimV2
+            </summary>
+        </member>
+        <member name="T:Useful.Utilities.WMI.ReturnValue">
+            <summary>
+            WMI Common Return Values
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.ComputerManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Useful.Utilities.ComputerManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.ComputerManager.#ctor(System.String)">
+            <summary>
+            Creates a new instance of Process Manager connected to a remote computer
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.ComputerManager.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates a new instance of the Process Manager connected to a remote server as a different user
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.ComputerManager.Computer">
+            <summary>
+            Gets information about the computer currently connected to. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ComputerManager.Connect(System.String,System.String,System.String)">
+            <summary>
+            Connects to the computer name passed in, leave blank for local
+            </summary>
+            <param name="computerName">Name of the computer. Leave blank for local</param>
+            <param name="username">The username to connect as. Leave blank for current user</param>
+            <param name="password">The password for username if provided.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ComputerManager.SplitUserAndDomain(System.String)">
+            <summary>
+            Splits the username and domain into a Tuple. Domain is Item1, User is Item2.
+            </summary>
+            <param name="username">The Domain\Username or User@domain string to parse.</param>
+            <returns>Domain is Item1, Username is Item2</returns>
+        </member>
+        <member name="M:Useful.Utilities.ComputerManager.EnsureDomain(System.String)">
+            <summary>
+            Ensures the username as a domain prefix. If no prefix is given machine name is used.
+            </summary>
+            <param name="user">The username to check for domain.</param>
+            <returns>domain\user or machine\user</returns>
+        </member>
+        <member name="M:Useful.Utilities.ComputerManager.IsLocal(System.String)">
+            <summary>
+            Checks if the name passed in is the current computer. 
+            Returns true if the string is null/empty or the name matches the current <see cref="P:Useful.Utilities.ComputerManager.MachineName"/> or <see cref="P:Useful.Utilities.ComputerManager.MachineFullName"/>.
+            </summary>
+            <param name="serverName">Computer name to check</param>
+            <returns></returns>
+        </member>
+        <member name="P:Useful.Utilities.ComputerManager.DomainNameFull">
+            <summary>
+            Gets the full domain name of the current computer (without the computer name). 
+            Use <see cref="P:Useful.Utilities.ComputerManager.MachineFullName"/> to get FQN of current computer.
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.ComputerManager.DomainNameBios">
+            <summary>
+            Gets the Domain Net Bios of the current user. 
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.ComputerManager.UserName">
+            <summary>
+            Gets the username of current user
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.ComputerManager.UserQualified">
+            <summary>
+            Gets the domain and username of current user. Domain\User
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.ComputerManager.MachineName">
+            <summary>
+            Gets the Machine name of the current computer (without domain). 
+            Use <see cref="P:Useful.Utilities.ComputerManager.MachineFullName"/> to get the FQN of the current computer.
+            </summary>
+        </member>
+        <member name="P:Useful.Utilities.ComputerManager.MachineFullName">
+            <summary>
+            Gets the fully qualified name of the current computer. computer.domain.com
+            </summary>
+        </member>
+        <member name="T:Useful.Utilities.SharedFolderConnection">
+            <summary>
+            Create a connection to a shared folder with a different set of credentials 
+            </summary>
+            <example>
+            Connect to a server share and copy a file as a different user:
+            <code lang="c#">
+            using (new SharedFolderConnection(@"\\192.168.1.9", new NetworkCredential("user", "password", "domain")))
+            {
+                File.Copy(@"\\192.168.1.9\some share\some file.txt", @"c:\dest\some file.txt", true); 
+            }
+            </code>
+            </example>
+        </member>
+        <member name="T:Useful.Utilities.NetworkConnection">
+            <summary>
+            Creates a connection to a network resource with a given set of credentials
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.SharedFolderConnection.#ctor(System.String,System.Net.NetworkCredential)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Useful.Utilities.SharedFolderConnection"/> class.
+            </summary>
+            <param name="unc">The unc. \\Server</param>
+            <param name="credentials">The <see cref="T:System.Net.NetworkCredential"/>.</param>
+        </member>
+        <member name="T:Useful.Utilities.Models.ProcessInfo">
+            <summary>
+            Model for holding process information. Also handles converting a <see cref="M:Useful.Utilities.Models.ProcessInfo.ManagementObject"/> to a model.
+            </summary>
+        </member>
+        <member name="T:Useful.Utilities.ProcessManager">
+            <summary>
+            Used to list, start and stop processes locally or remotely using WMI
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.ProcessManager.#ctor">
+            <summary>
+            Creates a new instance of Process Manager
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.ProcessManager.#ctor(System.String)">
+            <summary>
+            Creates a new instance of Process Manager connected to a remote computer
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.ProcessManager.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates a new instance of the Process Manager connected to a remote server as a different user
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.ProcessManager.Connect(System.String,System.String,System.String)">
+            <summary>
+            Connects to the computer name passed in, leave blank for local
+            </summary>
+            <param name="computerName">Name of the computer. Leave blank for local</param>
+            <param name="username">The username to connect as. Leave blank for current user</param>
+            <param name="password">The password for username if provided.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ProcessManager.GetProcesses(System.String)">
+            <summary>
+            Gets a list of running processes. Can be filtered by name
+            </summary>
+            <param name="name">Null or blank to return all, otherwise returns all processes matching this name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ProcessManager.GetProcess(System.UInt32)">
+            <summary>
+            Gets a single process by process id
+            </summary>
+            <param name="id">The process identifier</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ProcessManager.Terminate(System.String,System.Boolean)">
+            <summary>
+            Terminates a process with the specified name.
+            </summary>
+            <param name="name">The name of the process</param>
+            <param name="firstOnly">Flag if all or only the first process matching the name will be terminated</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ProcessManager.Terminate(System.UInt32)">
+            <summary>
+            Terminates a process by the specified identifier.
+            </summary>
+            <param name="id">The process identifier</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ProcessManager.Start(System.String,System.String,System.Int32)">
+            <summary>
+            Starts a command process.
+            </summary>
+            <param name="command">The command to run.</param>
+            <param name="timeoutSeconds">The number of seconds to wait before timing out (only applies to local processes). 
+            Pass 0 for no timeout</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ProcessManager.Run(System.String,System.String,System.Boolean)">
+            <summary>
+            Starts a local process
+            </summary>
+            <param name="filename">The file to run</param>
+            <param name="args">The optional arguments to pass to the file, if any</param>
+            <param name="hideWindow"><c>true</c> to hide the window.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Useful.Utilities.RegistryHelper">
+            <summary>
+            Windows registry wrapper. Used to read, write and delete keys and values. Handles picking 64bit or 32bit views. 
+            Can be used on local or remote registries.
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.RegistryHelper.GetValue``1(Microsoft.Win32.RegistryKey,System.String,``0)">
+            <summary>
+            Get the value of a key or the default if the key has no value
+            </summary>
+            <typeparam name="T">The type of value to return</typeparam>
+            <param name="key">The Sub Key to select</param>
+            <param name="keyName">The key name to get</param>
+            <param name="defaultValue">The default value to return if the key has no value</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.RegistryHelper.SetValue``1(Microsoft.Win32.RegistryKey,System.String,``0)">
+            <summary>
+            Sets the value of a given key
+            </summary>
+            <typeparam name="T">The Type of the value to be set</typeparam>
+            <param name="key">The Sub Key to select</param>
+            <param name="keyName">the key name to set </param>
+            <param name="value">The value to apply to the key name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.RegistryHelper.DeleteKey(Microsoft.Win32.RegistryKey,System.Boolean)">
+            <summary>
+            Deletes a key and value. Will delete a full tree structure by default
+            </summary>
+            <param name="key">Sub key to select from deletion </param>
+            <param name="deleteTree">if true current key and all children will be deleted. 
+                if there are children and this is false and error is thrown.
+            </param>
+        </member>
+        <member name="M:Useful.Utilities.RegistryHelper.DeleteValue(Microsoft.Win32.RegistryKey,System.String)">
+            <summary>
+            Deletes the value from a given key. To delete the key use <see cref="M:Useful.Utilities.RegistryHelper.DeleteKey(Microsoft.Win32.RegistryKey,System.Boolean)"/>
+            </summary>
+            <param name="key">The sub key name to select</param>
+            <param name="keyName">the key to remove the value from </param>
+        </member>
+        <member name="M:Useful.Utilities.RegistryHelper.GetKey(Microsoft.Win32.RegistryHive,System.String,System.String)">
+            <summary>
+            Gets or Creates a registry Sub Key
+            </summary>
+            <param name="hive"><see cref="T:Microsoft.Win32.RegistryHive"/></param>
+            <param name="subKeyName">Path for sub key</param>
+            <param name="computer">Remote computer name used for execution, null or blank for local host</param>
+            <returns>
+              <see cref="T:Microsoft.Win32.RegistryKey"/>
+            </returns>
+        </member>
+        <member name="M:Useful.Utilities.RegistryHelper.ImportFile(System.String,System.String)">
+            <summary>
+            Takes a .reg file and imports it to the registry
+            </summary>
+            <param name="regFile">Full path and name of the .reg file</param>
+            <param name="computer">Remote computer name used for execution, null or blank for local host</param>
+            <returns></returns>
+        </member>
+        <member name="P:Useful.Utilities.RegistryHelper.View">
+            <summary>
+            Selects the 64 or 32 bit registry view based on architecture. 
+            </summary>
+        </member>
+        <member name="T:Useful.Utilities.Security">
+            <summary>
+            Security Utility Functions
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.Security.SetLogonAsAService(System.String,System.String)">
+            <summary>
+            Set logon as a service rights for the user.
+            </summary>
+            <param name="user">The username as domain\user. if domain is not provide machine name is used</param>
+            <param name="remoteComputer">Can be used to execute on a remote computer.</param>
+        </member>
+        <member name="M:Useful.Utilities.Security.SetPrivilege(System.String,System.String,System.String)">
+            <summary>
+            Sets a privilege for the user.
+            </summary>
+            <param name="user">The username as domain\user. if domain is not provide machine name is used</param>
+            <param name="privilege">The privilege to set. <see cref="T:Useful.Utilities.Security.LsaWrapper"/></param>
+            <param name="remoteComputer">Can be used to execute on a remote computer.</param>
+        </member>
+        <member name="M:Useful.Utilities.Security.Login(System.String,System.String,System.String)">
+            <summary>
+            Login as a given user and return the login token
+            </summary>
+            <param name="user">The user: domain\user</param>
+            <param name="password">The password.</param>
+            <param name="remoteComputer">The remote computer.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.Security.IsValidLogin(System.String,System.String,System.String)">
+            <summary>
+            Determines whether the specified username and password are valid. Can be ran locally or remotely
+            </summary>
+            <param name="user">The username: domain\user</param>
+            <param name="password">The password.</param>
+            <param name="domain">The domain.</param>
+            <param name="remoteComputer">Can be used to execute on a remote computer.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.Security.ValidateLogin(System.String,System.String,System.String)">
+            <summary>
+            Validates the username and password. Throws error if its invalid
+            </summary>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <param name="domain">The domain.</param>
+            <param name="remoteComputer">Can be used to execute on a remote computer.</param>
+            <exception cref="T:System.InvalidOperationException">Thrown if Username and password is invalid!</exception>
+        </member>
+        <member name="M:Useful.Utilities.Security.IsInRole(System.String,System.String,System.Security.Principal.WindowsBuiltInRole,System.String)">
+            <summary>
+            Determines whether the specified user is in a given role
+            </summary>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <param name="role">The role.</param>
+            <param name="remoteComputer">Can be used to execute on a remote computer.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.Security.RunAs(System.String,System.String)">
+            <summary>
+            Runs an action as a different user.
+            </summary>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="F:Useful.Utilities.Security.LogonType.Interactive">
+            <summary>
+            This logon type is intended for users who will be interactively
+            using the computer, such as a user being logged on by a
+            terminal server, remote shell, or similar process.
+            This logon type has the additional expense of caching logon
+            information for disconnected operations; therefore, it is
+            inappropriate for some client/server applications, such as a
+            mail server.
+            </summary>
+        </member>
+        <member name="F:Useful.Utilities.Security.LogonType.Network">
+            <summary>
+            This logon type is intended for high performance servers to
+            authenticate plaintext passwords.
+            The LogonUser function does not cache credentials for this
+            logon type.
+            </summary>
+        </member>
+        <member name="F:Useful.Utilities.Security.LogonType.Batch">
+            <summary>
+            This logon type is intended for batch servers, where processes
+            may be executing on behalf of a user without their direct
+            intervention.  This type is also for higher performance servers
+            that process many plaintext authentication attempts at a time,
+            such as mail or Web servers.
+            The LogonUser function does not cache credentials for this
+            logon type.
+            </summary>
+        </member>
+        <member name="F:Useful.Utilities.Security.LogonType.Service">
+            <summary>
+            Indicates a service-type logon.  The account provided must have
+            the service privilege enabled.
+            </summary>
+        </member>
+        <member name="F:Useful.Utilities.Security.LogonType.Unlock">
+            <summary>
+            This logon type is for GINA DLLs that log on users who will be
+            interactively using the computer.
+            This logon type can generate a unique audit record that shows
+            when the workstation was unlocked.
+            </summary>
+        </member>
+        <member name="F:Useful.Utilities.Security.LogonType.NetworkCleartext">
+            <summary>
+            This logon type preserves the name and password in the
+            authentication package, which allows the server to make
+            connections to other network servers while impersonating the
+            client.  A server can accept plaintext credentials from a
+            client, call LogonUser, verify that the user can access the
+            system across the network, and still communicate with other
+            servers.
+            NOTE: Windows NT:  This value is not supported.
+            </summary>
+        </member>
+        <member name="F:Useful.Utilities.Security.LogonType.NewCredentials">
+            <summary>
+            This logon type allows the caller to clone its current token
+            and specify new credentials for outbound connections.  The new
+            logon session has the same local identifier but uses different
+            credentials for other network connections.
+            NOTE: This logon type is supported only by the
+            LOGON32_PROVIDER_WINNT50 logon provider.
+            NOTE: Windows NT:  This value is not supported.
+            </summary>
+        </member>
+        <member name="F:Useful.Utilities.Security.LogonProvider.Default">
+            <summary>
+            Use the standard logon provider for the system.
+            The default security provider is negotiate, unless you pass
+            NULL for the domain name and the user name is not in UPN format.
+            In this case, the default provider is NTLM.
+            NOTE: Windows 2000/NT:   The default security provider is NTLM.
+            </summary>
+        </member>
+        <member name="F:Useful.Utilities.Security.LogonProvider.WinNT35">
+            <summary>
+            Use this provider if you'll be authenticating against a Windows
+            NT 3.51 domain controller (uses the NT 3.51 logon provider).
+            </summary>
+        </member>
+        <member name="F:Useful.Utilities.Security.LogonProvider.WinNT40">
+            <summary>
+            Use the NTLM logon provider.
+            </summary>
+        </member>
+        <member name="F:Useful.Utilities.Security.LogonProvider.WinNT50">
+            <summary>
+            Use the negotiate logon provider.
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.Security.Impersonation.#ctor(System.String,System.String,System.String,Useful.Utilities.Security.LogonType,Useful.Utilities.Security.LogonProvider)">
+            <summary>
+            Begins impersonation with the given credentials, Logon type and Logon provider.
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.Security.Impersonation.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Useful.Utilities.Security.Impersonation"/> class.
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.Security.Impersonation.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.Security.Impersonation.Impersonate(System.String,System.String,System.String,Useful.Utilities.Security.LogonType,Useful.Utilities.Security.LogonProvider)">
+            <summary>
+            Impersonates the specified user account.
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.Security.Impersonation.UndoImpersonation">
+            <summary>
+            Stops impersonation.
+            </summary>
+        </member>
+        <member name="T:Useful.Utilities.Models.ServiceType">
+            <summary>
+            Type of Windows Service
+            </summary>
+        </member>
+        <member name="T:Useful.Utilities.Models.OnError">
+            <summary>
+            Windows Service Error reporting mode
+            </summary>
+        </member>
+        <member name="T:Useful.Utilities.Models.StartMode">
+            <summary>
+            Windows Service start mode
+            </summary>
+        </member>
+        <member name="T:Useful.Utilities.Models.ServiceState">
+            <summary>
+            Windows Service  state
+            </summary>
+        </member>
+        <member name="T:Useful.Utilities.Models.ServiceInfo">
+            <summary>
+            Model for holding service information. Also handles converting a <see cref="M:Useful.Utilities.Models.ServiceInfo.ManagementObject"/> to a model.
+            </summary>
+        </member>
+        <member name="T:Useful.Utilities.ServicesManager">
+            <summary>
+            Used to control windows services locally or remotely using WMI.
+            Can find, list, install, update, uninstall, start, stop or restart services
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Useful.Utilities.ServicesManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Useful.Utilities.ServicesManager"/> class connected to a remote server.
+            </summary>
+            <param name="server"></param>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Useful.Utilities.ServicesManager"/> class connected to a remote server as a different user.
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.Connect(System.String,System.String,System.String)">
+            <summary>
+            Connects to the computer name passed in, leave blank for local
+            </summary>
+            <param name="computerName">Name of the computer. Leave blank for local</param>
+            <param name="username">The username to connect as. Leave blank for current user</param>
+            <param name="password">The password for username if provided.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.GetServices">
+            <summary>
+            Gets a list of all services
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.GetService(System.String)">
+            <summary>
+            Gets a service by name.
+            </summary>
+            <param name="name">The service name to find.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.GetServiceInfo(Useful.Utilities.Models.ServiceInfo)">
+            <summary>
+            Gets a service by name.
+            </summary>
+            <param name="svcInfo">The service information object. The Name property is used</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.GetServiceInfo(System.String)">
+            <summary>
+            Gets a service by name.
+            </summary>
+            <param name="name">The service name to find.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.GetServiceState(Useful.Utilities.Models.ServiceInfo)">
+            <summary>
+            Gets the state of the service.
+            </summary>
+            <param name="svcInfo">The service information object. The Name property is used.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.GetServiceState(System.String)">
+            <summary>
+            Gets the state of the service.
+            </summary>
+            <param name="name">The service name to find.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.InstallService(System.String,System.String,System.String,System.String,System.String,System.String,Useful.Utilities.Models.ServiceType,Useful.Utilities.Models.OnError,Useful.Utilities.Models.StartMode,System.Boolean,System.String,System.String[],System.String[])">
+            <summary>
+            Installs a windows service. Ensures user has Logon as a service right by calling <see cref="M:Useful.Utilities.Security.SetLogonAsAService(System.String,System.String)"/>
+            </summary>
+            <param name="svcName">Name of the service.</param>
+            <param name="svcDispName">Display name of the service</param>
+            <param name="svcPath">The service file path.</param>
+            <param name="description">The service description.</param>
+            <param name="username">The username to run the service.</param>
+            <param name="password">The password of the user running the service.</param>
+            <param name="svcType">Type of the service.</param>
+            <param name="errHandle">The error handle type.</param>
+            <param name="svcStartMode">The service start mode.</param>
+            <param name="interactWithDesktop">if set to <c>true</c> service can interact with desktop.</param>
+            <param name="loadOrderGroup">The load order group.</param>
+            <param name="loadOrderGroupDependencies">The load order group dependencies.</param>
+            <param name="svcDependencies">Any service dependencies.</param>
+            <returns><see cref="T:Useful.Utilities.WMI.ReturnValue"/></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.InstallService(Useful.Utilities.Models.ServiceInfo)">
+            <summary>
+            Installs a windows service. Ensures user has Logon as a service right by calling <see cref="M:Useful.Utilities.Security.SetLogonAsAService(System.String,System.String)"/>
+            </summary>
+            <param name="service">The service information object. <see cref="T:Useful.Utilities.Models.ServiceInfo"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.IsServiceInstalled(Useful.Utilities.Models.ServiceInfo)">
+            <summary>
+            Determines whether a service is installed by name.
+            </summary>
+            <param name="svcInfo">The service information object. Name property is used</param>
+            <returns>True if installed</returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.IsServiceInstalled(System.String)">
+            <summary>
+            Determines whether a service is installed by name.
+            </summary>
+            <param name="svcName">Name of the service.</param>
+            <returns>True if installed</returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.ChangeCredentials(System.String,System.String,System.String)">
+            <summary>
+            Changes the credentials of a service.
+            </summary>
+            <param name="svcName">Name of the service.</param>
+            <param name="username">The new username. Can be a domain user by passing "Domain\Username"</param>
+            <param name="password">The new password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.Change(Useful.Utilities.Models.ServiceInfo)">
+            <summary>
+            Changes the specified service username, password or path.
+            </summary>
+            <param name="service">The service to update.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.GetDescription(System.String)">
+            <summary>
+            Gets the description of the service from the registry.
+            </summary>
+            <param name="svcName">Name of the service.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.SetDescription(System.String,System.String)">
+            <summary>
+            Sets the description of the service in the registry.
+            </summary>
+            <param name="svcName">Name of the service.</param>
+            <param name="description">The description text to set.</param>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.GetPath(System.String)">
+            <summary>
+            Gets the path of the service in the registry.
+            </summary>
+            <param name="svcName">Name of the service.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.SetPath(System.String,System.String)">
+            <summary>
+            Sets the path of the service in the registry.
+            </summary>
+            <param name="svcName">Name of the service.</param>
+            <param name="path">The path to set.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.UninstallService(System.String)">
+            <summary>
+            Uninstalls the service from the system.
+            </summary>
+            <param name="svcName">The service name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.UninstallService(Useful.Utilities.Models.ServiceInfo)">
+            <summary>
+            Uninstalls the service from the system.
+            </summary>
+            <param name="svcInfo">The service information object. Name property is used</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.StartService(System.String)">
+            <summary>
+            Starts the service.
+            </summary>
+            <param name="svcName">Name of the service.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.StartService(Useful.Utilities.Models.ServiceInfo)">
+            <summary>
+            Starts the service.
+            </summary>
+            <param name="service">The service information object. Name property is used</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.StopService(System.String)">
+            <summary>
+            Stops the service.
+            </summary>
+            <param name="svcName">Name of the service.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.StopService(Useful.Utilities.Models.ServiceInfo)">
+            <summary>
+            Stops the service.
+            </summary>
+            <param name="service">The service information object. Name property is used</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.WaitForState(System.String,Useful.Utilities.Models.ServiceState,System.Int32)">
+            <summary>
+            Waits for the service to be in a given state.
+            </summary>
+            <param name="svcName">Name of the service.</param>
+            <param name="state">The state to wait for.</param>
+            <param name="timeoutMs">The timeout in milliseconds.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.ServicesManager.WaitForState(Useful.Utilities.Models.ServiceInfo,Useful.Utilities.Models.ServiceState,System.Int32)">
+            <summary>
+            Waits for the service to be in a given state.
+            </summary>
+            <param name="service">The service information object.</param>
+            <param name="state">The state to wait for.</param>
+            <param name="timeoutMs">The timeout in milliseconds.</param>
+            <returns>True when service is in given state. 
+            False if service is not in given state by the end of the  timeout period</returns>
+        </member>
+        <member name="T:Useful.Utilities.TaskList">
+            <summary>
+            Provides functions for running async work.
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.TaskList.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Useful.Utilities.TaskList"/> class with a max thread count of 50.
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.TaskList.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Useful.Utilities.TaskList"/> class with a limited number of threads.
+            </summary>
+            <param name="threads">The number of threads to limit.</param>
+        </member>
+        <member name="M:Useful.Utilities.TaskList.AddTask(System.Action)">
+            <summary>
+            Adds the task to the list. If a thread is available work starts right away 
+            otherwise it waits for a thread then starts
+            </summary>
+            <param name="work">The action to run.</param>
+        </member>
+        <member name="M:Useful.Utilities.TaskList.WaitForAll">
+            <summary>
+            Waits for all tasks in the list to finish. Then clears the lists
+            </summary>
+        </member>
+        <member name="M:Useful.Utilities.TaskList.Run(System.Action,System.Action{System.Boolean},System.Action{System.Exception})">
+            <summary>
+            Runs the specified work.
+            If work action threw an error and error action is provided, 
+            it will be called before the after action.
+            If after action is provided, it is ran once the work action is done.
+            The after action is passed true if work completed successfully, false if work faulted.
+            After and error actions are ran in the Current Synchronization Context (usually the UI thread)
+            </summary>
+            <param name="work">The work to the run.</param>
+            <param name="after">The action to run after work is complete.</param>
+            <param name="error">The on error action if work faulted</param>
+            <returns></returns>
+        </member>
+        <member name="M:Useful.Utilities.TaskList.Run``1(System.Func{``0},System.Action{``0},System.Action{System.Exception})">
+            <summary>
+            Runs the specified work.
+            If work action threw an error and error action is provided, 
+            it will be called before the after action.
+            If after action is provided, it is ran once the work action is done.
+            The after action is passed the result of work action if it was successful.
+            If work action faulted, after action will be passed the default of <see cref="!:T"/>.
+            After and error actions are ran in the Current Synchronization Context (usually the UI thread)
+            </summary>
+            <typeparam name="T">Type returned from work function and input to after action</typeparam>
+            <param name="work">The work function to run</param>
+            <param name="after">The after action to run</param>
+            <param name="error">The on error action if work faulted</param>
+            <returns></returns>
+        </member>
+        <member name="P:Useful.Utilities.TaskList.Tasks">
+            <summary>
+            Gets all the tasks in the list.
+            </summary>
+        </member>
+    </members>
+</doc>

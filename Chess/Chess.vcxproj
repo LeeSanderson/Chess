@@ -382,6 +382,9 @@
     <None Include="packages.config" />
     <None Include="ReadMe.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Useful.Utilities.XML" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

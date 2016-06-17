@@ -4,7 +4,7 @@
   Build script for the Chess solution.
   ============================================================ -->
 
-  <target name="all" depends="init, build"/>
+  <target name="all" depends="init, build, package"/>
 
   <target name="init">
     <property name="solutionFile" value="All.sln"/>
@@ -16,6 +16,26 @@
     </fail>
     <echo>Using msbuild.exe from ${msbuildCmd}</echo>
     <property name="config" value="debug" overwrite="false"/>
+
+    <property name="nuget.tool" value=".\Packages\NuGet.CommandLine.3.3.0\tools\nuget.exe"/>
+    <property name="nuget.temp" value=".\Nuget\Temp"/>
+
+    <!-- 
+      Define CHESS API version number using semantic versioning convention http://semver.org/
+      This version number MUST be incremented everytime the API changes so that the nuget package
+      is updated correctly.
+    -->    
+    <property name="apiVersion" value="1.0.0"/>    
+
+    <!-- Verify the nuspec verion is the same and the defined apiVersion.-->
+    <property name="chess.nuspec" value=".\Nuget\Chess.nuspec"/>
+
+    <xmlpeek file="${chess.nuspec}" xpath="//package/metadata/version" property="nuget.apiVersion" />
+    <fail unless="${apiVersion == nuget.apiVersion}">
+      API version in build (${apiVersion}) differs from API version in nuget nuspec package (${nuget.apiVersion}).
+      These values must be the same.
+    </fail>
+
   </target>
 
   <target name="build" depends="init">
@@ -25,6 +45,64 @@
 	    <arg value="/t:Rebuild" />
 	    <arg value='/p:DefineConstants="TRACE;DEBUG;CODE_ANALYSIS;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS"'/>
 	  </exec>
+  </target>
+
+  <target name="package" depends="init">
+
+    <delete dir="${nuget.temp}" if="${directory::exists(nuget.temp)}"/>
+    <mkdir dir="${nuget.temp}"/>
+    <mkdir dir="${nuget.temp}\tools"/>
+    <mkdir dir="${nuget.temp}\lib"/>
+
+    <copy todir="${nuget.temp}\tools">
+      <fileset basedir=".\bin\">
+        <include name="Chess.dll"/>
+        <include name="mchess.exe"/>        
+        <include name="mchess.exe.config"/>
+        <include name="mcut.exe"/>
+        <include name="Microsoft.Concurrency.Taskometer.dll"/>        
+        <include name="Microsoft.Concurrency.UnitTesting.Execution.dll"/>        
+        <include name="Microsoft.Concurrency.UnitTesting.Extensions.dll"/>
+        <include name="Microsoft.Concurrency.UnitTestingFramework.dll"/>
+
+        <include name="Microsoft.ManagedChess.Base.exe"/>
+        <include name="Microsoft.ManagedChess.Engine.dll"/>
+        <include name="Microsoft.ManagedChess.Framework4Wrappers.dll"/>
+        <include name="Microsoft.ManagedChess.Framework35Wrappers.dll"/>
+        <include name="Microsoft.ManagedChess.Launcher.dll"/>
+        <include name="Microsoft.ManagedChess.MChess.dll"/>
+        
+        <include name="Microsoft.ManagedChess.ThreadingWrappers.dll"/>
+        <include name="Microsoft.ManagedChessAPI.dll"/>                
+        <include name="Scenario.Managed.dll"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${nuget.temp}\tools">
+      <fileset basedir=".\ManagedChess\external">
+        <include name="Microsoft.ExtendedReflection.dll"/>
+        <include name="Microsoft.ExtendedReflection.ClrMonitor.X86.dll"/>
+      </fileset>
+    </copy>
+ 
+    <echo file="${nuget.temp}\tools\regClrMonitor.bat">@echo off
+REM Run this batch file with elevated priveledges in order to register the required components to run CHESS 
+regsvr32 /u /s Microsoft.ExtendedReflection.ClrMonitor.X86.dll
+regsvr32 /i Microsoft.ExtendedReflection.ClrMonitor.X86.dll
+    </echo>
+
+    <copy todir="${nuget.temp}\lib">
+      <fileset basedir=".\bin\">
+        <include name="Microsoft.Concurrency.UnitTestingFramework.dll"/>
+      </fileset>
+    </copy>
+
+    <!-- Pack the packages -->
+    <exec program="${nuget.tool}">
+      <arg value="pack"/>
+      <arg value="${chess.nuspec}"/>
+    </exec>
+
   </target>
 
 </project>

@@ -7,6 +7,9 @@
 *.userosscache
 *.sln.docstates
 
+# Temp Nuget folder
+Nuget/Temp/
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
@@ -280,3 +283,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 /All.VC.opendb
+/Nuget/Temp
+*.nupkg
+All.VC.db

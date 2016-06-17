@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Chess</id>
+    <version>1.0.0</version>
+    <authors>Lee</authors>
+    <owners>Lee Sanderson</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>CHESS is a open source tool created by Microsoft Research for systematic and disciplined testing of concurrent programs.</description>
+    <tags>chess concurrency testing</tags>
+  </metadata>
+  <files>
+    <file src="Temp\Tools\**\*.*" target="tools" />
+    <file src="Temp\Lib\**\*.*" target="lib\net40" />
+  </files>
+</package>

@@ -24,3 +24,15 @@ Some minor modifications have been made to the [original CHESS Codeplex reposito
 ## Documentation ##
 
 There is lots of documentation about CHESS on [Codeplex](https://chesstool.codeplex.com/documentation) and on the [CHESS Microsoft Research pages](http://research.microsoft.com/en-us/projects/chess/).
+
+##Installation##
+
+CHESS can be easily installed in a project using NuGet.
+
+> Install-Package Chess
+
+Once installed you need to run the regClrMonitor.bat batch file so that the CLR profiler that is used to run/monitor your code.
+
+To run tests use the '*mcut*' command e.g.
+
+> mcut runAllTests [path to your test dll]

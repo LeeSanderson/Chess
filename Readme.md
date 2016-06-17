@@ -27,7 +27,7 @@ There is lots of documentation about CHESS on [Codeplex](https://chesstool.codep
 
 ##Installation##
 
-CHESS can be easily installed in a project using NuGet.
+CHESS can be easily installed in a project using [NuGet](https://www.nuget.org/packages/Chess/).
 
 > Install-Package Chess
 

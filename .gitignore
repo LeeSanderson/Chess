@@ -285,3 +285,5 @@ $RECYCLE.BIN/
 /All.VC.opendb
 /Nuget/Temp
 All.VC.db
+Chess*.nupkg
+buildAndPush.bat

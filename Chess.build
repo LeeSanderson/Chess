@@ -6,6 +6,9 @@
 
   <target name="all" depends="init, build, package"/>
 
+  <!-- ============================================================ 
+    Initialize the projet properties.
+  ============================================================ -->
   <target name="init">
     <property name="solutionFile" value="All.sln"/>
 
@@ -36,8 +39,13 @@
       These values must be the same.
     </fail>
 
+    <property name="chess.nupkg" value="Chess.${apiVersion}.nupkg"/>
+
   </target>
 
+  <!-- ============================================================ 
+    Build the solution.
+  ============================================================ -->
   <target name="build" depends="init">
     <exec program="${msbuildCmd}" >
 	    <arg value="${solutionFile}" />
@@ -46,6 +54,10 @@
 	    <arg value='/p:DefineConstants="TRACE;DEBUG;CODE_ANALYSIS;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS"'/>
 	  </exec>
   </target>
+
+  <!-- ============================================================ 
+    Package the project.
+  ============================================================ -->
 
   <target name="package" depends="init">
 
@@ -104,5 +116,29 @@ regsvr32 /i Microsoft.ExtendedReflection.ClrMonitor.X86.dll
     </exec>
 
   </target>
+
+  <!-- ============================================================ 
+    Push the built/packaged project to nuget
+  ============================================================ -->
+  <target name="push" depends="init, initPush, build, package">
+    <exec program="${nuget.tool}">
+      <arg value="push"/>
+      <arg value="${chess.nupkg}"/>
+      <arg value="${nuget.apikey}"/>
+    </exec>
+  </target>
+
+  <!-- ============================================================ 
+    Set up push specific properties
+  ============================================================ -->
+  <target name="initPush" depends="init">
+    <fail unless="${property::exists('nuget.apikey')}">
+       Cannot push to nuget without nuget API key. 
+       This can be passed on the command line with the command:
+
+         build push -D:nuget.apikey=[key]
+    </fail>
+  </target>
+
 
 </project>

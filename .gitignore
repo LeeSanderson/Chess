@@ -284,5 +284,4 @@ $RECYCLE.BIN/
 *.lnk
 /All.VC.opendb
 /Nuget/Temp
-*.nupkg
 All.VC.db

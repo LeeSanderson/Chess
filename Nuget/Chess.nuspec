@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Chess</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>Lee</authors>
     <owners>Lee Sanderson</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

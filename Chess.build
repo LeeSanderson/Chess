@@ -28,7 +28,7 @@
       This version number MUST be incremented everytime the API changes so that the nuget package
       is updated correctly.
     -->    
-    <property name="apiVersion" value="1.0.0"/>    
+    <property name="apiVersion" value="1.0.1"/>    
 
     <!-- Verify the nuspec verion is the same and the defined apiVersion.-->
     <property name="chess.nuspec" value=".\Nuget\Chess.nuspec"/>

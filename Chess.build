@@ -100,7 +100,7 @@
     <echo file="${nuget.temp}\tools\regClrMonitor.bat">@echo off
 REM Run this batch file with elevated priveledges in order to register the required components to run CHESS 
 regsvr32 /u /s Microsoft.ExtendedReflection.ClrMonitor.X86.dll
-regsvr32 /i Microsoft.ExtendedReflection.ClrMonitor.X86.dll
+regsvr32 Microsoft.ExtendedReflection.ClrMonitor.X86.dll
     </echo>
 
     <copy todir="${nuget.temp}\lib">

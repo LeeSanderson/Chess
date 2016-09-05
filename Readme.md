@@ -25,14 +25,48 @@ Some minor modifications have been made to the [original CHESS Codeplex reposito
 
 There is lots of documentation about CHESS on [Codeplex](https://chesstool.codeplex.com/documentation) and on the [CHESS Microsoft Research pages](http://research.microsoft.com/en-us/projects/chess/).
 
-##Installation##
+## Installation ##
 
 CHESS can be easily installed in a project using [NuGet](https://www.nuget.org/packages/Chess/).
 
 > Install-Package Chess
 
-Once installed you need to run the regClrMonitor.bat batch file so that the CLR profiler that is used to run/monitor your code.
+The NuGet package include both a .net 4.0 library for defining concurrency unit tests (Microsoft.Concurrency.UnitTestingFramework.dll) as well as tools for executing these tests (mcut.exe). 
+
+Once the package is installed you need to run the regClrMonitor.bat batch file so that the CLR profiler that is used to run/monitor your code. This needs to be run from an administrative command prompt.
+
+## Writing unit tests ##
+
+
+```csharp
+    [TestFixture]
+    public class TestClass
+    {
+        /// <summary>
+        /// Test we can read while updating.
+        /// </summary>
+        [Test]
+        [DataRaceTestMethod]
+        public void TestMethod()
+        {
+          // 
+        }
+    }
+```
+In the example above we decorate the class with a NUnit **[TestFixture]** attribute and the test method with a NUnit **[Test]** attribute so that we can run the test from a test runner (you could just as easily use any other unit testing framework e.g. [MS test](https://msdn.microsoft.com/en-us/library/ms243147.aspx) or [XUnit](https://xunit.github.io/)). 
+
+Then we add a **[ScheduleTestMethod]** attribute or a **[DataRaceTestMethod]** attribute from the Microsoft.Concurrency.UnitTestingFramework namespace. 
+
+1. The **[ScheduleTestMethod]** attribute marks a test method for concurrent testing. Chess will execute the test multiple time interleaving the different threads of the code in an attempt to find common concurrency bugs e.g. deadlocks.
+
+2. The **[DataRaceTestMethod]** attribute marks also marks a test method for concurrent testing in the same way as the **[ScheduleTestMethod]** attribute but additional tests are performed to detect race conditions - when two concurrent threads access the same memory location and one of those accesses is a write.
+
+
+## Running unit tests ##
 
 To run tests use the '*mcut*' command e.g.
 
-> mcut runAllTests [path to your test dll]
+> mcut runAllTests [path to your concurrency unit test assembly]
+
+## Examples ##
+See my [Concurrency](https://github.com/LeeSanderson/Concurrency) project for a full example including [NANT](http://nant.sourceforge.net/) script that builds the project and executes the concurrency tests. 

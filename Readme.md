@@ -68,5 +68,7 @@ To run tests use the '*mcut*' command e.g.
 
 > mcut runAllTests [path to your concurrency unit test assembly]
 
+*NOTE: You must run mcut from an administrative command prompt (failure to do this can result in a -667 error code)*
+
 ## Examples ##
 See my [Concurrency](https://github.com/LeeSanderson/Concurrency) project for a full example including [NANT](http://nant.sourceforge.net/) script that builds the project and executes the concurrency tests. 

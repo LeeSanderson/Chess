@@ -1,4 +1,4 @@
-#CHESS#
+# CHESS #
 
 CHESS is a open source tool created by **[Microsoft Research](http://research.microsoft.com/en-us/projects/chess/)** for systematic and disciplined testing of concurrent programs. 
 
